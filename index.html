@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Garden layout, interactive 3D model and scenario-bracketed solar planning material.">
-  <title>Garden Layout & Solar Planning</title>
-  <link rel="stylesheet" href="assets/site.css">
+  <meta name="description" content="Garden v0.16 R1: restored rhizome bed, source-backed material calculator, 2D layout, interactive 3D and adopted R4 solar planning evidence.">
+  <title>Garden v0.16 — Layout, Materials & Solar Planning</title>
+  <link rel="stylesheet" href="assets/site.css?v=0.16-r1-2">
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
-  <script defer src="assets/site.js"></script>
+  <script defer src="assets/calculator-core.js?v=0.16-r1-2"></script>
+  <script defer src="assets/regions-v0-16.js?v=0.16-r1-2"></script>
+  <script defer src="assets/site.js?v=0.16-r1-2"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -20,6 +22,7 @@
       </a>
       <div class="nav-links">
         <a href="#layout">2D layout</a>
+        <a href="#calculator">Calculator</a>
         <a href="#model">3D model</a>
         <a href="#solar">Solar</a>
         <a href="#downloads">Downloads</a>
@@ -27,42 +30,48 @@
     </nav>
 
     <div class="hero-content" id="top">
-      <p class="eyebrow">Garden layout & solar planning package</p>
-      <h1>See the plan.<br><span>Understand the sun.</span></h1>
-      <p class="hero-lede">A clear, browser-based view of the garden layout, interactive 3D model and scenario-bracketed solar analysis. No specialist software or sign-in is required.</p>
+      <p class="eyebrow">Garden v0.16 R1 · rhizome bed restored</p>
+      <h1>Plan the garden.<br><span>Order with evidence.</span></h1>
+      <p class="hero-lede">One practical place for the restored 2D plan, source-backed material quantities, interactive 3D model and the unchanged v0.15 R4 solar evidence. No specialist software or sign-in is required.</p>
 
       <div class="action-grid" aria-label="Main actions">
         <a class="action-card action-primary" href="#layout">
           <span class="action-number">01</span>
-          <strong>View 2D Garden Layout</strong>
-          <span>Open the plan and dimensioned reference</span>
+          <strong>View 2D layout</strong>
+          <span>See the restored rear/right Rhizome bed</span>
+        </a>
+        <a class="action-card action-calculator" href="#calculator">
+          <span class="action-number">02</span>
+          <strong>Calculate materials</strong>
+          <span>Use source geometry, depth and explicit allowances</span>
         </a>
         <a class="action-card" href="#model">
-          <span class="action-number">02</span>
-          <strong>Explore Interactive 3D Model</strong>
-          <span>Orbit and zoom in an ordinary browser</span>
+          <span class="action-number">03</span>
+          <strong>Explore interactive 3D</strong>
+          <span>Orbit, zoom and locate the Rhizome bed</span>
         </a>
         <a class="action-card" href="#solar">
-          <span class="action-number">03</span>
-          <strong>View Solar Analysis</strong>
-          <span>Compare the planning scenarios and bearings</span>
-        </a>
-        <a class="action-card" href="documents/garden_v0_15_project_summary.pdf">
           <span class="action-number">04</span>
-          <strong>Read Project Summary</strong>
-          <span>Open the concise three-page PDF</span>
+          <strong>Review solar evidence</strong>
+          <span>Read the adopted R4 scenarios; no rerun</span>
+        </a>
+        <a class="action-card" href="documents/garden_v0_16_project_summary.pdf">
+          <span class="action-number">05</span>
+          <strong>Read project summary</strong>
+          <span>Authority, geometry and ordering boundaries</span>
         </a>
         <a class="action-card action-download" href="#downloads">
-          <span class="action-number">05</span>
-          <strong>Download Documents & Data</strong>
-          <span>PDFs, planning data and public package</span>
+          <span class="action-number">06</span>
+          <strong>Download documents & data</strong>
+          <span>PDFs, validation, manifests and public package</span>
         </a>
       </div>
 
       <div class="status-row" aria-label="Project status">
-        <span class="status status-good">Planning solar complete</span>
-        <span class="status">Protected layout preserved</span>
-        <span class="status status-warn">Planning material — not ordering ready</span>
+        <span class="status status-good">Spatial model: v0.16 R1</span>
+        <span class="status">Solar authority: v0.15 R4 unchanged</span>
+        <span class="status status-good">Inherited geometry fingerprint-identical</span>
+        <span class="status status-warn">Ordering readiness is region/item-specific</span>
       </div>
     </div>
   </header>
@@ -72,6 +81,12 @@
       <div class="section-heading">
         <p class="eyebrow">Before you begin</p>
         <h2 id="what-this-is">What this material means</h2>
+      </div>
+      <div class="authority-strip" aria-label="Version and evidence authority">
+        <div><span>Spatial release</span><strong>Garden v0.16 R1</strong><small>Protected v0.14 descendant</small></div>
+        <div><span>Solar authority</span><strong>Garden v0.15 R4</strong><small>Adopted unchanged; no rerun</small></div>
+        <div><span>Region evidence</span><strong>Measured · derived · approximate</strong><small>Status shown per calculator region</small></div>
+        <div><span>Proposed feature</span><strong>Rhizome bed</strong><small>Exact plan; product dimensions unresolved</small></div>
       </div>
       <div class="boundary-grid">
         <article>
@@ -95,7 +110,7 @@
           <p>The results are suitable for <strong>garden planning</strong>. They are not survey, construction, fabrication or purchasing documentation.</p>
         </article>
       </div>
-      <p class="ordering-banner"><strong>ordering_ready=false</strong> — confirm product choices, clearances and dimensions before ordering or building.</p>
+      <p class="ordering-banner"><strong>Planning estimates are not ordering approval.</strong> Each calculator region states its own evidence and readiness. The Rhizome bed footprint is exact in plan, while Corten height, thickness and product choice remain unresolved.</p>
     </section>
 
     <section class="section" id="layout" aria-labelledby="layout-heading">
@@ -104,24 +119,24 @@
           <p class="eyebrow">The spatial plan</p>
           <h2 id="layout-heading">2D garden layout</h2>
         </div>
-        <a class="text-link" href="2d/garden_v0_15_layout_overview.pdf">Open layout PDF <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="2d/garden_v0_16_layout_overview.pdf">Open layout PDF <span aria-hidden="true">↗</span></a>
       </div>
 
       <div class="layout-grid">
         <figure class="media-card media-card-large">
-          <a href="2d/garden_v0_15_layout_overview.png">
-            <img src="2d/garden_v0_15_layout_overview.png" alt="Top-down garden layout with the rear of the garden at the top" loading="lazy">
+          <a href="2d/garden_v0_16_layout_overview.png">
+            <img src="2d/garden_v0_16_layout_overview.png" alt="Garden v0.16 top-down layout with the restored Rhizome bed in the rear-right corner" loading="lazy">
           </a>
           <figcaption>
             <strong>Garden layout overview</strong>
-            <span>Protected presentation geometry, shown in the familiar local orientation.</span>
+            <span>Familiar local orientation with the restored quarter-sector Rhizome bed at rear/right.</span>
           </figcaption>
         </figure>
 
         <div class="layout-side">
           <figure class="media-card">
-            <a href="2d/garden_v0_15_true_north.png">
-              <img src="2d/garden_v0_15_true_north.png" alt="Garden layout rotated so true north points upward" loading="lazy">
+            <a href="2d/garden_v0_16_true_north.png">
+              <img src="2d/garden_v0_16_true_north.png" alt="Garden v0.16 layout rotated so true north points upward, with the Rhizome bed labelled" loading="lazy">
             </a>
             <figcaption>
               <strong>True-north orientation</strong>
@@ -136,6 +151,91 @@
           </article>
         </div>
       </div>
+      <aside class="feature-callout" aria-labelledby="rhizome-callout-heading">
+        <div>
+          <p class="eyebrow">Restored feature</p>
+          <h3 id="rhizome-callout-heading">Rhizome bed</h3>
+        </div>
+        <p>Exact approved rear/right quarter-sector: centre <strong>(5800, 9000) mm</strong>, outer radius <strong>1100 mm</strong>, gross footprint <strong>0.950 m²</strong>. The shown 300 mm height and 20 mm band are presentation proxies, not fabrication dimensions.</p>
+      </aside>
+    </section>
+
+    <section class="section calculator-section" id="calculator" aria-labelledby="calculator-heading">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Source-backed quantities</p>
+          <h2 id="calculator-heading">Material calculator</h2>
+        </div>
+        <a class="text-link" href="data/garden_v0_16_region_manifest_r1.json">Inspect region manifest <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="calculator-intro">Select established regions, then enter the finished depth and explicit allowances. Areas come from Blender receiver meshes or exact analytic geometry—never from rendered image pixels.</p>
+
+      <form class="calculator" id="material-calculator" novalidate>
+        <fieldset class="region-picker">
+          <legend>1. Choose regions</legend>
+          <div class="region-list" id="region-list"></div>
+          <p class="field-error" data-error-for="areaM2" aria-live="polite"></p>
+        </fieldset>
+
+        <fieldset class="quantity-fields">
+          <legend>2. Enter material assumptions</legend>
+          <div class="form-grid">
+            <label class="form-field form-field-wide">
+              <span>Material name</span>
+              <input id="material-name" name="material" type="text" value="Mulch" maxlength="80" autocomplete="off">
+              <small>For example: sand, mulch or drainage gravel.</small>
+            </label>
+            <label class="form-field">
+              <span>Finished depth (mm)</span>
+              <input id="depth-mm" name="depthMm" type="number" inputmode="decimal" min="1" max="2000" step="1" value="50" aria-describedby="depth-note depth-error">
+              <small id="depth-note">Editable planning assumption.</small>
+              <small class="field-error" id="depth-error" data-error-for="depthMm"></small>
+            </label>
+            <label class="form-field">
+              <span>Waste allowance (%)</span>
+              <input id="waste-percent" name="wastePercent" type="number" inputmode="decimal" min="0" max="200" step="0.5" value="10" aria-describedby="waste-note waste-error">
+              <small id="waste-note">10% example default; edit for the product/job.</small>
+              <small class="field-error" id="waste-error" data-error-for="wastePercent"></small>
+            </label>
+            <label class="form-field">
+              <span>Settlement / compaction (%)</span>
+              <input id="settlement-percent" name="settlementPercent" type="number" inputmode="decimal" min="0" max="94" step="0.5" value="0" aria-describedby="settlement-note settlement-error">
+              <small id="settlement-note">0% example default; optional and editable.</small>
+              <small class="field-error" id="settlement-error" data-error-for="settlementPercent"></small>
+            </label>
+            <label class="form-field">
+              <span>Packaging</span>
+              <select id="package-mode" name="mode">
+                <option value="bags">Whole bags</option>
+                <option value="bulk">Bulk cubic metres</option>
+              </select>
+              <small>Bag results always round upward.</small>
+            </label>
+            <label class="form-field" id="bag-field">
+              <span>Bag volume (litres)</span>
+              <input id="bag-litres" name="bagLitres" type="number" inputmode="decimal" min="1" max="5000" step="1" value="40" aria-describedby="bag-note bag-error">
+              <small id="bag-note">40 L example default; verify the supplier pack.</small>
+              <small class="field-error" id="bag-error" data-error-for="bagLitres"></small>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="calculator-message" id="calculator-message" role="alert" aria-live="assertive"></div>
+        <output class="calculator-results" id="calculator-results" aria-live="polite">
+          <div><span>Selected area</span><strong id="result-area">—</strong><small>m²</small></div>
+          <div><span>Finished volume</span><strong id="result-finished-m3">—</strong><small>m³ · <span id="result-finished-litres">—</span> L</small></div>
+          <div><span>Adjusted order</span><strong id="result-order-m3">—</strong><small>m³ · <span id="result-order-litres">—</span> L</small></div>
+          <div id="bag-result"><span>Whole bags</span><strong id="result-bags">—</strong><small>rounded upward</small></div>
+        </output>
+        <div class="formula-card">
+          <h3>Formula and assumptions</h3>
+          <p><code>finished volume m³ = area m² × depth mm ÷ 1000</code></p>
+          <p><code>order volume = finished volume × (1 + waste fraction) ÷ (1 − settlement fraction)</code></p>
+          <p><code>bag count = ceiling(order litres ÷ bag litres)</code></p>
+          <p id="calculation-assumptions">Select at least one region to calculate.</p>
+        </div>
+      </form>
+      <p class="planning-note">These are transparent planning quantities, not a supplier quotation or automatic ordering approval. Confirm product specifications and the region-specific readiness shown above before purchase.</p>
     </section>
 
     <section class="section model-section" id="model" aria-labelledby="model-heading">
@@ -150,21 +250,24 @@
       <div class="viewer-shell">
         <model-viewer
           id="garden-viewer"
-          src="3d/garden_v0_15_3d_model.glb"
-          poster="3d/garden_v0_15_3d_preview.png"
+          src="3d/garden_v0_16_3d_model.glb"
+          poster="3d/garden_v0_16_3d_preview.png"
           camera-controls
           touch-action="pan-y"
           shadow-intensity="0.75"
           exposure="1"
           interaction-prompt="auto"
-          alt="Interactive 3D model of the garden layout">
+          alt="Interactive 3D model of Garden v0.16 with the restored Rhizome bed at rear-right">
+          <button class="viewer-hotspot" slot="hotspot-rhizome" data-position="5.05m 0.34m -8.25m" data-normal="0m 1m 0m" aria-label="Rhizome bed location">
+            <span>Rhizome bed</span>
+          </button>
         </model-viewer>
       </div>
       <div class="viewer-footer">
         <p>Drag to orbit · scroll or pinch to zoom. Off-site obstruction uncertainty appears in the solar scenarios rather than as invented meshes.</p>
         <div class="button-row">
-          <a class="button button-light" href="3d/garden_v0_15_3d_model.glb">Open/download GLB</a>
-          <a class="button button-outline-light" href="3d/garden_v0_15_3d_preview.png">Static 3D preview</a>
+          <a class="button button-light" href="3d/garden_v0_16_3d_model.glb">Open/download GLB</a>
+          <a class="button button-outline-light" href="3d/garden_v0_16_3d_preview.png">Static 3D preview</a>
         </div>
       </div>
       <noscript>
@@ -184,7 +287,7 @@
       <div class="solar-summary">
         <div>
           <h3>Whole-field planning hours/day</h3>
-          <p>Direct-sun-equivalent averages at the central 330° bearing. These are planning averages, not a promise for every planting point.</p>
+          <p>Direct-sun-equivalent averages at the central 330° bearing. These are adopted v0.15 R4 planning averages, not a promise for every planting point; the v0.16 release did not rerun solar.</p>
         </div>
         <div class="table-wrap">
           <table>
@@ -271,14 +374,14 @@
           <span class="file-badge">ZIP</span>
           <h3>Sanitised public distribution</h3>
           <p>A self-contained public copy of this wrapper and its approved assets. This derivative has its own hash and does not replace the frozen R5 share master.</p>
-          <a class="button button-light" href="downloads/garden_v0_15_public_distribution_r5_r1.zip">Download public package</a>
+          <a class="button button-light" href="downloads/garden_v0_16_public_distribution_r1.zip">Download v0.16 public package</a>
         </article>
 
         <article class="download-card">
           <span class="file-badge">PDF</span>
           <h3>Project summary</h3>
-          <p>Three pages covering the spatial plan, 3D model and planning disposition.</p>
-          <a class="text-link" href="documents/garden_v0_15_project_summary.pdf">Open PDF <span aria-hidden="true">↗</span></a>
+          <p>Rhizome authority and geometry, preservation evidence, source regions, formulas and solar boundary.</p>
+          <a class="text-link" href="documents/garden_v0_16_project_summary.pdf">Open PDF <span aria-hidden="true">↗</span></a>
         </article>
 
         <article class="download-card">
@@ -292,7 +395,7 @@
           <span class="file-badge">PDF</span>
           <h3>2D layout</h3>
           <p>The recipient-friendly garden layout overview.</p>
-          <a class="text-link" href="2d/garden_v0_15_layout_overview.pdf">Open PDF <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="2d/garden_v0_16_layout_overview.pdf">Open PDF <span aria-hidden="true">↗</span></a>
         </article>
       </div>
 
@@ -305,8 +408,11 @@
           <a href="data/garden_v0_15_solar_results_r4.json"><strong>Solar results</strong><span>JSON · complete result summary</span></a>
           <a href="data/garden_v0_15_skyline_envelopes_r4.json"><strong>Skyline envelopes</strong><span>JSON · obstruction brackets</span></a>
           <a href="records/garden_v0_15_final_planning_disposition_r4.md"><strong>Planning disposition</strong><span>Markdown · approved claim boundary</span></a>
-          <a href="records/garden_v0_15_public_web_wrapper_manifest_r1.json"><strong>Public manifest</strong><span>JSON · publication identity</span></a>
-          <a href="records/SHA256SUMS.txt"><strong>SHA-256 ledger</strong><span>Text · public file checksums</span></a>
+          <a href="data/garden_v0_16_region_manifest_r1.json"><strong>Region manifest</strong><span>JSON · source-backed calculator areas</span></a>
+          <a href="data/garden_v0_16_rhizome_solar_mapping_r1.json"><strong>Rhizome solar mapping</strong><span>JSON · adopted R4 receivers, no rerun</span></a>
+          <a href="records/garden_v0_16_public_validation_r1.json"><strong>Model validation</strong><span>JSON · sanitised PASS record</span></a>
+          <a href="records/garden_v0_16_public_manifest_r1.json"><strong>Public manifest</strong><span>JSON · v0.16 publication identity</span></a>
+          <a href="records/garden_v0_16_SHA256SUMS_R1.txt"><strong>SHA-256 ledger</strong><span>Text · v0.16 public checksums</span></a>
         </div>
       </details>
     </section>
@@ -314,13 +420,13 @@
 
   <footer>
     <div>
-      <strong>Garden planning package</strong>
+      <strong>Garden v0.16 R1 planning package</strong>
       <p>Planning material, not survey, construction, fabrication or purchasing documentation.</p>
     </div>
     <div class="footer-status">
-      <span>Protected geometry unchanged</span>
-      <span>No solar rerun</span>
-      <span>ordering_ready=false</span>
+      <span>Inherited geometry preserved</span>
+      <span>Solar v0.15 R4 unchanged</span>
+      <span>Ordering readiness is item-specific</span>
     </div>
   </footer>
 </body>

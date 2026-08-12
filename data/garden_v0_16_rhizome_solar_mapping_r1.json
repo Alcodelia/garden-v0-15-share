@@ -1,0 +1,74 @@
+{
+  "gross_receiver_count": 96,
+  "gross_sampled_area_m2": 0.96,
+  "interpretation": "Planning context only. The low planter was not added as a solar obstruction and R4 remains the adopted authority.",
+  "mapping_method": "Select existing 100 mm receiver centres inside the approved rear-right quarter-sector; no solar geometry or result was recalculated.",
+  "net_receiver_count": 94,
+  "net_sampled_area_m2": 0.9400000000000001,
+  "project_version": "0.16",
+  "receiver_cell_area_m2": 0.01,
+  "schema": "garden-v0.16-rhizome-solar-mapping-r1",
+  "solar_authority": {
+    "model": "Garden v0.15 R4 adopted scenario-bracketed receiver results",
+    "receiver_results_sha256": "19da7be115099e073e8a1bba7bdcab6c31c64cb84cb5124ed32bcdb1bb64f68b",
+    "solar_rerun": false
+  },
+  "summary_b330": {
+    "autumn": {
+      "baseline": {
+        "gross_footprint_mean_hours_per_day": 0.0026041666666666665,
+        "net_fill_mean_hours_per_day": 0.0
+      },
+      "conservative": {
+        "gross_footprint_mean_hours_per_day": 0.0026041666666666665,
+        "net_fill_mean_hours_per_day": 0.0
+      },
+      "likely": {
+        "gross_footprint_mean_hours_per_day": 0.0026041666666666665,
+        "net_fill_mean_hours_per_day": 0.0
+      }
+    },
+    "spring": {
+      "baseline": {
+        "gross_footprint_mean_hours_per_day": 0.0,
+        "net_fill_mean_hours_per_day": 0.0
+      },
+      "conservative": {
+        "gross_footprint_mean_hours_per_day": 0.0,
+        "net_fill_mean_hours_per_day": 0.0
+      },
+      "likely": {
+        "gross_footprint_mean_hours_per_day": 0.0,
+        "net_fill_mean_hours_per_day": 0.0
+      }
+    },
+    "summer": {
+      "baseline": {
+        "gross_footprint_mean_hours_per_day": 2.5143229166666665,
+        "net_fill_mean_hours_per_day": 2.464095744680851
+      },
+      "conservative": {
+        "gross_footprint_mean_hours_per_day": 2.3463541666666665,
+        "net_fill_mean_hours_per_day": 2.3027925531914892
+      },
+      "likely": {
+        "gross_footprint_mean_hours_per_day": 2.4598958333333334,
+        "net_fill_mean_hours_per_day": 2.4127659574468083
+      }
+    },
+    "winter": {
+      "baseline": {
+        "gross_footprint_mean_hours_per_day": 0.0,
+        "net_fill_mean_hours_per_day": 0.0
+      },
+      "conservative": {
+        "gross_footprint_mean_hours_per_day": 0.0,
+        "net_fill_mean_hours_per_day": 0.0
+      },
+      "likely": {
+        "gross_footprint_mean_hours_per_day": 0.0,
+        "net_fill_mean_hours_per_day": 0.0
+      }
+    }
+  }
+}

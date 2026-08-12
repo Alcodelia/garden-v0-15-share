@@ -1,0 +1,225 @@
+{
+  "authority": {
+    "approved_placement": "garden_v0_10_placement_approved_r1.json",
+    "approved_placement_sha256": "c2dfeed6b98c624e5f22c4e3f040549f3d1f7fc5716d9160ddb22ce8a8c91c5a",
+    "band_display_mm": 20,
+    "centre_mm": [
+      5800,
+      9000
+    ],
+    "height_display_mm": 300,
+    "inner_radius_display_mm": 1080,
+    "outer_radius_mm": 1100,
+    "plan_status": "USER_APPROVED_EXACT",
+    "vertical_and_band_status": "PRESENTATION_PROXY_NOT_FABRICATION_AUTHORITY"
+  },
+  "objects": [
+    {
+      "dimensions_m": [
+        1.100000381,
+        1.099999905,
+        0.300000012
+      ],
+      "garden_role": "rhizome_containment_corten_arc",
+      "geometry_sha256": "02cd6d19b3c06562786ef860b97171b064ac7feacbd7d92f3cb19672a7d4b78d",
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "V016_R1__RHIZOME_BED__CORTEN_ARC",
+      "ordering_authority": false,
+      "type": "MESH"
+    },
+    {
+      "dimensions_m": [
+        1.080000401,
+        1.079999924,
+        0.239999995
+      ],
+      "garden_role": "rhizome_bed_material_fill_proxy",
+      "geometry_sha256": "fda2f234edb4eedee67629f365bf3d1b0a0a3e010f94298171c9e648ae08f204",
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "V016_R1__RHIZOME_BED__FILL",
+      "ordering_authority": false,
+      "type": "MESH"
+    },
+    {
+      "dimensions_m": [
+        1.008160114,
+        0.112000003,
+        0.0
+      ],
+      "garden_role": "rhizome_bed_label",
+      "geometry_sha256": "4dac62cafc9af9ff9e647a7acf6da9215d6ab856e3aa7bb76daa11ca93902eab",
+      "location_m": [
+        4.420000076,
+        8.210000038,
+        0.340000004
+      ],
+      "name": "V016_R1__LABEL__RHIZOME_BED_LOCAL",
+      "ordering_authority": false,
+      "type": "FONT"
+    },
+    {
+      "dimensions_m": [
+        1.008160114,
+        0.112000003,
+        0.0
+      ],
+      "garden_role": "rhizome_bed_label",
+      "geometry_sha256": "236edc898f54bb9b4cfe77564676205c55ba7ee3ff1b1b0568d33d2d02451f9d",
+      "location_m": [
+        4.349999905,
+        7.75,
+        0.344999999
+      ],
+      "name": "V016_R1__LABEL__RHIZOME_BED_TRUE_NORTH",
+      "ordering_authority": false,
+      "type": "FONT"
+    },
+    {
+      "dimensions_m": [
+        1.008160114,
+        0.112000003,
+        0.0
+      ],
+      "garden_role": "rhizome_bed_label",
+      "geometry_sha256": "d02c86de7e9405d815c13fe1a71817f0055b0065f1a6ff34e80ec2b674c16779",
+      "location_m": [
+        4.75,
+        8.619999886,
+        0.720000029
+      ],
+      "name": "V016_R1__LABEL__RHIZOME_BED_PERSPECTIVE",
+      "ordering_authority": false,
+      "type": "FONT"
+    },
+    {
+      "dimensions_m": [
+        2.559999943,
+        2.269999504,
+        2.0
+      ],
+      "garden_role": "rhizome_bed_label_leader",
+      "geometry_sha256": "d7d68c6aac8632363980604c4a0908401c44807190bdf3196369c3f1e46bc548",
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "V016_R1__LABEL_LINE__RHIZOME_BED",
+      "ordering_authority": false,
+      "type": "CURVE"
+    },
+    {
+      "dimensions_m": [
+        4.826700211,
+        0.210000008,
+        0.0
+      ],
+      "garden_role": "v0_16_view_annotation",
+      "geometry_sha256": "c413774324e410be7535ef56de447197d8fd9baaba259965ce43497d70d76dda",
+      "location_m": [
+        2.900000095,
+        9.869999886,
+        3.099999905
+      ],
+      "name": "V016_R1__TITLE__LOCAL_TOP",
+      "ordering_authority": false,
+      "type": "FONT"
+    },
+    {
+      "dimensions_m": [
+        4.796889305,
+        0.133545011,
+        0.0
+      ],
+      "garden_role": "v0_16_view_annotation",
+      "geometry_sha256": "6d9693a68995910f0fe198d77a6e577b45ec6b21cbc7ff7edd322251778f0a80",
+      "location_m": [
+        2.900000095,
+        9.409999847,
+        3.099999905
+      ],
+      "name": "V016_R1__SUBTITLE__LOCAL_TOP",
+      "ordering_authority": false,
+      "type": "FONT"
+    },
+    {
+      "dimensions_m": [
+        4.50810051,
+        0.210000008,
+        0.0
+      ],
+      "garden_role": "v0_16_view_annotation",
+      "geometry_sha256": "8656f180039fac41b01437eac83a0c1b3d564595fdbd4d9ef0e8b5f262ebcfa5",
+      "location_m": [
+        6.025000095,
+        9.912658691,
+        3.099999905
+      ],
+      "name": "V016_R1__TITLE__TRUE_NORTH",
+      "ordering_authority": false,
+      "type": "FONT"
+    },
+    {
+      "dimensions_m": [
+        3.666325092,
+        0.133545011,
+        0.0
+      ],
+      "garden_role": "v0_16_view_annotation",
+      "geometry_sha256": "c87ca897f0ffe3071093f6f5f00359cc0dbc3899484014932c3575b2ac3c5442",
+      "location_m": [
+        5.795000076,
+        9.514286995,
+        3.099999905
+      ],
+      "name": "V016_R1__SUBTITLE__TRUE_NORTH",
+      "ordering_authority": false,
+      "type": "FONT"
+    },
+    {
+      "dimensions_m": [
+        0.607327998,
+        0.022400003,
+        0.0
+      ],
+      "garden_role": "v0_16_view_annotation",
+      "geometry_sha256": "b673a1ebb752b09683e36b0bd7340a9054702dd1a8da5c999f63e79c3f70a965",
+      "location_m": [
+        0.0,
+        0.245000005,
+        -0.75
+      ],
+      "name": "V016_R1__TITLE__PERSPECTIVE",
+      "ordering_authority": false,
+      "type": "FONT"
+    },
+    {
+      "dimensions_m": [
+        0.461694479,
+        0.013543,
+        0.0
+      ],
+      "garden_role": "v0_16_view_annotation",
+      "geometry_sha256": "6c03d3679c57be2babb197cc58ae59a68dfcf25715f0d39b231bbf3832df0de7",
+      "location_m": [
+        0.0,
+        0.194999993,
+        -0.75
+      ],
+      "name": "V016_R1__SUBTITLE__PERSPECTIVE",
+      "ordering_authority": false,
+      "type": "FONT"
+    }
+  ],
+  "project_version": "0.16",
+  "revision": "R1",
+  "schema": "garden-v0.16-object-geometry-schedule-r1"
+}
