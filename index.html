@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Garden layout, interactive 3D model and scenario-bracketed solar planning material.">
+  <title>Garden Layout & Solar Planning</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+  <script defer src="assets/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="hero">
+    <nav class="topbar" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Garden planning home">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>Garden planning</span>
+      </a>
+      <div class="nav-links">
+        <a href="#layout">2D layout</a>
+        <a href="#model">3D model</a>
+        <a href="#solar">Solar</a>
+        <a href="#downloads">Downloads</a>
+      </div>
+    </nav>
+
+    <div class="hero-content" id="top">
+      <p class="eyebrow">Garden layout & solar planning package</p>
+      <h1>See the plan.<br><span>Understand the sun.</span></h1>
+      <p class="hero-lede">A clear, browser-based view of the garden layout, interactive 3D model and scenario-bracketed solar analysis. No specialist software or sign-in is required.</p>
+
+      <div class="action-grid" aria-label="Main actions">
+        <a class="action-card action-primary" href="#layout">
+          <span class="action-number">01</span>
+          <strong>View 2D Garden Layout</strong>
+          <span>Open the plan and dimensioned reference</span>
+        </a>
+        <a class="action-card" href="#model">
+          <span class="action-number">02</span>
+          <strong>Explore Interactive 3D Model</strong>
+          <span>Orbit and zoom in an ordinary browser</span>
+        </a>
+        <a class="action-card" href="#solar">
+          <span class="action-number">03</span>
+          <strong>View Solar Analysis</strong>
+          <span>Compare the planning scenarios and bearings</span>
+        </a>
+        <a class="action-card" href="documents/garden_v0_15_project_summary.pdf">
+          <span class="action-number">04</span>
+          <strong>Read Project Summary</strong>
+          <span>Open the concise three-page PDF</span>
+        </a>
+        <a class="action-card action-download" href="#downloads">
+          <span class="action-number">05</span>
+          <strong>Download Documents & Data</strong>
+          <span>PDFs, planning data and public package</span>
+        </a>
+      </div>
+
+      <div class="status-row" aria-label="Project status">
+        <span class="status status-good">Planning solar complete</span>
+        <span class="status">Protected layout preserved</span>
+        <span class="status status-warn">Planning material — not ordering ready</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section intro-section" aria-labelledby="what-this-is">
+      <div class="section-heading">
+        <p class="eyebrow">Before you begin</p>
+        <h2 id="what-this-is">What this material means</h2>
+      </div>
+      <div class="boundary-grid">
+        <article>
+          <span class="boundary-icon" aria-hidden="true">↗</span>
+          <h3>Orientation</h3>
+          <p>The rear bearing is approximately <strong>330° true ±5°</strong>. The solar work checks the 325°, 330° and 335° orientation bracket.</p>
+        </article>
+        <article>
+          <span class="boundary-icon" aria-hidden="true">◐</span>
+          <h3>Off-site uncertainty</h3>
+          <p>Nearby structures and trees are represented as <strong>scenario brackets</strong>, not as invented or surveyed off-site geometry.</p>
+        </article>
+        <article>
+          <span class="boundary-icon" aria-hidden="true">♧</span>
+          <h3>Gum scenarios</h3>
+          <p>Gum-tree cases are uncertainty tests using porous-canopy assumptions. They are <strong>not surveyed tree models</strong>.</p>
+        </article>
+        <article>
+          <span class="boundary-icon" aria-hidden="true">✓</span>
+          <h3>Appropriate use</h3>
+          <p>The results are suitable for <strong>garden planning</strong>. They are not survey, construction, fabrication or purchasing documentation.</p>
+        </article>
+      </div>
+      <p class="ordering-banner"><strong>ordering_ready=false</strong> — confirm product choices, clearances and dimensions before ordering or building.</p>
+    </section>
+
+    <section class="section" id="layout" aria-labelledby="layout-heading">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">The spatial plan</p>
+          <h2 id="layout-heading">2D garden layout</h2>
+        </div>
+        <a class="text-link" href="2d/garden_v0_15_layout_overview.pdf">Open layout PDF <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="layout-grid">
+        <figure class="media-card media-card-large">
+          <a href="2d/garden_v0_15_layout_overview.png">
+            <img src="2d/garden_v0_15_layout_overview.png" alt="Top-down garden layout with the rear of the garden at the top" loading="lazy">
+          </a>
+          <figcaption>
+            <strong>Garden layout overview</strong>
+            <span>Protected presentation geometry, shown in the familiar local orientation.</span>
+          </figcaption>
+        </figure>
+
+        <div class="layout-side">
+          <figure class="media-card">
+            <a href="2d/garden_v0_15_true_north.png">
+              <img src="2d/garden_v0_15_true_north.png" alt="Garden layout rotated so true north points upward" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>True-north orientation</strong>
+              <span>Rear bearing approximately 330° true ±5°.</span>
+            </figcaption>
+          </figure>
+          <article class="document-card">
+            <p class="document-type">PDF · dimensioned reference</p>
+            <h3>Existing-site reference</h3>
+            <p>The frozen dimensioned drawing retained beneath the later presentation layout.</p>
+            <a class="button button-dark" href="2d/garden_v0_6_existing_site_dimensioned_reference.pdf">Open reference PDF</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section model-section" id="model" aria-labelledby="model-heading">
+      <div class="section-heading split-heading light-heading">
+        <div>
+          <p class="eyebrow">Walk around the layout</p>
+          <h2 id="model-heading">Interactive 3D model</h2>
+        </div>
+        <span class="viewer-status" id="viewer-status" role="status">Loading interactive viewer…</span>
+      </div>
+
+      <div class="viewer-shell">
+        <model-viewer
+          id="garden-viewer"
+          src="3d/garden_v0_15_3d_model.glb"
+          poster="3d/garden_v0_15_3d_preview.png"
+          camera-controls
+          touch-action="pan-y"
+          shadow-intensity="0.75"
+          exposure="1"
+          interaction-prompt="auto"
+          alt="Interactive 3D model of the garden layout">
+        </model-viewer>
+      </div>
+      <div class="viewer-footer">
+        <p>Drag to orbit · scroll or pinch to zoom. Off-site obstruction uncertainty appears in the solar scenarios rather than as invented meshes.</p>
+        <div class="button-row">
+          <a class="button button-light" href="3d/garden_v0_15_3d_model.glb">Open/download GLB</a>
+          <a class="button button-outline-light" href="3d/garden_v0_15_3d_preview.png">Static 3D preview</a>
+        </div>
+      </div>
+      <noscript>
+        <p class="noscript-note">The interactive controls require JavaScript. The static preview and GLB download remain available above.</p>
+      </noscript>
+    </section>
+
+    <section class="section" id="solar" aria-labelledby="solar-heading">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Scenario-bracketed evidence</p>
+          <h2 id="solar-heading">Solar planning analysis</h2>
+        </div>
+        <a class="text-link" href="documents/garden_v0_15_solar_summary.pdf">Open solar summary PDF <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="solar-summary">
+        <div>
+          <h3>Whole-field planning hours/day</h3>
+          <p>Direct-sun-equivalent averages at the central 330° bearing. These are planning averages, not a promise for every planting point.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Season</th><th>Baseline</th><th>Likely</th><th>Conservative</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>Winter</th><td>3.07</td><td>2.31</td><td>1.77</td></tr>
+              <tr><th>Autumn</th><td>5.47</td><td>5.44</td><td>4.76</td></tr>
+              <tr><th>Spring</th><td>5.41</td><td>5.38</td><td>4.67</td></tr>
+              <tr><th>Summer</th><td>6.74</td><td>6.38</td><td>5.76</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="solar-group">
+        <div class="group-label">
+          <span>Winter · B330</span>
+          <h3>Off-site obstruction bracket</h3>
+          <p>Baseline, likely and conservative cases show the material effect of unresolved off-site obstruction.</p>
+        </div>
+        <div class="heatmap-grid heatmap-grid-three">
+          <figure class="heatmap-card">
+            <a href="solar/garden_v0_15_winter_baseline_b330.png"><img src="solar/garden_v0_15_winter_baseline_b330.png" alt="Winter baseline solar heatmap at 330 degrees" loading="lazy"></a>
+            <figcaption><strong>Baseline</strong><span>10 m gum case · 0.75 open sky</span></figcaption>
+          </figure>
+          <figure class="heatmap-card">
+            <a href="solar/garden_v0_15_winter_likely_b330.png"><img src="solar/garden_v0_15_winter_likely_b330.png" alt="Winter likely solar heatmap at 330 degrees" loading="lazy"></a>
+            <figcaption><strong>Likely</strong><span>12 m gum case · 0.60 open sky</span></figcaption>
+          </figure>
+          <figure class="heatmap-card">
+            <a href="solar/garden_v0_15_winter_conservative_b330.png"><img src="solar/garden_v0_15_winter_conservative_b330.png" alt="Winter conservative solar heatmap at 330 degrees" loading="lazy"></a>
+            <figcaption><strong>Conservative</strong><span>14 m gum case · 0.45 open sky</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="solar-group solar-group-muted">
+        <div class="group-label">
+          <span>Likely winter scenario</span>
+          <h3>Orientation sensitivity</h3>
+          <p>The established ±5° bearing uncertainty is shown at 325°, 330° and 335°.</p>
+        </div>
+        <div class="heatmap-grid heatmap-grid-three">
+          <figure class="heatmap-card">
+            <a href="solar/garden_v0_15_winter_likely_b325.png"><img src="solar/garden_v0_15_winter_likely_b325.png" alt="Likely winter solar heatmap at 325 degrees" loading="lazy"></a>
+            <figcaption><strong>325°</strong><span>Lower bearing case</span></figcaption>
+          </figure>
+          <figure class="heatmap-card">
+            <a href="solar/garden_v0_15_winter_likely_b330.png"><img src="solar/garden_v0_15_winter_likely_b330.png" alt="Likely winter solar heatmap at 330 degrees" loading="lazy"></a>
+            <figcaption><strong>330°</strong><span>Central bearing case</span></figcaption>
+          </figure>
+          <figure class="heatmap-card">
+            <a href="solar/garden_v0_15_winter_likely_b335.png"><img src="solar/garden_v0_15_winter_likely_b335.png" alt="Likely winter solar heatmap at 335 degrees" loading="lazy"></a>
+            <figcaption><strong>335°</strong><span>Upper bearing case</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="summer-feature">
+        <figure class="heatmap-card heatmap-wide">
+          <a href="solar/garden_v0_15_summer_likely_b330.png"><img src="solar/garden_v0_15_summer_likely_b330.png" alt="Likely summer solar heatmap at 330 degrees" loading="lazy"></a>
+          <figcaption><strong>Summer likely · 330°</strong><span>The sixth distinct published R4 solar view.</span></figcaption>
+        </figure>
+        <article class="interpretation-card">
+          <p class="eyebrow">How to read this</p>
+          <h3>Use the bracket, not false precision.</h3>
+          <p>Structural obstructions are treated as opaque. Gum-tree influence is a porous biological sensitivity. The useful result is the range across plausible cases.</p>
+          <a class="button button-dark" href="documents/garden_v0_15_solar_summary.pdf">Read the full solar summary</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section downloads-section" id="downloads" aria-labelledby="downloads-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Take a copy</p>
+        <h2 id="downloads-heading">Documents & useful data</h2>
+        <p>The human-readable PDFs come first. Technical CSV/JSON evidence is available for people who need to inspect the underlying planning outputs.</p>
+      </div>
+
+      <div class="download-grid">
+        <article class="download-card download-featured">
+          <span class="file-badge">ZIP</span>
+          <h3>Sanitised public distribution</h3>
+          <p>A self-contained public copy of this wrapper and its approved assets. This derivative has its own hash and does not replace the frozen R5 share master.</p>
+          <a class="button button-light" href="downloads/garden_v0_15_public_distribution_r5_r1.zip">Download public package</a>
+        </article>
+
+        <article class="download-card">
+          <span class="file-badge">PDF</span>
+          <h3>Project summary</h3>
+          <p>Three pages covering the spatial plan, 3D model and planning disposition.</p>
+          <a class="text-link" href="documents/garden_v0_15_project_summary.pdf">Open PDF <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="download-card">
+          <span class="file-badge">PDF</span>
+          <h3>Solar summary</h3>
+          <p>Four pages covering the scenarios, results, heatmaps and interpretation boundary.</p>
+          <a class="text-link" href="documents/garden_v0_15_solar_summary.pdf">Open PDF <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="download-card">
+          <span class="file-badge">PDF</span>
+          <h3>2D layout</h3>
+          <p>The recipient-friendly garden layout overview.</p>
+          <a class="text-link" href="2d/garden_v0_15_layout_overview.pdf">Open PDF <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+
+      <details class="technical-files">
+        <summary>Technical planning data and validation records</summary>
+        <div class="technical-grid">
+          <a href="data/garden_v0_15_receiver_results_r4.csv"><strong>Receiver results</strong><span>CSV · 5,220 receivers</span></a>
+          <a href="data/garden_v0_15_zone_summary_r4.csv"><strong>Zone summary</strong><span>CSV · planning zones</span></a>
+          <a href="data/garden_v0_15_scenario_comparison_r4.csv"><strong>Scenario comparison</strong><span>CSV · scenario sensitivity</span></a>
+          <a href="data/garden_v0_15_solar_results_r4.json"><strong>Solar results</strong><span>JSON · complete result summary</span></a>
+          <a href="data/garden_v0_15_skyline_envelopes_r4.json"><strong>Skyline envelopes</strong><span>JSON · obstruction brackets</span></a>
+          <a href="records/garden_v0_15_final_planning_disposition_r4.md"><strong>Planning disposition</strong><span>Markdown · approved claim boundary</span></a>
+          <a href="records/garden_v0_15_public_web_wrapper_manifest_r1.json"><strong>Public manifest</strong><span>JSON · publication identity</span></a>
+          <a href="records/SHA256SUMS.txt"><strong>SHA-256 ledger</strong><span>Text · public file checksums</span></a>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Garden planning package</strong>
+      <p>Planning material, not survey, construction, fabrication or purchasing documentation.</p>
+    </div>
+    <div class="footer-status">
+      <span>Protected geometry unchanged</span>
+      <span>No solar rerun</span>
+      <span>ordering_ready=false</span>
+    </div>
+  </footer>
+</body>
+</html>

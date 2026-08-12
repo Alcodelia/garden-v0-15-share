@@ -1,0 +1,128 @@
+{
+  "blender_version": "5.2.0 LTS",
+  "checks": {
+    "comparison_csv_expected_row_count": true,
+    "exact_twelve_case_set": true,
+    "exists_garden_v0_15_final_planning_disposition_r4.md": true,
+    "exists_garden_v0_15_model_inventory_r4.json": true,
+    "exists_garden_v0_15_receiver_results_r4.csv": true,
+    "exists_garden_v0_15_scenario_comparison_r4.csv": true,
+    "exists_garden_v0_15_skyline_envelopes_r4.json": true,
+    "exists_garden_v0_15_solar_results_r4.json": true,
+    "exists_garden_v0_15_zone_summary_r4.csv": true,
+    "fov_double_count_false": true,
+    "gum_scenarios_exact": true,
+    "independent_full_receiver_case_scenario_recalculation_exact": true,
+    "inherited_fingerprint_matches_build_inventory": true,
+    "inherited_object_count_matches": true,
+    "offsite_bracketed_not_blocker": true,
+    "ordering_not_ready": true,
+    "planning_complete_true": true,
+    "protected_garden_v0_13_known_site_solar.blend_exact": true,
+    "protected_garden_v0_13_solar_results_r1.json_exact": true,
+    "protected_garden_v0_13_zone_summary_r1.csv_exact": true,
+    "protected_garden_v0_14_model_inventory_r4.json_exact": true,
+    "protected_garden_v0_14_presentation_master_r4.blend_exact": true,
+    "protected_garden_v0_14_validation_r4.json_exact": true,
+    "protected_garden_v0_15_r3_obstruction_scenario_specification_package.zip_exact": true,
+    "protected_geometry_claim_preserved": true,
+    "protected_v0_14_hash_unchanged_after_validation": true,
+    "r4_blend_hash_unchanged_during_validation": true,
+    "receiver_csv_exact_5220_rows": true,
+    "result_object_exists_5220": true,
+    "result_receiver_coordinates_match_inherited_source": true,
+    "results_pass_true": true,
+    "six_qa_renders_pass": true,
+    "source_receiver_exists_5220": true,
+    "temporary_qa_objects_removed": true,
+    "validator_saved_blend_false": true,
+    "zone_csv_expected_row_count": true
+  },
+  "claim_boundary": "Automated R4 validation proves numeric recomputation, source immutability and QA generation. Human visual review of the six QA images remains required before adopting the presentation of the final planning solar result; ordering readiness remains false.",
+  "created_utc": "2026-08-12T05:26:31.806142+00:00",
+  "errors": [],
+  "final_solar_scope": "SCENARIO_BRACKETED_PLANNING__NOT_SURVEY_GRADE_OFFSITE_GEOMETRY",
+  "human_visual_review_pass": null,
+  "human_visual_review_required": true,
+  "input_blend_sha256_after_validation": "ee40fe77e301b3ba7b96f56c386720fc71661767e9921adf7001991f911c6bbc",
+  "input_blend_sha256_before_validation": "ee40fe77e301b3ba7b96f56c386720fc71661767e9921adf7001991f911c6bbc",
+  "offsite_geometry_bracketed_not_blocker": true,
+  "ordering_ready": false,
+  "package_revision": "R4",
+  "pass": true,
+  "planning_complete": true,
+  "planning_disposition": "PLANNING_SOLAR_COMPLETE_WITH_BRACKETED_OFFSITE_UNCERTAINTY__MATERIAL_SCENARIO_SENSITIVITY_PRESENT",
+  "project_version": "v0.15",
+  "qa_render_error": null,
+  "qa_renders": [
+    {
+      "bytes": 2040430,
+      "dimensions_px": [
+        1200,
+        1800
+      ],
+      "file": "garden_v0_15_qa_winter_baseline_b330_r4.png",
+      "label": "WINTER_BASELINE_B330",
+      "pass": true,
+      "sha256": "8378b83ac9ec921448a4d6b63a885b8987ee41e8724cb78f32e02068c2094f5a"
+    },
+    {
+      "bytes": 2046507,
+      "dimensions_px": [
+        1200,
+        1800
+      ],
+      "file": "garden_v0_15_qa_winter_likely_b330_r4.png",
+      "label": "WINTER_LIKELY_B330",
+      "pass": true,
+      "sha256": "1807c42d8cb02f2a7fb225a774f5c911e104c665702e480db0333d501d2de7a5"
+    },
+    {
+      "bytes": 2030558,
+      "dimensions_px": [
+        1200,
+        1800
+      ],
+      "file": "garden_v0_15_qa_winter_conservative_b330_r4.png",
+      "label": "WINTER_CONSERVATIVE_B330",
+      "pass": true,
+      "sha256": "c6ee40d26d7336d219582554ff1709a762bdee6e77457ac94cca2de777c7e6cc"
+    },
+    {
+      "bytes": 2045263,
+      "dimensions_px": [
+        1200,
+        1800
+      ],
+      "file": "garden_v0_15_qa_winter_likely_b325_r4.png",
+      "label": "WINTER_LIKELY_B325",
+      "pass": true,
+      "sha256": "0de76557774b707bccb73ba51bf9af10797a527948414b3c32b70a3e4618f56a"
+    },
+    {
+      "bytes": 2045301,
+      "dimensions_px": [
+        1200,
+        1800
+      ],
+      "file": "garden_v0_15_qa_winter_likely_b335_r4.png",
+      "label": "WINTER_LIKELY_B335",
+      "pass": true,
+      "sha256": "3ca09742b047c29ea280ff3c30227bc8e82af70942e7dc7cf3d269dbd28b0015"
+    },
+    {
+      "bytes": 2066602,
+      "dimensions_px": [
+        1200,
+        1800
+      ],
+      "file": "garden_v0_15_qa_summer_likely_b330_r4.png",
+      "label": "SUMMER_LIKELY_B330",
+      "pass": true,
+      "sha256": "b78b8d810f24e19465f795defedeacbac2dee1de0d06dfb4cd8930852d9df595"
+    }
+  ],
+  "recalculation_mismatch_count": 0,
+  "recalculation_mismatch_examples": [],
+  "schema": "garden.v0.15.scenario_solar_validation.r4.v1"
+}

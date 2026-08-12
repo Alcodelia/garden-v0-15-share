@@ -1,0 +1,188 @@
+{
+  "schema": "garden-v0.15-public-web-wrapper-r5-r1-1",
+  "created_utc": "2026-08-12T07:28:01.164Z",
+  "publication_status": "PUBLICATION_TARGET_CONFIGURED__PUBLIC_VALIDATION_PENDING",
+  "public_landing_url": "https://alcodelia.github.io/garden-v0-15-share/",
+  "hosting_repository": "https://github.com/Alcodelia/garden-v0-15-share",
+  "published_commit_sha": null,
+  "deployment_identifier": null,
+  "adopted_r5_master": {
+    "filename": "garden_v0_15_final_share_package_r5_r2.zip",
+    "sha256": "a94561ff3bdd61779b4a8f998ad97fb4310926e25752828e05183dd9b984ecfd",
+    "public_download": false,
+    "modified": false
+  },
+  "public_download": {
+    "filename": "garden_v0_15_public_distribution_r5_r1.zip",
+    "sha256": "6da1f323072ee67a948ccdadaf9fdccbb15f17c38e84c606138cfa37fc8c4f5b",
+    "bytes": 38435405,
+    "kind": "sanitised public derivative",
+    "replaces_adopted_r5_master": false
+  },
+  "protected_sources": {
+    "geometry_sha256": "0136226021cb8200be6622a27af4c32e89803258b4125d522d56d5f877a426d0",
+    "solar_result_sha256": "ee40fe77e301b3ba7b96f56c386720fc71661767e9921adf7001991f911c6bbc",
+    "solar_completion_bundle_sha256": "f878a72d76b767e932c5e40a2ebb9e6b9d3b80d27b2eca1cab655c67db3f9701",
+    "geometry_changed": false,
+    "solar_rerun": false
+  },
+  "ordering_ready": false,
+  "files_excluding_this_manifest_and_sha256_ledger": [
+    {
+      "path": ".nojekyll",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "2d/garden_v0_15_layout_overview.pdf",
+      "bytes": 2017895,
+      "sha256": "faafaff688ca265daef0262c206455431fee1b5888e3a33bfe52c42ff0c85f3a"
+    },
+    {
+      "path": "2d/garden_v0_15_layout_overview.png",
+      "bytes": 3047163,
+      "sha256": "f601cc43049cef5706fe09ce6b3b0ad23e703ad51a7638b45b4a3d30235e2c8c"
+    },
+    {
+      "path": "2d/garden_v0_15_true_north.png",
+      "bytes": 3021290,
+      "sha256": "711986fd8d8b7ff6cea5157c96cf3108332b1d08dfdd1168e0f2f7d14b6d0f32"
+    },
+    {
+      "path": "2d/garden_v0_6_existing_site_clean_reference.png",
+      "bytes": 71876,
+      "sha256": "93d77cbb5d9930de8aca092bb99cf64741fef8a7e661903eb7da3f816735ef57"
+    },
+    {
+      "path": "2d/garden_v0_6_existing_site_dimensioned_reference.pdf",
+      "bytes": 36549,
+      "sha256": "6ecaf5be6a7b4fa9706dcf718ec9bf2264cc51d99255f75768dcf7436ca2ff7f"
+    },
+    {
+      "path": "3d/garden_v0_15_3d_model.glb",
+      "bytes": 516552,
+      "sha256": "1edf62216ac360718b0702f1663443c2e14a4521654506c8d84bd09fbf611a73"
+    },
+    {
+      "path": "3d/garden_v0_15_3d_preview.png",
+      "bytes": 2438351,
+      "sha256": "170a57d0c5f5600bd6409cd6e2fa56de419bba202fab7ff1b618053ff1a43404"
+    },
+    {
+      "path": "assets/site.css",
+      "bytes": 13887,
+      "sha256": "8cb969ebed3eedce79ced5ff5e576d69844edd5049cfaf646ceb3ab8187a9ccf"
+    },
+    {
+      "path": "assets/site.js",
+      "bytes": 1011,
+      "sha256": "506814ee8a7071c542f9e73b5dffad17c50f18ec8e4809204e40eca9a7b2af98"
+    },
+    {
+      "path": "data/garden_v0_15_receiver_results_r4.csv",
+      "bytes": 4167502,
+      "sha256": "19da7be115099e073e8a1bba7bdcab6c31c64cb84cb5124ed32bcdb1bb64f68b"
+    },
+    {
+      "path": "data/garden_v0_15_scenario_comparison_r4.csv",
+      "bytes": 13833,
+      "sha256": "27cf2ddfb39e3085a72eaca4391b892f8a3d1d949a081e8aaa481689b80de5c4"
+    },
+    {
+      "path": "data/garden_v0_15_skyline_envelopes_r4.json",
+      "bytes": 15919,
+      "sha256": "2cdf39275573f016dda864a750e2f48c0a6fc417a30500575d1b36a9f22e26d5"
+    },
+    {
+      "path": "data/garden_v0_15_solar_results_r4.json",
+      "bytes": 268507,
+      "sha256": "28fcbf0a11912c02be0abeb19d426b0e83b2becc35ff22340e3aabe2a6b49ad0"
+    },
+    {
+      "path": "data/garden_v0_15_zone_summary_r4.csv",
+      "bytes": 67628,
+      "sha256": "97b6b19b2c6991ff2d87e83c115b0ea347498f62502251fd8f0067b1551aaed4"
+    },
+    {
+      "path": "documents/garden_v0_15_project_summary.pdf",
+      "bytes": 6807032,
+      "sha256": "1a31857e1613fa495a3e0eb0c6ec8a89e6ceb2ff37922ec2aa87e35e3c8a3c85"
+    },
+    {
+      "path": "documents/garden_v0_15_solar_summary.pdf",
+      "bytes": 8265058,
+      "sha256": "2f3728bed97e6efc443f231d245ca5d4d331b90c0550e5ec80a554b91cfced82"
+    },
+    {
+      "path": "downloads/garden_v0_15_public_distribution_r5_r1.zip",
+      "bytes": 38435405,
+      "sha256": "6da1f323072ee67a948ccdadaf9fdccbb15f17c38e84c606138cfa37fc8c4f5b"
+    },
+    {
+      "path": "index.html",
+      "bytes": 16649,
+      "sha256": "000dd658e359d9b76c2b6ce05881e89ddf89eb142e3053b0fe2d4ea2b9976512"
+    },
+    {
+      "path": "PUBLIC-DISTRIBUTION-README.txt",
+      "bytes": 1328,
+      "sha256": "ab3c9bda5fe2737d01a8d617a7000635d525a31508dbe2ec5b2571a81bbb982e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1103,
+      "sha256": "76a20e99382edfbf25d0389a7703caafc1f6c5c59455fa2f86417eca14f0214b"
+    },
+    {
+      "path": "records/garden_v0_15_final_planning_disposition_r4.md",
+      "bytes": 1670,
+      "sha256": "07437cfa6220bede6b703d2002e46c6372e9b941a6093ab053efb6b5896d5886"
+    },
+    {
+      "path": "records/garden_v0_15_public_distribution_manifest_r1.json",
+      "bytes": 6261,
+      "sha256": "fa31b1e9036a1ae843a54a31e8f5b5597e5448616c14f8f8bcea38a516095549"
+    },
+    {
+      "path": "records/garden_v0_15_validation_r4.json",
+      "bytes": 4941,
+      "sha256": "b29eaf89ba90a3fa1ca1efe1f0c4186ce495fd1bab4b18f3e48afbfac7013727"
+    },
+    {
+      "path": "records/PUBLIC-DISTRIBUTION-SHA256SUMS.txt",
+      "bytes": 2979,
+      "sha256": "a504c6e21a937f87361d2ba2c2797ca88f036c268d3785f5018b95f4e5ae0c05"
+    },
+    {
+      "path": "solar/garden_v0_15_summer_likely_b330.png",
+      "bytes": 2066485,
+      "sha256": "2c36a4d6aaab914b99309b6981262c1483bf9310351336923cc047908bae3275"
+    },
+    {
+      "path": "solar/garden_v0_15_winter_baseline_b330.png",
+      "bytes": 2040313,
+      "sha256": "142482266b32bd94761e3ef881a5c19096ef21a5b63293b9f540f8d41615f940"
+    },
+    {
+      "path": "solar/garden_v0_15_winter_conservative_b330.png",
+      "bytes": 2030441,
+      "sha256": "937e971938f2329840fcaee10699a6bf8e6440d6222459505e26adc8e380e216"
+    },
+    {
+      "path": "solar/garden_v0_15_winter_likely_b325.png",
+      "bytes": 2045146,
+      "sha256": "43b05926c86f2808f07b5f3cf8994a1b683903e59b0c87ddeb15d887f49fb3f2"
+    },
+    {
+      "path": "solar/garden_v0_15_winter_likely_b330.png",
+      "bytes": 2046390,
+      "sha256": "4cca8e0d2f75f0417bc79ebf2cffbfd22a642b3d700dc37c23bf35279c043703"
+    },
+    {
+      "path": "solar/garden_v0_15_winter_likely_b335.png",
+      "bytes": 2045184,
+      "sha256": "1624789caafe89ceda7efef7663176c264de52cacbc8823a4ea5a5e9a1d60eff"
+    }
+  ],
+  "file_count_excluding_this_manifest_and_sha256_ledger": 31
+}
