@@ -175,6 +175,46 @@
     calculate(false);
   }
 
+  function initialiseViewModes() {
+    const buttons = Array.from(document.querySelectorAll('[data-view-target]'));
+    if (!buttons.length) return;
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        buttons.forEach((candidate) => candidate.setAttribute('aria-pressed', String(candidate === button)));
+        const target = document.getElementById(button.dataset.viewTarget);
+        if (!target) return;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      });
+    });
+  }
+
+  function initialiseSolarExplorer() {
+    const season = document.querySelector('#solar-season');
+    const scenario = document.querySelector('#solar-scenario');
+    const image = document.querySelector('#solar-explorer-image');
+    const link = document.querySelector('#solar-explorer-link');
+    const status = document.querySelector('#solar-explorer-status');
+    if (!season || !scenario || !image || !link || !status) return;
+
+    function update() {
+      const seasonLabel = season.options[season.selectedIndex].text;
+      const scenarioLabel = scenario.options[scenario.selectedIndex].text;
+      const path = `solar/v0_18/garden_v0_18_solar_${season.value}_${scenario.value}_b330_r1.png`;
+      image.src = path;
+      image.alt = `${seasonLabel} ${scenarioLabel.toLowerCase()} R4 solar heatmap at B330 with G1, G2, lemon, mandarin, lime and Rhizome bed markers`;
+      link.href = path;
+      status.textContent = `${seasonLabel} · ${scenarioLabel.toLowerCase()} · central B330 bearing`;
+    }
+
+    season.addEventListener('change', update);
+    scenario.addEventListener('change', update);
+    image.addEventListener('error', () => { status.textContent = 'Selected static heatmap unavailable — use the scenario figures below'; });
+    update();
+  }
+
   initialiseViewer();
   initialiseCalculator();
+  initialiseViewModes();
+  initialiseSolarExplorer();
 })();

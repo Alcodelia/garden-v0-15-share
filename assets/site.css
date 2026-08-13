@@ -402,6 +402,69 @@ footer p { max-width: 550px; margin: 7px 0 0; }
 .footer-status { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 .footer-status span { padding: 6px 9px; border: 1px solid var(--line); border-radius: 999px; }
 
+.view-mode-section { padding-bottom: 34px; }
+.view-mode-switcher {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.view-mode-switcher button {
+  display: flex;
+  min-height: 150px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: var(--shadow);
+}
+.view-mode-switcher button[aria-pressed="true"] { color: var(--white); background: var(--forest); border-color: var(--forest); }
+.view-mode-switcher button > span { color: var(--clay); font-family: Georgia, serif; }
+.view-mode-switcher button > strong { margin-top: auto; font-size: 1.18rem; }
+.view-mode-switcher button > small { margin-top: 5px; color: var(--muted); }
+.view-mode-switcher button[aria-pressed="true"] > small { color: rgba(255, 255, 255, 0.7); }
+
+.realistic-section {
+  width: 100%;
+  padding-inline: max(22px, calc((100vw - 1180px) / 2));
+  background: #e1e7dc;
+}
+.evidence-badge { padding: 8px 12px; color: var(--forest); background: #cbd8c2; border-radius: 999px; font-size: 0.8rem; font-weight: 800; }
+.realistic-intro { max-width: 850px; margin: -18px 0 34px; color: var(--muted); font-size: 1.05rem; }
+.realistic-hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.realistic-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+.realistic-gallery .media-card img { aspect-ratio: 14 / 9; object-fit: cover; }
+.reality-boundary { margin-top: 18px; padding: 18px 20px; color: var(--forest-deep); background: #cbd8c2; border-radius: 13px; }
+
+.solar-explorer {
+  display: grid;
+  grid-template-columns: 0.62fr 1.38fr;
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 20px;
+  padding: 18px;
+  color: var(--white);
+  background: var(--forest-deep);
+  border-radius: var(--radius);
+}
+.solar-explorer-controls { display: flex; flex-direction: column; padding: 24px; }
+.solar-explorer-controls .eyebrow { color: #b8c9aa; }
+.solar-explorer-controls h3 { margin-bottom: 12px; font-family: Georgia, serif; font-size: 2rem; font-weight: 500; }
+.solar-explorer-controls > p:not(.eyebrow) { color: rgba(255, 255, 255, 0.7); }
+.solar-explorer-controls label { display: grid; gap: 6px; margin-top: 14px; font-size: 0.82rem; font-weight: 800; }
+.solar-explorer-controls select { min-height: 46px; padding: 8px 10px; color: var(--ink); background: var(--white); border: 0; border-radius: 8px; }
+.solar-explorer-status { margin: auto 0 0 !important; padding-top: 22px; font-weight: 800; }
+.solar-explorer > a { display: grid; overflow: hidden; place-items: center; background: #101b18; border-radius: 14px; }
+.solar-explorer img { width: 100%; max-height: 760px; object-fit: contain; }
+.location-summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 54px; }
+.location-summary-grid article { min-height: 156px; padding: 20px; background: var(--white); border: 1px solid var(--line); border-radius: 14px; }
+.location-summary-grid strong { color: var(--forest); font-size: 1.1rem; }
+.location-summary-grid p { margin: 10px 0 0; color: var(--muted); font-size: 0.9rem; }
+
 @media (max-width: 940px) {
   .authority-strip { grid-template-columns: repeat(2, 1fr); }
   .boundary-grid { grid-template-columns: repeat(2, 1fr); }
@@ -411,6 +474,8 @@ footer p { max-width: 550px; margin: 7px 0 0; }
   .group-label { position: static; }
   .technical-grid { grid-template-columns: repeat(2, 1fr); }
   .calculator { grid-template-columns: 1fr; }
+  .solar-explorer { grid-template-columns: 1fr; }
+  .location-summary-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -439,6 +504,10 @@ footer p { max-width: 550px; margin: 7px 0 0; }
   .download-grid { grid-template-columns: 1fr; }
   .download-featured { min-height: 310px; grid-row: auto; }
   .technical-grid { grid-template-columns: 1fr; }
+  .view-mode-switcher { grid-template-columns: 1fr; }
+  .view-mode-switcher button { min-height: 124px; }
+  .realistic-gallery { grid-template-columns: 1fr; }
+  .location-summary-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; }
   .footer-status { justify-content: flex-start; }
 }
