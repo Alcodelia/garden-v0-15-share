@@ -4,7 +4,27 @@
   function initialiseViewer() {
     const status = document.querySelector('#viewer-status');
     const viewer = document.querySelector('#garden-viewer');
+    const hotspot = viewer && viewer.querySelector('[slot="hotspot-rhizome"]');
     if (!status || !viewer) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const compactViewer = window.matchMedia('(max-width: 720px)').matches;
+    viewer.setAttribute('camera-orbit', compactViewer ? '38deg 58deg 27m' : '38deg 58deg 18.5m');
+    if (reduceMotion) {
+      viewer.setAttribute('interaction-prompt', 'none');
+    }
+
+    function recordViewerState(event) {
+      window.GARDEN_VIEWER_QA = {
+        cameraChangeSource: event && event.detail ? event.detail.source : null,
+        orbit: viewer.getAttribute('camera-orbit'),
+        target: viewer.getAttribute('camera-target'),
+        fieldOfView: viewer.getAttribute('field-of-view'),
+        reducedMotion: reduceMotion,
+        source: viewer.getAttribute('src'),
+        hotspotPosition: hotspot ? hotspot.dataset.position : null
+      };
+    }
 
     const fallback = window.setTimeout(() => {
       if (!customElements.get('model-viewer')) {
@@ -23,7 +43,20 @@
       status.textContent = 'Interactive model loaded';
       status.classList.remove('fallback');
       status.classList.add('ready');
+      recordViewerState();
     });
+
+    viewer.addEventListener('camera-change', recordViewerState);
+
+    if (hotspot) {
+      hotspot.addEventListener('click', () => {
+        viewer.setAttribute('camera-target', '5.05m 0.34m -8.25m');
+        viewer.setAttribute('camera-orbit', '25deg 70deg 4.2m');
+        viewer.setAttribute('field-of-view', '30deg');
+        status.textContent = 'Rhizome bed focused';
+        if (reduceMotion && viewer.jumpCameraToGoal) viewer.jumpCameraToGoal();
+      });
+    }
 
     viewer.addEventListener('error', () => {
       status.textContent = 'Interactive model unavailable — use the static preview or GLB link';

@@ -350,8 +350,14 @@ figcaption span { color: var(--muted); font-size: 0.9rem; }
 .viewer-status.fallback { color: #efc6ae; }
 .viewer-shell { overflow: hidden; background: #dfe3dc; border-radius: var(--radius); }
 model-viewer { display: block; width: 100%; height: min(72vh, 760px); min-height: 520px; background: #e3e6e0; }
-.viewer-hotspot { padding: 8px 11px; color: var(--white); background: var(--forest-deep); border: 2px solid var(--white); border-radius: 999px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28); cursor: pointer; font-size: 0.78rem; font-weight: 800; }
+.viewer-hotspot { position: relative; width: 20px; height: 20px; padding: 0; color: var(--white); background: var(--forest-deep); border: 2px solid var(--white); border-radius: 50%; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28); cursor: pointer; }
 .viewer-hotspot::after { position: absolute; width: 2px; height: 24px; left: 50%; top: 100%; content: ""; background: var(--white); }
+.viewer-hotspot-label { position: absolute; left: 50%; bottom: calc(100% + 10px); width: max-content; max-width: min(180px, 60vw); padding: 7px 10px; color: var(--white); background: var(--forest-deep); border: 2px solid var(--white); border-radius: 999px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28); font-size: 0.78rem; font-weight: 800; line-height: 1.2; opacity: 0; pointer-events: none; transform: translate(-50%, 4px); transition: opacity 140ms ease, transform 140ms ease, visibility 0s linear 140ms; visibility: hidden; }
+.viewer-hotspot:focus-visible .viewer-hotspot-label,
+.viewer-hotspot:active .viewer-hotspot-label { opacity: 1; transform: translate(-50%, 0); transition-delay: 0s; visibility: visible; }
+@media (hover: hover) and (pointer: fine) {
+  .viewer-hotspot:hover .viewer-hotspot-label { opacity: 1; transform: translate(-50%, 0); transition-delay: 0s; visibility: visible; }
+}
 .viewer-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 20px; }
 .viewer-footer p { max-width: 670px; margin: 0; color: rgba(255, 255, 255, 0.66); font-size: 0.91rem; }
 .noscript-note { color: #efc6ae; }

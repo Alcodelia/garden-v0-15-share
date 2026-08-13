@@ -1,0 +1,169 @@
+{
+  "schema": "garden.v0.18.r5.viewer_validation",
+  "generated_at": "2026-08-14T08:12:06.4650225+10:00",
+  "status": "R5_VIEWER_CLEANUP_PASS__R4_MODEL_BYTES_PRESERVED__RHIZOME_HOTSPOT_NON_PERSISTENT__AWAITING_FINAL_HUMAN_VIEWER_APPROVAL",
+  "human_viewer_judgement": {
+    "status": "PENDING",
+    "reviewer": "Dav",
+    "local_url": "http://127.0.0.1:8765/#model",
+    "automated_qa_is_not_human_approval": true
+  },
+  "repository_preflight": {
+    "branch": "codex/garden-v0.18-r2-glb-visual-repair",
+    "head": "b6d05428c082c7652506a5f0bbf650fd14f67cd8",
+    "status_attributed_to_inherited_r4_work": [
+      "M assets/site.js",
+      "M index.html",
+      "?? 3d/garden_v0_18_external_context_model_r2.glb",
+      "?? 3d/garden_v0_18_primary_interactive_model_r2.glb",
+      "?? 3d/garden_v0_18_primary_interactive_model_r3.glb",
+      "?? 3d/garden_v0_18_primary_interactive_model_r4.glb",
+      "?? realistic/garden_v0_18_left_side_perspective_r2.png",
+      "?? realistic/garden_v0_18_left_side_perspective_r3.png",
+      "?? realistic/garden_v0_18_left_side_perspective_r4.png",
+      "?? realistic/garden_v0_18_local_top_down_r2.png",
+      "?? realistic/garden_v0_18_patio_perspective_r2.png",
+      "?? realistic/garden_v0_18_rear_garden_perspective_r2.png",
+      "?? realistic/garden_v0_18_rhizome_bed_close_r2.png",
+      "?? realistic/garden_v0_18_right_service_perspective_r2.png",
+      "?? realistic/garden_v0_18_true_north_r2.png"
+    ]
+  },
+  "implementation": {
+    "control_layers_before_r5": {
+      "html": "button, hotspot slot/position/normal, accessible name and visible span text",
+      "css": "permanently visible pill presentation",
+      "javascript": "activation camera target/orbit/field-of-view and viewer QA state"
+    },
+    "r5_change": "Retained the hotspot button and R4 activation logic; changed the presentation to a 20 px marker with an aria-hidden visual label revealed by fine-pointer hover, keyboard focus-visible, or the brief active interaction state.",
+    "r5_source_files_changed": [
+      "index.html",
+      "assets/site.css"
+    ],
+    "r5_source_files_inspected_but_not_changed": [
+      "assets/site.js"
+    ],
+    "hotspot_position": "5.05m 0.34m -8.25m",
+    "hotspot_normal": "0m 1m 0m",
+    "accessible_name": "Rhizome bed location",
+    "element": "BUTTON",
+    "tab_index": 0
+  },
+  "protected_assets": {
+    "r4_primary_glb": {
+      "path": "3d/garden_v0_18_primary_interactive_model_r4.glb",
+      "expected_sha256": "37721f8b5d4c650cc4314a90f31887998cbbe080acff58c81fd2980562d06845",
+      "preflight_sha256": "37721f8b5d4c650cc4314a90f31887998cbbe080acff58c81fd2980562d06845",
+      "final_sha256": "37721f8b5d4c650cc4314a90f31887998cbbe080acff58c81fd2980562d06845",
+      "byte_identical": true
+    },
+    "r2_context_glb": {
+      "path": "3d/garden_v0_18_external_context_model_r2.glb",
+      "expected_sha256_from_r4_validation": "31a107097f98672d9686931904babdd6723d0edb54cc7a7175faecf157b6f27c",
+      "preflight_sha256": "31a107097f98672d9686931904babdd6723d0edb54cc7a7175faecf157b6f27c",
+      "final_sha256": "31a107097f98672d9686931904babdd6723d0edb54cc7a7175faecf157b6f27c",
+      "byte_identical": true
+    },
+    "model_asset_status_entries_unchanged_from_preflight": true,
+    "solar_git_status_and_diff_empty": true,
+    "model_or_solar_assets_written_by_r5": false
+  },
+  "browser_qa": {
+    "browser": "Codex in-app browser",
+    "desktop_1280x900": {
+      "viewer_status": "Interactive model loaded",
+      "viewer_source": "3d/garden_v0_18_primary_interactive_model_r4.glb",
+      "default_label": {"opacity": "0", "visibility": "hidden"},
+      "marker_px": {"width": 20, "height": 20},
+      "hover_label": {"opacity": "1", "visibility": "visible"},
+      "hover_leave_label": {"opacity": "0", "visibility": "hidden"},
+      "keyboard_focus": {"active_element": "BUTTON", "accessible_name": "Rhizome bed location", "label_visibility": "visible"},
+      "focus_leave_label": {"opacity": "0", "visibility": "hidden"},
+      "activation": {"status": "Rhizome bed focused", "camera_target": "5.05m 0.34m -8.25m", "camera_orbit": "25deg 70deg 4.2m", "field_of_view": "30deg"},
+      "orbit_visual_sha256": {"before": "f3bacd929b428fd124d94a863c6cc7badec6a7a7a52b5d876c2b78a1abe457b6", "after": "199c03c8460072360073f7c44aba2308b21f007c896ea8047868e3ce763df8b9", "changed": true},
+      "zoom_visual_sha256": {"before": "199c03c8460072360073f7c44aba2308b21f007c896ea8047868e3ce763df8b9", "after": "f6bcf086268bee09bf20418350740c9c8273f10a0d9af384de7e8782a75296c6", "changed": true},
+      "page_scroll_y_during_control_test": {"before": 8206.3330078125, "after_orbit": 8206.3330078125, "after_zoom": 8206.3330078125},
+      "horizontal_overflow": {"inner_width": 1280, "document_scroll_width": 1265, "present": false},
+      "console_warnings_or_errors": []
+    },
+    "compact_360x800": {
+      "viewer_status": "Interactive model loaded",
+      "viewer_source": "3d/garden_v0_18_primary_interactive_model_r4.glb",
+      "compact_camera_orbit_attribute": "38deg 58deg 27m",
+      "default_label": {"opacity": "0", "visibility": "hidden"},
+      "marker_px": {"width": 20, "height": 20},
+      "intentional_activation": {"status": "Rhizome bed focused", "label_visibility_during_focus": "visible"},
+      "ordinary_model_navigation_after_activation": {"hotspot_focused": false, "label_visibility": "hidden"},
+      "horizontal_overflow": {"inner_width": 360, "document_scroll_width": 345, "present": false},
+      "console_warnings_or_errors": [],
+      "touch_note": "The viewport control verifies the compact responsive presentation but retains a fine pointer. Hardware-touch safety is additionally established by limiting hover rules to (hover: hover) and (pointer: fine), using only :active/:focus-visible for intentional disclosure, and verifying dismissal when ordinary model navigation removes focus."
+    }
+  },
+  "static_and_regression_qa": {
+    "javascript_syntax": {"command": "node --check assets\\site.js", "pass": true},
+    "calculator_syntax": {"command": "node --check assets\\calculator-core.js", "pass": true},
+    "diff_whitespace": {"command": "git diff --check", "pass": true},
+    "calculator_regression": {"command": "node --test garden_v0_16\\tests\\calculator.test.cjs", "tests": 1, "passed": 1, "failed": 0},
+    "local_http": {
+      "base_url": "http://127.0.0.1:8765/",
+      "checked_endpoints": 6,
+      "all_http_200": true,
+      "primary_glb_direct_http_200": true,
+      "context_glb_direct_http_200": true
+    },
+    "static_fallback_preserved": true,
+    "direct_r4_glb_download_preserved": true,
+    "reduced_motion_css_preserved": true,
+    "reduced_motion_javascript_preserved": true,
+    "r4_camera_framing_attributes_changed_by_r5": false,
+    "r4_activation_javascript_changed_by_r5": false
+  },
+  "automated_check_summary": {
+    "total": 36,
+    "passed": 36,
+    "failed": 0
+  },
+  "checks": {
+    "r4_primary_glb_hash_exact": true,
+    "r2_context_glb_hash_exact": true,
+    "model_asset_status_unchanged_from_preflight": true,
+    "solar_status_and_diff_clean": true,
+    "no_model_or_solar_asset_written": true,
+    "hotspot_position_unchanged": true,
+    "hotspot_normal_unchanged": true,
+    "hotspot_accessible_name_present": true,
+    "hotspot_keyboard_focusable": true,
+    "desktop_default_label_hidden": true,
+    "desktop_marker_discoverable": true,
+    "desktop_hover_label_visible": true,
+    "desktop_hover_leave_label_hidden": true,
+    "desktop_keyboard_focus_label_visible": true,
+    "desktop_focus_leave_label_hidden": true,
+    "desktop_hotspot_activation_works": true,
+    "activation_camera_target_preserved": true,
+    "desktop_model_orbit_works": true,
+    "desktop_model_zoom_works": true,
+    "desktop_control_test_did_not_scroll_page": true,
+    "desktop_no_horizontal_overflow": true,
+    "desktop_no_console_warnings_or_errors": true,
+    "compact_rule_applied": true,
+    "compact_default_label_hidden": true,
+    "compact_marker_discoverable": true,
+    "compact_activation_may_reveal_label_during_focus": true,
+    "compact_ordinary_navigation_hides_label": true,
+    "compact_no_horizontal_overflow": true,
+    "compact_no_console_warnings_or_errors": true,
+    "fine_pointer_hover_rule_is_touch_safe": true,
+    "direct_r4_glb_http_200": true,
+    "static_fallback_preserved": true,
+    "reduced_motion_behavior_preserved": true,
+    "viewer_javascript_syntax_pass": true,
+    "repository_diff_check_pass": true,
+    "calculator_regression_pass": true
+  },
+  "evidence": {
+    "desktop_default": {"path": "records/garden_v0_18_r5_viewer_desktop_default_1280x900.png", "sha256": "6eb8f74c9b955111a6bff5c39212306372b5c14ce4eb08dc546713668f657bf8"},
+    "desktop_hover": {"path": "records/garden_v0_18_r5_viewer_desktop_hover_1280x900.png", "sha256": "5dbc738b515a7f31a1021109899efc10960ba8c4f7cce3e6df83d8d20584b3e4"},
+    "compact_default": {"path": "records/garden_v0_18_r5_viewer_mobile_default_360x800.png", "sha256": "b31b817d97b4ba7bfe268b231c8186a11a0e9a019c84022878a0188a74406ef2"}
+  }
+}
