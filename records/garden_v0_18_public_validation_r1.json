@@ -1,6 +1,6 @@
 {
   "schema": "garden.v0.18.public_validation.r1",
-  "status": "PASS_LOCAL__LIVE_PENDING",
+  "status": "PASS__HUMAN_VISUAL_PENDING",
   "checks": {
     "all_local_links_resolve": true,
     "glb_v2_header_and_length_pass": true,
@@ -81,6 +81,16 @@
     "console_warnings_or_errors": [],
     "human_checkpoint": "PENDING_USER_REVIEW"
   },
-  "live_qa": "PENDING_PUBLICATION",
+  "live_qa": {
+    "status": "PASS",
+    "base_url": "https://alcodelia.github.io/garden-v0-15-share/",
+    "source_publication_commit": "4ac9d6bc5f07f269066a28889998398a2f6ece79",
+    "all_manifest_file_hashes_match_live": true,
+    "index_resource_count": 39,
+    "all_index_local_resources_http_200": true,
+    "live_glb_v2_header_and_length_pass": true,
+    "live_public_zip_crc_pass": true,
+    "unauthenticated": true
+  },
   "human_visual_approval": false
 }
