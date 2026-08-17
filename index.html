@@ -1,288 +1,148 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js" data-mode="presentation" data-data-status="loading">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Garden v0.18 R1: protected layout, photo-grounded realistic presentation, interactive 3D and adopted R4 solar planning evidence.">
-  <title>Garden v0.18 — Plan, Realistic Presentation & Solar Evidence</title>
-  <link rel="stylesheet" href="assets/site.css?v=0.18-r5">
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
-  <script defer src="assets/calculator-core.js?v=0.18-r1"></script>
-  <script defer src="assets/regions-v0-16.js?v=0.18-r1"></script>
-  <script defer src="assets/site.js?v=0.18-r2-3"></script>
+  <meta name="description" content="Explore the complete garden layout, finished views, compact 3D model and likely seasonal sunlight, or open Calculator mode for assumptions and quantities.">
+  <title>Garden design — Layout, 3D and seasonal sun</title>
+  <link rel="stylesheet" href="assets/site.css?v=0.21-r2">
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <script type="module" src="assets/vendor/model-viewer-4.3.1.min.js?v=4.3.1-r1"></script>
+  <script defer src="assets/material-profiles.js?v=0.21-r1"></script>
+  <script defer src="assets/calculator-core.js?v=0.21-r1"></script>
+  <script defer src="assets/site-data.js?v=0.21-r2"></script>
+  <script defer src="assets/site.js?v=0.21-r2"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
+  <p class="sr-only" id="mode-status" role="status" aria-live="polite"></p>
 
-  <header class="hero">
+  <header class="hero" data-section-key="overview">
     <nav class="topbar" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Garden planning home">
+      <a class="brand" href="#top" aria-label="Garden plan home">
         <span class="brand-mark" aria-hidden="true">G</span>
-        <span>Garden planning</span>
+        <span>Garden plan</span>
       </a>
-      <div class="nav-links">
-        <a href="#layout">Plan</a>
-        <a href="#realistic">Realistic</a>
-        <a href="#calculator">Calculator</a>
-        <a href="#model">3D model</a>
-        <a href="#solar">Solar</a>
-        <a href="#downloads">Downloads</a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+        Sections
+      </button>
+
+      <div class="nav-links" id="primary-nav">
+        <a href="#top" data-nav-key="overview">Overview</a>
+        <a href="#layout" data-nav-key="layout">Layout</a>
+        <a href="#realistic" data-nav-key="realistic" data-mode-only="presentation">Finished views</a>
+        <a href="#model" data-nav-key="model">3D explore</a>
+        <a href="#solar" data-nav-key="solar">Sun &amp; shade</a>
+        <a href="#calculator" data-nav-key="materials" data-mode-only="calculator">Material quantities</a>
+        <a href="#downloads" data-nav-key="downloads">Plans</a>
       </div>
+
+      <fieldset class="mode-control" aria-describedby="mode-control-note">
+        <legend>Website view</legend>
+        <label>
+          <input type="radio" name="website-view" value="presentation" checked>
+          <span>Presentation</span>
+        </label>
+        <label>
+          <input type="radio" name="website-view" value="calculator">
+          <span>Calculator</span>
+        </label>
+      </fieldset>
+      <span class="sr-only" id="mode-control-note">Choose the garden presentation or reveal the technical calculator and supporting evidence.</span>
     </nav>
 
     <div class="hero-content" id="top">
-      <p class="eyebrow">Garden v0.18 R1 · photo-grounded reality release</p>
-      <h1>See the plan.<br><span>Understand the reality.</span></h1>
-      <p class="hero-lede">Move clearly between protected plan geometry, a photo-grounded realistic presentation and the unchanged v0.15 R4 solar authority. The original private photographs are not published.</p>
+      <p class="eyebrow" id="hero-eyebrow">A complete backyard plan</p>
+      <h1 id="hero-heading">A garden designed to work as a whole</h1>
+      <p class="hero-lede" id="hero-lede">See the complete layout, the finished garden character and the useful sunlight each part is likely to receive through the year.</p>
 
-      <div class="action-grid" aria-label="Main actions">
-        <a class="action-card action-primary" href="#layout">
-          <span class="action-number">01</span>
-          <strong>View 2D layout</strong>
-          <span>See the restored rear/right Rhizome bed</span>
+      <div class="hero-actions" data-mode-only="presentation" aria-label="Start exploring">
+        <a class="hero-action hero-action-primary" href="#layout">
+          <span class="action-kicker">Start here</span>
+          <strong>See the complete garden plan</strong>
+          <span>Understand the whole site from above</span>
         </a>
-        <a class="action-card action-calculator" href="#calculator">
-          <span class="action-number">02</span>
-          <strong>Calculate materials</strong>
-          <span>Use source geometry, depth and explicit allowances</span>
+        <a class="hero-action" href="#realistic">
+          <span class="action-kicker">Garden character</span>
+          <strong>See the finished views</strong>
+          <span>Explore the design from ground level</span>
         </a>
-        <a class="action-card" href="#model">
-          <span class="action-number">03</span>
-          <strong>Explore interactive 3D</strong>
-          <span>Orbit, zoom and locate the Rhizome bed</span>
-        </a>
-        <a class="action-card" href="#solar">
-          <span class="action-number">04</span>
-          <strong>Review solar evidence</strong>
-          <span>Read the adopted R4 scenarios; no rerun</span>
-        </a>
-        <a class="action-card" href="documents/garden_v0_16_project_summary.pdf">
-          <span class="action-number">05</span>
-          <strong>Read project summary</strong>
-          <span>Authority, geometry and ordering boundaries</span>
-        </a>
-        <a class="action-card action-download" href="#downloads">
-          <span class="action-number">06</span>
-          <strong>Download documents & data</strong>
-          <span>PDFs, validation, manifests and public package</span>
+        <a class="hero-action" href="#solar">
+          <span class="action-kicker">Through the year</span>
+          <strong>See sun and shade</strong>
+          <span>Compare all four likely seasonal views</span>
         </a>
       </div>
 
-      <div class="status-row" aria-label="Project status">
-        <span class="status status-good">Spatial authority: v0.16 R1 unchanged</span>
-        <span class="status status-good">Realistic presentation: v0.18 R1</span>
-        <span class="status">Solar authority: v0.15 R4 unchanged</span>
-        <span class="status status-good">Inherited geometry fingerprint-identical</span>
-        <span class="status status-warn">Ordering readiness is region/item-specific</span>
+      <div class="hero-actions hero-actions-technical" data-mode-only="calculator" aria-label="Technical destinations">
+        <a class="hero-action" href="#layout"><strong>Layout &amp; geometry</strong><span>Orientation, sources and feature detail</span></a>
+        <a class="hero-action" href="#calculator"><strong>Material quantities</strong><span>Supported profiles, units, assumptions and results</span></a>
+        <a class="hero-action" href="#model"><strong>3D &amp; appearance</strong><span>Shared model and presentation context</span></a>
+        <a class="hero-action" href="#solar"><strong>Solar analysis</strong><span>Scenarios, values and uncertainty</span></a>
+        <a class="hero-action" href="#downloads"><strong>Evidence &amp; downloads</strong><span>Documents, data and validation</span></a>
       </div>
+
+      <p class="hero-boundary" data-caveat-key="global">Use this site to understand and plan the garden. Confirm dimensions, products and site conditions before building or buying materials.</p>
     </div>
   </header>
 
   <main id="main">
-    <section class="section intro-section" aria-labelledby="what-this-is">
+    <section class="section intro-section" data-section-key="overview" aria-labelledby="what-this-is">
+      <span class="anchor-alias" id="views" aria-hidden="true"></span>
       <div class="section-heading">
-        <p class="eyebrow">Before you begin</p>
-        <h2 id="what-this-is">What this material means</h2>
+        <p class="eyebrow" data-mode-only="presentation">A clear final design</p>
+        <p class="eyebrow" data-mode-only="calculator">Authority and use boundary</p>
+        <h2 id="what-this-is" data-heading-key="overview">How the design comes together</h2>
       </div>
-      <div class="authority-strip" aria-label="Version and evidence authority">
-        <div><span>Spatial authority</span><strong>Garden v0.16 R1</strong><small>Protected geometry unchanged</small></div>
-        <div><span>Reality presentation</span><strong>Garden v0.18 R1</strong><small>Photo-grounded, non-dimensional</small></div>
-        <div><span>Solar authority</span><strong>Garden v0.15 R4</strong><small>Adopted unchanged; no rerun</small></div>
-        <div><span>Privacy boundary</span><strong>16 originals local only</strong><small>No raw photos or EXIF published</small></div>
-      </div>
-      <div class="boundary-grid">
-        <article>
-          <span class="boundary-icon" aria-hidden="true">↗</span>
-          <h3>Orientation</h3>
-          <p>The rear bearing is approximately <strong>330° true ±5°</strong>. The solar work checks the 325°, 330° and 335° orientation bracket.</p>
-        </article>
-        <article>
-          <span class="boundary-icon" aria-hidden="true">◐</span>
-          <h3>Off-site uncertainty</h3>
-          <p>Nearby structures and trees are represented as <strong>scenario brackets</strong>, not as invented or surveyed off-site geometry.</p>
-        </article>
-        <article>
-          <span class="boundary-icon" aria-hidden="true">♧</span>
-          <h3>Gum scenarios</h3>
-          <p>Gum-tree cases are uncertainty tests using porous-canopy assumptions. They are <strong>not surveyed tree models</strong>.</p>
-        </article>
-        <article>
-          <span class="boundary-icon" aria-hidden="true">✓</span>
-          <h3>Appropriate use</h3>
-          <p>The results are suitable for <strong>garden planning</strong>. They are not survey, construction, fabrication or purchasing documentation.</p>
-        </article>
-      </div>
-      <p class="ordering-banner"><strong>Planning estimates are not ordering approval.</strong> Each calculator region states its own evidence and readiness. The Rhizome bed footprint is exact in plan, while Corten height, thickness and product choice remain unresolved.</p>
-    </section>
 
-    <section class="section view-mode-section" id="views" aria-labelledby="views-heading">
-      <div class="section-heading">
-        <p class="eyebrow">Three complementary views</p>
-        <h2 id="views-heading">Plan · realistic · solar</h2>
-        <p>The plan controls positions and dimensions. The realistic view communicates observed colour, surfaces and labelled presentation planting. Solar remains the separately adopted numerical authority.</p>
+      <div class="intro-public" data-mode-only="presentation">
+        <p class="section-lede">The design brings the patio, lawn, growing beds, existing citrus, service access and curved feature bed into one clear backyard plan. The top-down layout explains where everything belongs; finished views, compact 3D exploration and seasonal maps add useful context.</p>
+        <div class="plain-facts" aria-label="Garden design summary">
+          <article><span aria-hidden="true">01</span><h3>One connected layout</h3><p>Every main garden area is shown together, so circulation, growing space and everyday use can be understood as one plan.</p></article>
+          <article><span aria-hidden="true">02</span><h3>Grounded in the real site</h3><p>Familiar surfaces, garden direction and existing citrus help the finished views read as this backyard rather than a generic concept.</p></article>
+          <article><span aria-hidden="true">03</span><h3>Seasonal light in context</h3><p>Four likely maps compare useful light through the year while keeping nearby-tree and building uncertainty honest.</p></article>
+        </div>
       </div>
-      <div class="view-mode-switcher" role="group" aria-label="Choose a garden evidence view">
-        <button type="button" data-view-target="layout" aria-pressed="true"><span>01</span><strong>Protected plan</strong><small>Authoritative geometry</small></button>
-        <button type="button" data-view-target="realistic" aria-pressed="false"><span>02</span><strong>Realistic presentation</strong><small>Photo-grounded appearance</small></button>
-        <button type="button" data-view-target="solar" aria-pressed="false"><span>03</span><strong>Solar evidence</strong><small>R4 scenarios and locations</small></button>
+
+      <div class="technical-overview" data-mode-only="calculator">
+        <p class="section-lede">The site combines protected planned geometry, the accepted R4 interactive model, photo-grounded appearance context, the adopted R4 solar analysis and one shared material-calculation function.</p>
+        <div class="authority-strip" aria-label="Version and evidence authority">
+          <div><span>Spatial authority</span><strong>Garden v0.16 R1</strong><small>Protected geometry unchanged</small></div>
+          <div><span>Appearance context</span><strong>Garden v0.18 R4/R5</strong><small>Photo-grounded, non-dimensional</small></div>
+          <div><span>Solar authority</span><strong>Garden v0.15 R4</strong><small>Adopted unchanged; no rerun</small></div>
+          <div><span>Privacy boundary</span><strong>Public derivatives only</strong><small>No raw photographs or EXIF</small></div>
+        </div>
+        <div class="boundary-grid">
+          <article><span class="boundary-icon" aria-hidden="true">↗</span><h3>Orientation</h3><p>The rear bearing is approximately <strong>330° true ±5°</strong>; B325, B330 and B335 cases retain that uncertainty.</p></article>
+          <article><span class="boundary-icon" aria-hidden="true">◐</span><h3>Off-site uncertainty</h3><p>Nearby structures and trees are represented as scenario brackets, not surveyed off-site geometry.</p></article>
+          <article><span class="boundary-icon" aria-hidden="true">♧</span><h3>Gum scenarios</h3><p>Gum cases use porous biological occupancy assumptions and are not surveyed tree models.</p></article>
+          <article><span class="boundary-icon" aria-hidden="true">✓</span><h3>Appropriate use</h3><p>The outputs are garden-planning evidence, not survey, construction, fabrication or purchasing authority.</p></article>
+        </div>
+        <details class="project-status">
+          <summary>Project status and evidence boundary</summary>
+          <p>The interactive model is the accepted R4 primary GLB. R5 changed only the Rhizome hotspot presentation. Region areas come from the published v0.16 manifest; solar scenarios and values come from the unchanged v0.15 R4 records.</p>
+          <p>Ordering readiness remains region- and item-specific. The Rhizome bed plan footprint is exact while edging height, thickness, fabrication and product choice remain unresolved.</p>
+        </details>
       </div>
     </section>
 
-    <section class="section" id="layout" aria-labelledby="layout-heading">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">The spatial plan</p>
-          <h2 id="layout-heading">2D garden layout</h2>
-        </div>
-        <a class="text-link" href="2d/garden_v0_16_layout_overview.pdf">Open layout PDF <span aria-hidden="true">↗</span></a>
-      </div>
-
-      <div class="layout-grid">
-        <figure class="media-card media-card-large">
-          <a href="2d/garden_v0_16_layout_overview.png">
-            <img src="2d/garden_v0_16_layout_overview.png" alt="Garden v0.16 top-down layout with the restored Rhizome bed in the rear-right corner" loading="lazy">
-          </a>
-          <figcaption>
-            <strong>Garden layout overview</strong>
-            <span>Familiar local orientation with the restored quarter-sector Rhizome bed at rear/right.</span>
-          </figcaption>
-        </figure>
-
-        <div class="layout-side">
-          <figure class="media-card">
-            <a href="2d/garden_v0_16_true_north.png">
-              <img src="2d/garden_v0_16_true_north.png" alt="Garden v0.16 layout rotated so true north points upward, with the Rhizome bed labelled" loading="lazy">
-            </a>
-            <figcaption>
-              <strong>True-north orientation</strong>
-              <span>Rear bearing approximately 330° true ±5°.</span>
-            </figcaption>
-          </figure>
-          <article class="document-card">
-            <p class="document-type">PDF · dimensioned reference</p>
-            <h3>Existing-site reference</h3>
-            <p>The frozen dimensioned drawing retained beneath the later presentation layout.</p>
-            <a class="button button-dark" href="2d/garden_v0_6_existing_site_dimensioned_reference.pdf">Open reference PDF</a>
-          </article>
-        </div>
-      </div>
-      <aside class="feature-callout" aria-labelledby="rhizome-callout-heading">
-        <div>
-          <p class="eyebrow">Restored feature</p>
-          <h3 id="rhizome-callout-heading">Rhizome bed</h3>
-        </div>
-        <p>Exact approved rear/right quarter-sector: centre <strong>(5800, 9000) mm</strong>, outer radius <strong>1100 mm</strong>, gross footprint <strong>0.950 m²</strong>. The shown 300 mm height and 20 mm band are presentation proxies, not fabrication dimensions.</p>
-      </aside>
-    </section>
-
-    <section class="section calculator-section" id="calculator" aria-labelledby="calculator-heading">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">Source-backed quantities</p>
-          <h2 id="calculator-heading">Material calculator</h2>
-        </div>
-        <a class="text-link" href="data/garden_v0_16_region_manifest_r1.json">Inspect region manifest <span aria-hidden="true">↗</span></a>
-      </div>
-      <p class="calculator-intro">Select established regions, then enter the finished depth and explicit allowances. Areas come from Blender receiver meshes or exact analytic geometry—never from rendered image pixels.</p>
-
-      <form class="calculator" id="material-calculator" novalidate>
-        <fieldset class="region-picker">
-          <legend>1. Choose regions</legend>
-          <div class="region-list" id="region-list"></div>
-          <p class="field-error" data-error-for="areaM2" aria-live="polite"></p>
-        </fieldset>
-
-        <fieldset class="quantity-fields">
-          <legend>2. Enter material assumptions</legend>
-          <div class="form-grid">
-            <label class="form-field form-field-wide">
-              <span>Material name</span>
-              <input id="material-name" name="material" type="text" value="Mulch" maxlength="80" autocomplete="off">
-              <small>For example: sand, mulch or drainage gravel.</small>
-            </label>
-            <label class="form-field">
-              <span>Finished depth (mm)</span>
-              <input id="depth-mm" name="depthMm" type="number" inputmode="decimal" min="1" max="2000" step="1" value="50" aria-describedby="depth-note depth-error">
-              <small id="depth-note">Editable planning assumption.</small>
-              <small class="field-error" id="depth-error" data-error-for="depthMm"></small>
-            </label>
-            <label class="form-field">
-              <span>Waste allowance (%)</span>
-              <input id="waste-percent" name="wastePercent" type="number" inputmode="decimal" min="0" max="200" step="0.5" value="10" aria-describedby="waste-note waste-error">
-              <small id="waste-note">10% example default; edit for the product/job.</small>
-              <small class="field-error" id="waste-error" data-error-for="wastePercent"></small>
-            </label>
-            <label class="form-field">
-              <span>Settlement / compaction (%)</span>
-              <input id="settlement-percent" name="settlementPercent" type="number" inputmode="decimal" min="0" max="94" step="0.5" value="0" aria-describedby="settlement-note settlement-error">
-              <small id="settlement-note">0% example default; optional and editable.</small>
-              <small class="field-error" id="settlement-error" data-error-for="settlementPercent"></small>
-            </label>
-            <label class="form-field">
-              <span>Packaging</span>
-              <select id="package-mode" name="mode">
-                <option value="bags">Whole bags</option>
-                <option value="bulk">Bulk cubic metres</option>
-              </select>
-              <small>Bag results always round upward.</small>
-            </label>
-            <label class="form-field" id="bag-field">
-              <span>Bag volume (litres)</span>
-              <input id="bag-litres" name="bagLitres" type="number" inputmode="decimal" min="1" max="5000" step="1" value="40" aria-describedby="bag-note bag-error">
-              <small id="bag-note">40 L example default; verify the supplier pack.</small>
-              <small class="field-error" id="bag-error" data-error-for="bagLitres"></small>
-            </label>
-          </div>
-        </fieldset>
-
-        <div class="calculator-message" id="calculator-message" role="alert" aria-live="assertive"></div>
-        <output class="calculator-results" id="calculator-results" aria-live="polite">
-          <div><span>Selected area</span><strong id="result-area">—</strong><small>m²</small></div>
-          <div><span>Finished volume</span><strong id="result-finished-m3">—</strong><small>m³ · <span id="result-finished-litres">—</span> L</small></div>
-          <div><span>Adjusted order</span><strong id="result-order-m3">—</strong><small>m³ · <span id="result-order-litres">—</span> L</small></div>
-          <div id="bag-result"><span>Whole bags</span><strong id="result-bags">—</strong><small>rounded upward</small></div>
-        </output>
-        <div class="formula-card">
-          <h3>Formula and assumptions</h3>
-          <p><code>finished volume m³ = area m² × depth mm ÷ 1000</code></p>
-          <p><code>order volume = finished volume × (1 + waste fraction) ÷ (1 − settlement fraction)</code></p>
-          <p><code>bag count = ceiling(order litres ÷ bag litres)</code></p>
-          <p id="calculation-assumptions">Select at least one region to calculate.</p>
-        </div>
-      </form>
-      <p class="planning-note">These are transparent planning quantities, not a supplier quotation or automatic ordering approval. Confirm product specifications and the region-specific readiness shown above before purchase.</p>
-    </section>
-
-    <section class="section realistic-section" id="realistic" aria-labelledby="realistic-heading">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">Photo-grounded, not photogrammetry</p>
-          <h2 id="realistic-heading">A recognisable garden</h2>
-        </div>
-        <span class="evidence-badge">16/16 originals verified · originals remain private</span>
-      </div>
-      <p class="realistic-intro">Photo-grounded, glTF-compatible materials reflect the observed charcoal fencing, weathered Corten, mixed lawn, concrete, cream/blue-grey house surfaces and dark timber. Existing citrus, proposed planting and external gums are labelled presentation proxies; none silently becomes measured geometry or solar obstruction.</p>
-      <figure class="realistic-hero media-card">
-        <a href="realistic/garden_v0_18_patio_perspective_r2.png"><img src="realistic/garden_v0_18_patio_perspective_r2.png" alt="Photo-grounded Garden v0.18 R2 view from the patio toward the protected planned layout" loading="lazy"></a>
-        <figcaption><strong>Patio view toward the adopted plan</strong><span>Movable beds and the wheelbarrow remain in planned positions, not their temporary photographed locations.</span></figcaption>
-      </figure>
-      <div class="realistic-gallery">
-        <figure class="media-card"><a href="realistic/garden_v0_18_rear_garden_perspective_r2.png"><img src="realistic/garden_v0_18_rear_garden_perspective_r2.png" alt="Photo-grounded R2 view from the rear garden toward the patio and house" loading="lazy"></a><figcaption><strong>Rear garden</strong><span>Protected layout with approximate façade context.</span></figcaption></figure>
-        <figure class="media-card"><a href="realistic/garden_v0_18_left_side_perspective_r2.png"><img src="realistic/garden_v0_18_left_side_perspective_r2.png" alt="Photo-grounded R2 left-side garden presentation" loading="lazy"></a><figcaption><strong>Left side</strong><span>Citrus and planting forms are neutral proxies.</span></figcaption></figure>
-        <figure class="media-card"><a href="realistic/garden_v0_18_right_service_perspective_r2.png"><img src="realistic/garden_v0_18_right_service_perspective_r2.png" alt="Photo-grounded R2 right service-side presentation with AC, hose and worm farm context" loading="lazy"></a><figcaption><strong>Right/service side</strong><span>Observed colour and service relationships, not new dimensions.</span></figcaption></figure>
-        <figure class="media-card"><a href="realistic/garden_v0_18_rhizome_bed_close_r2.png"><img src="realistic/garden_v0_18_rhizome_bed_close_r2.png" alt="Close R2 presentation view of the unchanged Rhizome bed geometry with a small neutral unresolved plant proxy" loading="lazy"></a><figcaption><strong>Rhizome bed</strong><span>Exact plan geometry; displayed Corten height and plant identity remain unresolved proxies.</span></figcaption></figure>
-      </div>
-      <aside class="reality-boundary"><strong>Authority boundary:</strong> appearance is photo-grounded; XY/Z geometry remains v0.16; solar numbers remain v0.15 R4. The original photographs, EXIF and local comparison overlays are excluded from this site.</aside>
-    </section>
-
-    <section class="section model-section" id="model" aria-labelledby="model-heading">
+    <section class="section model-section" id="model" data-section-key="model" aria-labelledby="model-heading">
       <div class="section-heading split-heading light-heading">
         <div>
-          <p class="eyebrow">Walk around the layout · R4 local review candidate</p>
-          <h2 id="model-heading">Interactive 3D model</h2>
+          <p class="eyebrow" data-mode-only="presentation">Move through the plan</p>
+          <p class="eyebrow" data-mode-only="calculator">Shared accepted R4 model</p>
+          <h2 id="model-heading" data-heading-key="model" tabindex="-1">Explore the garden in 3D</h2>
         </div>
-        <span class="viewer-status" id="viewer-status" role="status">Loading interactive viewer…</span>
+        <div class="viewer-tools">
+          <span class="viewer-status" id="viewer-status" role="status">Loading interactive viewer…</span>
+          <button class="button button-light viewer-reset" id="viewer-reset" type="button">Reset view</button>
+        </div>
       </div>
+
+      <p class="model-intro" data-mode-only="presentation">Drag to look around and scroll or pinch to zoom. Planting and some smaller details are illustrative.</p>
+      <p class="model-intro" data-mode-only="calculator">Both website views use this single model element and source. Camera state is retained while switching views; model geometry is not changed by the interface.</p>
 
       <div class="viewer-shell">
         <model-viewer
@@ -295,6 +155,8 @@
           camera-orbit="38deg 58deg 18.5m"
           camera-target="2.9m 0.85m -4.5m"
           field-of-view="32deg"
+          min-camera-orbit="auto auto 4.2m"
+          max-camera-orbit="auto auto 28m"
           min-field-of-view="24deg"
           max-field-of-view="48deg"
           shadow-intensity="0.8"
@@ -302,203 +164,299 @@
           exposure="1.05"
           tone-mapping="neutral"
           interaction-prompt="auto"
-          alt="Interactive photo-grounded Garden v0.18 R4 primary model with three long growing beds parallel to the mobile cart axis, focused on the protected garden plan and excluding off-site gum proxies from its bounds">
-          <button class="viewer-hotspot" slot="hotspot-rhizome" data-position="5.05m 0.34m -8.25m" data-normal="0m 1m 0m" aria-label="Rhizome bed location">
-            <span class="viewer-hotspot-label" aria-hidden="true">Rhizome bed</span>
-          </button>
+          alt="Interactive photo-grounded garden model showing the protected planned layout and proposed planting context">
+          <button class="viewer-hotspot" slot="hotspot-rhizome" data-position="5.05m 0.34m -8.25m" data-normal="0m 1m 0m" aria-label="Rhizome bed" hidden disabled tabindex="-1"></button>
         </model-viewer>
       </div>
+
       <div class="viewer-footer">
-        <p>Drag to orbit · scroll or pinch to zoom. Presentation trees and planting proxies are visual context only; R4 solar uses its own separately adopted obstruction scenarios.</p>
+        <p data-mode-only="presentation">The model helps explain the layout and appearance. It is planning context rather than a promise of final planting.</p>
+        <p data-mode-only="calculator">Presentation trees and planting are visual proxies. The adopted R4 solar obstruction scenarios remain a separate numerical authority.</p>
         <div class="button-row">
-          <a class="button button-light" href="3d/garden_v0_18_primary_interactive_model_r4.glb" download>Download primary R4 GLB</a>
-          <a class="button button-outline-light" href="realistic/garden_v0_18_left_side_perspective_r4.png">Static R4 context view</a>
+          <a class="button button-light" href="3d/garden_v0_18_primary_interactive_model_r4.glb" download>Download 3D model</a>
+          <a class="button button-outline-light" href="realistic/garden_v0_18_left_side_perspective_r4.png">Open static view</a>
         </div>
       </div>
-      <noscript>
-        <p class="noscript-note">The interactive controls require JavaScript. The static preview and GLB download remain available above.</p>
-      </noscript>
+      <noscript><p class="noscript-note">Interactive controls require JavaScript. The static view and model download remain available above.</p></noscript>
     </section>
 
-    <section class="section" id="solar" aria-labelledby="solar-heading">
+    <section class="section" id="layout" data-section-key="layout" aria-labelledby="layout-heading">
       <div class="section-heading split-heading">
         <div>
-          <p class="eyebrow">Scenario-bracketed evidence</p>
-          <h2 id="solar-heading">Solar planning analysis</h2>
+          <p class="eyebrow" data-mode-only="presentation">What sits where</p>
+          <p class="eyebrow" data-mode-only="calculator">Plan, orientation and sources</p>
+          <h2 id="layout-heading" data-heading-key="layout" tabindex="-1">The complete garden plan</h2>
         </div>
-        <a class="text-link" href="documents/garden_v0_15_solar_summary.pdf">Open solar summary PDF <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="2d/garden_v0_16_layout_overview.pdf">Open layout PDF <span aria-hidden="true">↗</span></a>
       </div>
+      <p class="section-lede" data-caveat-key="layout">This is the planned layout, not a site survey. The back of the garden faces roughly north-west.</p>
 
-      <div class="solar-explorer" aria-labelledby="solar-explorer-heading">
-        <div class="solar-explorer-controls">
-          <p class="eyebrow">Explore the adopted evidence</p>
-          <h3 id="solar-explorer-heading">Season and obstruction scenario</h3>
-          <p>Every view uses the same 0–9 h/day scale and marks G1, G2, lemon, mandarin, lime and the Rhizome bed.</p>
-          <label><span>Season</span><select id="solar-season"><option value="winter">Winter</option><option value="autumn">Autumn</option><option value="spring">Spring</option><option value="summer">Summer</option></select></label>
-          <label><span>Scenario</span><select id="solar-scenario"><option value="baseline">Baseline</option><option value="likely" selected>Likely</option><option value="conservative">Conservative</option></select></label>
-          <p class="solar-explorer-status" id="solar-explorer-status" role="status">Winter · likely · central B330 bearing</p>
-          <noscript><p>JavaScript is unavailable; the default winter-likely image and the static scenario figures below remain readable.</p></noscript>
+      <div class="layout-grid">
+        <figure class="media-card media-card-large layout-primary">
+          <a href="realistic/garden_v0_18_local_top_down_r2.png"><img src="realistic/garden_v0_18_local_top_down_r2.png" alt="Clean top-down view of the planned garden in familiar local orientation" loading="lazy"></a>
+          <figcaption>
+            <strong>Whole garden, top-down</strong>
+            <span data-mode-only="presentation">The patio, lawn, growing beds, service side and curved back-right feature bed in familiar local orientation.</span>
+            <span data-mode-only="calculator">The same clean local-orientation base used in Presentation, with technical references retained below.</span>
+          </figcaption>
+        </figure>
+
+        <div class="layout-side">
+          <figure class="media-card" data-mode-only="presentation">
+            <a href="realistic/garden_v0_18_true_north_r2.png"><img src="realistic/garden_v0_18_true_north_r2.png" alt="Clean top-down garden view rotated with true north pointing upward" loading="lazy"></a>
+            <figcaption><strong>Which way is north?</strong><span>An optional north-up view to help explain how shade moves.</span></figcaption>
+          </figure>
+          <figure class="media-card" data-mode-only="calculator">
+            <a href="2d/garden_v0_16_true_north.png"><img src="2d/garden_v0_16_true_north.png" alt="Planned garden layout rotated with true north pointing upward" loading="lazy"></a>
+            <figcaption><strong>Which way is north?</strong><span>Rear bearing approximately 330° true ±5°.</span></figcaption>
+          </figure>
+          <figure class="media-card layout-technical" data-mode-only="calculator">
+            <a href="2d/garden_v0_16_layout_overview.png"><img src="2d/garden_v0_16_layout_overview.png" alt="Labelled technical top-down plan of the garden in local orientation" loading="lazy"></a>
+            <figcaption><strong>Labelled technical plan</strong><span>Protected v0.16 receiver regions and the exact Rhizome plan footprint, retained as a secondary technical view.</span></figcaption>
+          </figure>
+          <article class="document-card" data-mode-only="calculator">
+            <p class="document-type">PDF · frozen source reference</p>
+            <h3>Existing-site dimensioned reference</h3>
+            <p>The retained source drawing beneath the later presentation layout; it is not current construction documentation.</p>
+            <a class="button button-dark" href="2d/garden_v0_6_existing_site_dimensioned_reference.pdf">Open reference PDF</a>
+          </article>
+          <article class="orientation-card" data-mode-only="presentation">
+            <p class="eyebrow">Why direction matters</p>
+            <h3>Which way the garden faces</h3>
+            <p>The back of the garden faces roughly north-west. That direction shapes where useful light reaches through the year.</p>
+            <a class="text-link" href="#solar">See sun and shade <span aria-hidden="true">↓</span></a>
+          </article>
         </div>
-        <a id="solar-explorer-link" href="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png"><img id="solar-explorer-image" src="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png" alt="Winter likely R4 solar heatmap at B330 with six plant-location markers" loading="lazy"></a>
       </div>
 
-      <div class="location-summary-grid" aria-label="Plain-language plant location solar summaries">
-        <article><strong>G1</strong><p>Not reliably sunny enough for a fruiting Carolina muscadine under the conservative summer case.</p></article>
-        <article><strong>G2</strong><p>The stronger grape position; summer is suitable but shoulder-season light and practical conditions remain limiting.</p></article>
-        <article><strong>Lemon</strong><p>No winter direct-sun equivalent at the adopted point; relocate to a measured sunnier citrus position.</p></article>
-        <article><strong>Mandarin</strong><p>Deeply shaded outside summer and still a relocation candidate.</p></article>
-        <article><strong>Lime</strong><p>The strongest adopted citrus point, but winter uncertainty still supports retaining and monitoring.</p></article>
-        <article><strong>Rhizome bed</strong><p>Shaded in winter, autumn and spring; the exact rhizome/tree identity remains decisive.</p></article>
+      <div class="design-feature-strip" data-mode-only="presentation" aria-label="Important design features">
+        <article><strong>Patio connection</strong><span>The garden opens directly from the existing outdoor living area.</span></article>
+        <article><strong>Central open space</strong><span>The lawn keeps a clear, flexible centre to the backyard.</span></article>
+        <article><strong>Growing areas</strong><span>Beds and existing citrus sit around the brighter, usable edges.</span></article>
+        <article><strong>Service access</strong><span>The right side remains legible as a practical route rather than leftover space.</span></article>
       </div>
 
-      <div class="solar-summary">
+      <aside class="feature-callout" data-mode-only="calculator" aria-labelledby="rhizome-callout-heading">
+        <div><p class="eyebrow">Key garden feature</p><h3 id="rhizome-callout-heading">The Rhizome bed</h3></div>
+        <p>Centre <strong>(5800, 9000) mm</strong>; outer radius <strong>1100 mm</strong>; gross footprint <strong id="rhizome-gross-area">0.950 m²</strong>; net fill <strong id="rhizome-net-area">0.916 m²</strong>. <span data-caveat-key="rhizome">Plan geometry is exact. Display height/band are presentation proxies; fabrication dimensions and product choice remain unresolved.</span></p>
+      </aside>
+    </section>
+
+    <section class="section realistic-section" id="realistic" data-section-key="realistic" aria-labelledby="realistic-heading">
+      <div class="section-heading split-heading">
         <div>
-          <h3>Whole-field planning hours/day</h3>
-          <p>Direct-sun-equivalent averages at the central 330° bearing. These are adopted v0.15 R4 planning averages, not a promise for every planting point. v0.18 photo validation found no evaluable hard-shadow anchors, so the seasonal model was not rerun.</p>
+          <p class="eyebrow" data-mode-only="presentation">Finished garden views</p>
+          <p class="eyebrow" data-mode-only="calculator">Photo-grounded appearance evidence</p>
+          <h2 id="realistic-heading" data-heading-key="realistic" tabindex="-1">See the garden from ground level</h2>
         </div>
+        <span class="evidence-badge" data-mode-only="calculator">16/16 source photographs verified · originals remain private</span>
+      </div>
+      <p class="realistic-intro" data-mode-only="presentation">These polished views show the planned garden from the patio and around the site. Colours and surfaces reflect the existing garden; planting and some smaller details remain illustrative.</p>
+      <p class="realistic-intro" data-mode-only="calculator">Photo-grounded materials communicate observed charcoal fencing, weathered Corten, mixed lawn, concrete and house surfaces. Existing citrus, proposed planting and external gums remain labelled visual proxies.</p>
+
+      <figure class="realistic-hero media-card">
+        <a href="realistic/garden_v0_18_patio_perspective_r2.png"><img src="realistic/garden_v0_18_patio_perspective_r2.png" alt="Garden view from the patio toward the planned beds and lawn" loading="lazy"></a>
+        <figcaption><strong>From the patio into the garden</strong><span>The adopted layout shown with recognisable colours, surfaces and planting context.</span></figcaption>
+      </figure>
+      <div class="realistic-gallery">
+        <figure class="media-card"><a href="realistic/garden_v0_18_rear_garden_perspective_r2.png"><img src="realistic/garden_v0_18_rear_garden_perspective_r2.png" alt="Illustrative rear-garden view toward the patio and house" loading="lazy"></a><figcaption><strong>Rear garden</strong><span>Looking back toward the patio and house.</span></figcaption></figure>
+        <figure class="media-card"><a href="realistic/garden_v0_18_left_side_perspective_r2.png"><img src="realistic/garden_v0_18_left_side_perspective_r2.png" alt="Illustrative left-side garden view" loading="lazy"></a><figcaption><strong>Left side</strong><span>Growing areas, lawn and citrus context.</span></figcaption></figure>
+        <figure class="media-card"><a href="realistic/garden_v0_18_right_service_perspective_r2.png"><img src="realistic/garden_v0_18_right_service_perspective_r2.png" alt="Illustrative view along the right service side" loading="lazy"></a><figcaption><strong>Right/service side</strong><span>Service relationships and observed colour.</span></figcaption></figure>
+        <figure class="media-card"><a href="realistic/garden_v0_18_rhizome_bed_close_r2.png"><img src="realistic/garden_v0_18_rhizome_bed_close_r2.png" alt="Close illustrative view of the curved feature bed in the rear-right corner" loading="lazy"></a><figcaption><strong data-mode-only="presentation">Curved feature bed</strong><strong data-mode-only="calculator">Rhizome bed</strong><span data-mode-only="presentation">The distinctive rear-corner bed shown at a more human scale.</span><span data-mode-only="calculator">Exact plan shape with unresolved planting and edging details.</span></figcaption></figure>
+      </div>
+      <aside class="reality-boundary" data-mode-only="calculator"><strong>Authority boundary:</strong> appearance is photo-grounded; XY/Z geometry remains v0.16; solar numbers remain v0.15 R4. Raw photographs, EXIF and local comparison overlays are excluded.</aside>
+    </section>
+
+    <section class="section solar-section" id="solar" data-section-key="solar" aria-labelledby="solar-heading">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow" data-mode-only="presentation">A seasonal planning view</p>
+          <p class="eyebrow" data-mode-only="calculator">Adopted scenario-bracketed evidence</p>
+          <h2 id="solar-heading" data-heading-key="solar" tabindex="-1">Sun and shade through the year</h2>
+        </div>
+        <a class="text-link" href="documents/garden_v0_20_four_season_solar_summary_r6.pdf" data-mode-only="calculator">Open four-season solar report <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="section-lede" data-mode-only="presentation">These four maps estimate the pattern of useful sunlight across the garden through the year. They all use the same scale so the seasons can be compared fairly.</p>
+      <p class="section-lede" data-mode-only="calculator">Explore all four seasons and the baseline, likely and conservative B330 cases, then review the adopted whole-field values, location results, winter obstruction bracket and orientation sensitivity.</p>
+      <p class="domain-caveat" data-caveat-key="solar" data-mode-only="calculator">Off-site geometry is scenario-bracketed rather than surveyed. Use baseline, likely and conservative results together and retain the ±5° bearing boundary.</p>
+
+      <div class="presentation-solar-grid heatmap-grid" data-mode-only="presentation" aria-label="Likely seasonal sunlight maps">
+        <figure class="heatmap-card" data-presentation-solar-map data-season="summer"><a href="solar/v0_18/garden_v0_18_solar_summer_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_summer_likely_b330_r1.png" alt="Estimated Summer sunlight pattern across the garden" loading="lazy"></a><figcaption><strong>Summer</strong><span>Estimated useful light pattern</span></figcaption></figure>
+        <figure class="heatmap-card" data-presentation-solar-map data-season="autumn"><a href="solar/v0_18/garden_v0_18_solar_autumn_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_autumn_likely_b330_r1.png" alt="Estimated Autumn sunlight pattern across the garden" loading="lazy"></a><figcaption><strong>Autumn</strong><span>Estimated useful light pattern</span></figcaption></figure>
+        <figure class="heatmap-card" data-presentation-solar-map data-season="winter"><a href="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png" alt="Estimated Winter sunlight pattern across the garden" loading="lazy"></a><figcaption><strong>Winter</strong><span>Estimated useful light pattern</span></figcaption></figure>
+        <figure class="heatmap-card" data-presentation-solar-map data-season="spring"><a href="solar/v0_18/garden_v0_18_solar_spring_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_spring_likely_b330_r1.png" alt="Estimated Spring sunlight pattern across the garden" loading="lazy"></a><figcaption><strong>Spring</strong><span>Estimated useful light pattern</span></figcaption></figure>
+      </div>
+      <div class="solar-reading" data-mode-only="presentation">
+        <div class="solar-reading-scale" aria-hidden="true"><span>Less useful light</span><i></i><span>More useful light</span></div>
+        <div><h3>How to read the maps</h3><p>Warmer colours estimate more useful direct-sun-equivalent light; cooler colours estimate less. Nearby trees and buildings are not surveyed in full, so the maps are best used to compare patterns and seasons rather than promise an exact number for one day.</p></div>
+      </div>
+      <div class="presentation-solar-route" data-mode-only="presentation">
+        <div><h3>Want the assumptions?</h3><p>Calculator mode keeps the alternate shade cases, direction sensitivity and numerical results together.</p></div>
+        <a class="button button-dark" href="?mode=calculator#solar" data-switch-mode="calculator" data-section-target="solar">See assumptions and alternate cases</a>
+      </div>
+
+      <div class="solar-explorer" aria-labelledby="solar-explorer-heading" data-mode-only="calculator">
+        <div class="solar-explorer-controls">
+          <p class="eyebrow">Choose a season</p>
+          <h3 id="solar-explorer-heading">Seasonal sun and shade</h3>
+          <p>Every view uses the same 0–9 hours/day scale and marks G1, G2, lemon, mandarin, lime and the Rhizome bed.</p>
+          <label><span>Season</span><select id="solar-season"><option value="winter">Winter</option><option value="autumn">Autumn</option><option value="spring">Spring</option><option value="summer">Summer</option></select></label>
+          <label><span>Shade case</span><select id="solar-scenario"><option value="baseline">Sunnier bound (baseline)</option><option value="likely" selected>Likely working case</option><option value="conservative">Shadier bound (conservative)</option></select></label>
+          <p class="solar-explorer-status" id="solar-explorer-status" role="status">Winter · likely working case · central direction</p>
+          <noscript><p>The default winter-likely image remains available. Use JavaScript for the full explorer.</p></noscript>
+        </div>
+        <a id="solar-explorer-link" href="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png"><img id="solar-explorer-image" src="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png" alt="Winter likely solar heatmap at the central garden direction with six location markers" loading="eager"></a>
+      </div>
+
+      <div class="solar-locations-heading" data-mode-only="calculator">
+        <div><p class="eyebrow">Six marked locations</p><h3>What the sunlight means for key spots</h3></div>
+        <p>G1 and G2 are the two grape-ring positions shown on the plan. Each takeaway below comes from the adopted location summary.</p>
+      </div>
+      <div class="location-summary-grid" id="location-summary-grid" data-mode-only="calculator" aria-label="Plant location solar summaries" aria-busy="true">
+        <p class="data-placeholder">Loading the six adopted location summaries…</p>
+      </div>
+      <noscript data-mode-only="calculator"><p class="noscript-note noscript-light">Open <a href="data/garden_v0_18_location_solar_summary_r1.json">the location summary record</a> to read all six adopted conclusions without JavaScript.</p></noscript>
+
+      <div class="solar-summary" data-mode-only="calculator">
+        <div><h3>Whole-field planning hours/day</h3><p>Weighted across all 5,220 receivers at B330 and derived at runtime from the adopted R4 zone summaries.</p></div>
         <div class="table-wrap">
           <table>
-            <thead>
-              <tr><th>Season</th><th>Baseline</th><th>Likely</th><th>Conservative</th></tr>
-            </thead>
-            <tbody>
-              <tr><th>Winter</th><td>3.07</td><td>2.31</td><td>1.77</td></tr>
-              <tr><th>Autumn</th><td>5.47</td><td>5.44</td><td>4.76</td></tr>
-              <tr><th>Spring</th><td>5.41</td><td>5.38</td><td>4.67</td></tr>
-              <tr><th>Summer</th><td>6.74</td><td>6.38</td><td>5.76</td></tr>
-            </tbody>
+            <thead><tr><th>Season</th><th>Baseline</th><th>Likely</th><th>Conservative</th></tr></thead>
+            <tbody id="whole-field-body"><tr><td colspan="4">Loading adopted values…</td></tr></tbody>
           </table>
         </div>
       </div>
 
-      <div class="solar-group">
-        <div class="group-label">
-          <span>Winter · B330</span>
-          <h3>Off-site obstruction bracket</h3>
-          <p>Baseline, likely and conservative cases show the material effect of unresolved off-site obstruction.</p>
+      <div class="technical-solar" data-mode-only="calculator">
+        <div class="solar-group">
+          <div class="group-label"><span>Winter · B330</span><h3>Off-site obstruction bracket</h3><p>Baseline, likely and conservative cases show the effect of unresolved off-site obstruction.</p></div>
+          <div class="heatmap-grid heatmap-grid-three">
+            <figure class="heatmap-card"><a href="solar/v0_18/garden_v0_18_solar_winter_baseline_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_baseline_b330_r1.png" alt="Winter baseline solar heatmap at 330 degrees" loading="lazy"></a><figcaption><strong>Baseline</strong><span>10 m gum case · 0.75 open sky</span></figcaption></figure>
+            <figure class="heatmap-card"><a href="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png" alt="Winter likely solar heatmap at 330 degrees" loading="lazy"></a><figcaption><strong>Likely</strong><span>12 m gum case · 0.60 open sky</span></figcaption></figure>
+            <figure class="heatmap-card"><a href="solar/v0_18/garden_v0_18_solar_winter_conservative_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_conservative_b330_r1.png" alt="Winter conservative solar heatmap at 330 degrees" loading="lazy"></a><figcaption><strong>Conservative</strong><span>14 m gum case · 0.45 open sky</span></figcaption></figure>
+          </div>
         </div>
-        <div class="heatmap-grid heatmap-grid-three">
-          <figure class="heatmap-card">
-            <a href="solar/v0_18/garden_v0_18_solar_winter_baseline_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_baseline_b330_r1.png" alt="Winter baseline R4 solar heatmap at 330 degrees with plant-location markers" loading="lazy"></a>
-            <figcaption><strong>Baseline</strong><span>10 m gum case · 0.75 open sky</span></figcaption>
-          </figure>
-          <figure class="heatmap-card">
-            <a href="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png" alt="Winter likely R4 solar heatmap at 330 degrees with plant-location markers" loading="lazy"></a>
-            <figcaption><strong>Likely</strong><span>12 m gum case · 0.60 open sky</span></figcaption>
-          </figure>
-          <figure class="heatmap-card">
-            <a href="solar/v0_18/garden_v0_18_solar_winter_conservative_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_conservative_b330_r1.png" alt="Winter conservative R4 solar heatmap at 330 degrees with plant-location markers" loading="lazy"></a>
-            <figcaption><strong>Conservative</strong><span>14 m gum case · 0.45 open sky</span></figcaption>
-          </figure>
+
+        <div class="solar-group solar-group-muted">
+          <div class="group-label"><span>Likely winter scenario</span><h3>Orientation sensitivity</h3><p>The established ±5° direction uncertainty is retained at 325°, 330° and 335°.</p></div>
+          <div class="heatmap-grid heatmap-grid-three">
+            <figure class="heatmap-card"><a href="solar/v0_18/garden_v0_18_solar_winter_likely_b325_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_likely_b325_r1.png" alt="Likely winter solar heatmap at 325 degrees" loading="lazy"></a><figcaption><strong>325°</strong><span>Lower bearing case</span></figcaption></figure>
+            <figure class="heatmap-card"><a href="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png" alt="Likely winter solar heatmap at 330 degrees" loading="lazy"></a><figcaption><strong>330°</strong><span>Central bearing case</span></figcaption></figure>
+            <figure class="heatmap-card"><a href="solar/v0_18/garden_v0_18_solar_winter_likely_b335_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_likely_b335_r1.png" alt="Likely winter solar heatmap at 335 degrees" loading="lazy"></a><figcaption><strong>335°</strong><span>Upper bearing case</span></figcaption></figure>
+          </div>
+        </div>
+
+        <div class="summer-feature">
+          <figure class="heatmap-card heatmap-wide"><a href="solar/v0_18/garden_v0_18_solar_summer_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_summer_likely_b330_r1.png" alt="Likely summer solar heatmap at 330 degrees" loading="lazy"></a><figcaption><strong>Summer likely · 330°</strong><span>Adopted central planning case.</span></figcaption></figure>
+          <article class="interpretation-card"><p class="eyebrow">How to read this</p><h3>Use the bracket, not false precision.</h3><p>Structural obstructions are opaque. Gum influence is a porous biological sensitivity. The useful result is the range across plausible cases.</p><a class="button button-dark" href="documents/garden_v0_20_four_season_solar_summary_r6.pdf">Read the four-season solar report</a></article>
         </div>
       </div>
 
-      <div class="solar-group solar-group-muted">
-        <div class="group-label">
-          <span>Likely winter scenario</span>
-          <h3>Orientation sensitivity</h3>
-          <p>The established ±5° bearing uncertainty is shown at 325°, 330° and 335°.</p>
+    </section>
+
+    <section class="section calculator-section" id="calculator" data-section-key="materials" data-mode-only="calculator" aria-labelledby="calculator-heading">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Supported bulk materials only</p>
+          <h2 id="calculator-heading" data-heading-key="materials" tabindex="-1">Bulk-material quantity planner</h2>
         </div>
-        <div class="heatmap-grid heatmap-grid-three">
-          <figure class="heatmap-card">
-            <a href="solar/v0_18/garden_v0_18_solar_winter_likely_b325_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_likely_b325_r1.png" alt="Likely winter R4 solar heatmap at 325 degrees with plant-location markers" loading="lazy"></a>
-            <figcaption><strong>325°</strong><span>Lower bearing case</span></figcaption>
-          </figure>
-          <figure class="heatmap-card">
-            <a href="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png" alt="Likely winter R4 solar heatmap at 330 degrees with plant-location markers" loading="lazy"></a>
-            <figcaption><strong>330°</strong><span>Central bearing case</span></figcaption>
-          </figure>
-          <figure class="heatmap-card">
-            <a href="solar/v0_18/garden_v0_18_solar_winter_likely_b335_r1.png"><img src="solar/v0_18/garden_v0_18_solar_winter_likely_b335_r1.png" alt="Likely winter R4 solar heatmap at 335 degrees with plant-location markers" loading="lazy"></a>
-            <figcaption><strong>335°</strong><span>Upper bearing case</span></figcaption>
-          </figure>
-        </div>
+        <a class="text-link" href="data/garden_v0_16_region_manifest_r1.json">Inspect region manifest <span aria-hidden="true">↗</span></a>
       </div>
 
-      <div class="summer-feature">
-        <figure class="heatmap-card heatmap-wide">
-          <a href="solar/v0_18/garden_v0_18_solar_summer_likely_b330_r1.png"><img src="solar/v0_18/garden_v0_18_solar_summer_likely_b330_r1.png" alt="Likely summer R4 solar heatmap at 330 degrees with plant-location markers" loading="lazy"></a>
-          <figcaption><strong>Summer likely · 330°</strong><span>The sixth distinct published R4 solar view.</span></figcaption>
-        </figure>
-        <article class="interpretation-card">
-          <p class="eyebrow">How to read this</p>
-          <h3>Use the bracket, not false precision.</h3>
-          <p>Structural obstructions are treated as opaque. Gum-tree influence is a porous biological sensitivity. The useful result is the range across plausible cases.</p>
-          <a class="button button-dark" href="documents/garden_v0_15_solar_summary.pdf">Read the full solar summary</a>
-        </article>
+      <div class="calculator-technical">
+        <p class="calculator-intro">Choose a supported bulk-material category, select established garden areas and declare the depth and supplier information you actually intend to use. The calculator does not invent density, pack size, compaction or product coverage.</p>
+        <div class="calculator-principles" aria-label="Calculator engineering rules">
+          <article><span>Exact relationship</span><strong>Area × depth = volume</strong><small>Area comes from the shared region manifest—with its recorded tolerance—and depth is entered in millimetres.</small></article>
+          <article><span>Declared property</span><strong>Volume × density = mass</strong><small>Mass appears only when a matching density and source are entered.</small></article>
+          <article><span>Planning conversion</span><strong>Supplier units round upward</strong><small>Bag or bulk rounding uses only the unit declared for the selected product or supplier.</small></article>
+        </div>
+
+        <form class="calculator" id="material-calculator" novalidate>
+          <fieldset class="profile-picker">
+            <legend>1. Choose a supported material</legend>
+            <label class="form-field form-field-wide"><span>Bulk-material profile</span><select id="material-profile" name="profileId" aria-describedby="profile-note profile-error"><option value="">Loading supported profiles…</option></select><small id="profile-note">Profiles constrain the calculation to bulk materials with a volume basis.</small><small class="field-error" id="profile-error" data-error-for="profileId"></small></label>
+            <div class="profile-summary" id="profile-summary" role="status" aria-live="polite"><p>Select a supported profile to see its calculation and evidence policy.</p></div>
+          </fieldset>
+
+          <fieldset class="region-picker">
+            <legend>2. Choose application areas</legend>
+            <div class="region-list" id="region-list" aria-busy="true"><p class="data-placeholder">Loading shared region records…</p></div>
+            <p class="field-error" id="area-error" data-error-for="areaM2" aria-live="polite"></p>
+          </fieldset>
+
+          <fieldset class="quantity-fields">
+            <legend>3. Declare depth, properties and order basis</legend>
+            <div class="form-grid">
+              <label class="form-field"><span>Finished layer depth (mm)</span><input id="depth-mm" name="depthMm" type="number" inputmode="decimal" min="1" max="1000" step="0.5" value="" aria-describedby="depth-note depth-error"><small id="depth-note">Required user value. The 1–1,000 mm range is a calculator guardrail, not application advice.</small><small class="field-error" id="depth-error" data-error-for="depthMm"></small></label>
+              <label class="form-field"><span>Waste allowance (%)</span><input id="waste-percent" name="wastePercent" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="0" aria-describedby="waste-note waste-error"><small id="waste-note">User-entered planning allowance. Zero means excluded.</small><small class="field-error" id="waste-error" data-error-for="wastePercent"></small></label>
+              <label class="form-field"><span>Declared bulk density (kg/m³) <em>optional</em></span><input id="density-kg-m3" name="densityKgM3" type="number" inputmode="decimal" min="1" max="5000" step="0.1" value="" aria-describedby="density-note density-error"><small id="density-note">Leave blank for volume-only results. Use a value for the same material and moisture/compaction state.</small><small class="field-error" id="density-error" data-error-for="densityKgM3"></small></label>
+              <label class="form-field"><span>Density source <em>required with density</em></span><input id="density-source" name="densitySource" type="text" maxlength="160" autocomplete="off" value="" aria-describedby="density-source-note density-source-error"><small id="density-source-note">For example, identify the supplier product sheet or your measured source; no source is assumed.</small><small class="field-error" id="density-source-error" data-error-for="densitySource"></small></label>
+              <label class="form-field form-field-wide"><span>Order basis</span><select id="order-mode" name="orderMode" aria-describedby="order-note order-error"><option value="">Loading supported order bases…</option></select><small id="order-note">Volume-only applies no supplier rounding. Other options always round upward.</small><small class="field-error" id="order-error" data-error-for="orderMode"></small></label>
+              <label class="form-field" id="bag-field" hidden><span>Declared bag volume (litres)</span><input id="bag-litres" name="bagLitres" type="number" inputmode="decimal" min="0.1" max="5000" step="0.1" value="" aria-describedby="bag-note bag-error"><small id="bag-note">Enter the actual pack volume from the selected product.</small><small class="field-error" id="bag-error" data-error-for="bagLitres"></small></label>
+              <label class="form-field" id="bulk-field" hidden><span>Supplier bulk increment (m³)</span><input id="bulk-increment-m3" name="bulkIncrementM3" type="number" inputmode="decimal" min="0.001" max="100" step="0.001" value="" aria-describedby="bulk-note bulk-error"><small id="bulk-note">Enter the supplier's actual order increment.</small><small class="field-error" id="bulk-error" data-error-for="bulkIncrementM3"></small></label>
+            </div>
+            <button class="button button-dark calculate-button" type="submit">Calculate planning quantity</button>
+          </fieldset>
+
+          <div class="calculator-message" id="calculator-message" role="alert"></div>
+
+          <section class="result-panel" id="calculator-result-panel" aria-labelledby="calculator-result-heading">
+            <div class="result-heading"><div><p class="eyebrow">Transparent planning result</p><h3 id="calculator-result-heading">Quantity breakdown</h3></div><p id="calculation-status" role="status" aria-live="polite">Choose a profile, area and depth, then calculate.</p></div>
+            <div class="calculator-results" id="calculator-results" role="status" aria-live="polite" data-state="empty">
+              <div><span>Selected area</span><strong id="result-area">—</strong><small>m² from shared geometry</small></div>
+              <div><span>Finished volume</span><strong id="result-finished-m3">—</strong><small>m³ · <span id="result-finished-litres">—</span> L</small></div>
+              <div><span>Planning volume</span><strong id="result-planning-m3">—</strong><small>m³ · <span id="result-planning-litres">—</span> L</small></div>
+              <div><span id="result-order-label">Supplier conversion</span><strong id="result-order-primary">—</strong><small id="result-order-detail">No result yet</small></div>
+              <div><span>Estimated mass</span><strong id="result-mass">—</strong><small id="result-mass-detail">Requires declared density and source</small></div>
+            </div>
+            <div class="formula-breakdown" aria-label="Formula and assumption breakdown">
+              <article><span>Mathematically exact</span><h4>Geometry and unit conversion</h4><p><code>depth m = depth mm ÷ 1000</code></p><p><code>finished volume m³ = area m² × depth m</code></p></article>
+              <article><span>User-declared estimate</span><h4>Waste and optional mass</h4><p><code>planning volume = finished volume × (1 + waste %)</code></p><p><code>mass kg = volume m³ × declared density kg/m³</code></p></article>
+              <article><span>Supplier-unit conversion</span><h4>Ordering aid</h4><p><code>units = ceiling(planning quantity ÷ declared unit)</code></p><p>No minimum order, delivery rule or product coverage is assumed.</p></article>
+            </div>
+            <p class="calculation-assumptions" id="calculation-assumptions">No calculation has been completed.</p>
+          </section>
+        </form>
+        <p class="planning-note" data-caveat-key="materials">Results separate exact geometry from declared properties and supplier-unit rounding. Confirm the product, site conditions and supplier information before purchase.</p>
       </div>
     </section>
 
-    <section class="section downloads-section" id="downloads" aria-labelledby="downloads-heading">
+    <section class="section downloads-section" id="downloads" data-section-key="downloads" aria-labelledby="downloads-heading">
       <div class="section-heading">
-        <p class="eyebrow">Take a copy</p>
-        <h2 id="downloads-heading">Documents & useful data</h2>
-        <p>The human-readable PDFs come first. Technical CSV/JSON evidence is available for people who need to inspect the underlying planning outputs.</p>
+        <p class="eyebrow" data-mode-only="presentation">Take a useful copy</p>
+        <p class="eyebrow" data-mode-only="calculator">Documents, source data and validation</p>
+        <h2 id="downloads-heading" data-heading-key="downloads" tabindex="-1">Plans and useful summaries</h2>
+        <p data-mode-only="presentation">Open the layout and the two readable summaries. These documents support planning rather than construction.</p>
+        <p data-mode-only="calculator">The public package and human-readable PDFs come first; source data and validation remain grouped below.</p>
       </div>
 
-      <div class="download-grid">
-        <article class="download-card download-featured">
-          <span class="file-badge">ZIP</span>
-          <h3>Sanitised public distribution</h3>
-          <p>The v0.18 GLB, skinned renders, all 14 unique R4 heatmaps, plain-language location summaries, licence record and public validation. Raw photos and EXIF are excluded.</p>
-          <a class="button button-light" href="downloads/garden_v0_18_public_distribution_r1.zip">Download v0.18 public package</a>
-        </article>
+      <div class="download-grid" id="download-grid" aria-busy="true"><p class="data-placeholder">Loading document links…</p></div>
+      <noscript>
+        <div class="noscript-downloads"><a href="2d/garden_v0_16_layout_overview.pdf">2D layout</a><a href="documents/garden_v0_16_project_summary.pdf">Project summary</a><a href="documents/garden_v0_20_four_season_solar_summary_r6.pdf">Four-season solar report</a></div>
+      </noscript>
 
-        <article class="download-card">
-          <span class="file-badge">PDF</span>
-          <h3>Project summary</h3>
-          <p>Rhizome authority and geometry, preservation evidence, source regions, formulas and solar boundary.</p>
-          <a class="text-link" href="documents/garden_v0_16_project_summary.pdf">Open PDF <span aria-hidden="true">↗</span></a>
-        </article>
-
-        <article class="download-card">
-          <span class="file-badge">PDF</span>
-          <h3>Solar summary</h3>
-          <p>Four pages covering the scenarios, results, heatmaps and interpretation boundary.</p>
-          <a class="text-link" href="documents/garden_v0_15_solar_summary.pdf">Open PDF <span aria-hidden="true">↗</span></a>
-        </article>
-
-        <article class="download-card">
-          <span class="file-badge">PDF</span>
-          <h3>2D layout</h3>
-          <p>The recipient-friendly garden layout overview.</p>
-          <a class="text-link" href="2d/garden_v0_16_layout_overview.pdf">Open PDF <span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-
-      <details class="technical-files">
+      <details class="technical-files" data-mode-only="calculator">
         <summary>Technical planning data and validation records</summary>
-        <div class="technical-grid">
-          <a href="data/garden_v0_15_receiver_results_r4.csv"><strong>Receiver results</strong><span>CSV · 5,220 receivers</span></a>
-          <a href="data/garden_v0_15_zone_summary_r4.csv"><strong>Zone summary</strong><span>CSV · planning zones</span></a>
-          <a href="data/garden_v0_15_scenario_comparison_r4.csv"><strong>Scenario comparison</strong><span>CSV · scenario sensitivity</span></a>
-          <a href="data/garden_v0_15_solar_results_r4.json"><strong>Solar results</strong><span>JSON · complete result summary</span></a>
-          <a href="data/garden_v0_15_skyline_envelopes_r4.json"><strong>Skyline envelopes</strong><span>JSON · obstruction brackets</span></a>
-          <a href="records/garden_v0_15_final_planning_disposition_r4.md"><strong>Planning disposition</strong><span>Markdown · approved claim boundary</span></a>
-          <a href="data/garden_v0_16_region_manifest_r1.json"><strong>Region manifest</strong><span>JSON · source-backed calculator areas</span></a>
-          <a href="data/garden_v0_16_rhizome_solar_mapping_r1.json"><strong>Rhizome solar mapping</strong><span>JSON · adopted R4 receivers, no rerun</span></a>
-          <a href="records/garden_v0_16_public_validation_r1.json"><strong>Model validation</strong><span>JSON · sanitised PASS record</span></a>
-          <a href="records/garden_v0_16_public_manifest_r1.json"><strong>Public manifest</strong><span>JSON · v0.16 publication identity</span></a>
-          <a href="records/garden_v0_16_SHA256SUMS_R1.txt"><strong>SHA-256 ledger</strong><span>Text · v0.16 public checksums</span></a>
-          <a href="data/garden_v0_18_location_solar_summary_r1.json"><strong>Location solar summaries</strong><span>JSON · six marked planting locations</span></a>
-          <a href="records/garden_v0_18_public_validation_r1.json"><strong>v0.18 validation</strong><span>JSON · privacy, links, GLB and hashes</span></a>
-          <a href="records/garden_v0_18_public_manifest_r1.json"><strong>v0.18 manifest</strong><span>JSON · published file identity</span></a>
-          <a href="records/garden_v0_18_SHA256SUMS_R1.txt"><strong>v0.18 SHA-256 ledger</strong><span>Text · published v0.18 assets</span></a>
-        </div>
+        <div class="technical-grid" id="technical-grid"></div>
       </details>
+
+      <aside class="technical-route" data-mode-only="presentation">
+        <div><p class="eyebrow">Need the assumptions or source data?</p><h3>Open the full planning evidence.</h3></div>
+        <a class="button button-dark" href="?mode=calculator#downloads" data-switch-mode="calculator" data-section-target="downloads">Open Calculator view</a>
+      </aside>
     </section>
   </main>
 
   <footer>
     <div>
-      <strong>Garden v0.18 R1 reality and solar presentation</strong>
-      <p>Planning material, not survey, construction, fabrication or purchasing documentation.</p>
+      <strong data-mode-only="presentation">Garden planning guidance</strong>
+      <strong data-mode-only="calculator">Garden planning evidence and calculations</strong>
+      <p data-caveat-key="global">This is a garden-planning guide rather than a site survey or construction drawing. Confirm site conditions before building.</p>
     </div>
-    <div class="footer-status">
-      <span>Inherited geometry preserved</span>
-      <span>Solar v0.15 R4 unchanged</span>
-      <span>Raw photos and EXIF excluded</span>
-      <span>Ordering readiness is item-specific</span>
+    <div class="footer-links">
+      <a href="#top">Back to top</a>
+      <a href="?mode=calculator#top" data-mode-only="presentation" data-switch-mode="calculator" data-section-target="overview">Technical view</a>
+      <a href="?mode=presentation#top" data-mode-only="calculator" data-switch-mode="presentation" data-section-target="overview">Presentation view</a>
     </div>
   </footer>
 </body>
