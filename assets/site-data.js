@@ -160,7 +160,7 @@
 
   const DOWNLOADS = Object.freeze({
     documents: Object.freeze([
-      Object.freeze({ id: 'public-package', type: 'ZIP', title: 'Sanitised public distribution', description: 'Public models, renders, solar maps and validation with raw photographs and EXIF excluded.', href: 'downloads/garden_v0_18_public_distribution_r1.zip', modes: ['calculator'] }),
+      Object.freeze({ id: 'public-package', type: 'ZIP', title: 'Sanitised public distribution', description: 'Public models, pixel-identical metadata-sanitised renders, solar maps and validation with raw photographs and local file paths excluded.', href: 'downloads/garden_v0_18_public_distribution_r2_sanitised_metadata.zip', modes: ['calculator'] }),
       Object.freeze({ id: 'layout', type: 'PDF', title: 'Complete garden layout', description: 'A clear top-down overview of the planned garden.', href: '2d/garden_v0_16_layout_overview.pdf', modes: ['presentation', 'calculator'] }),
       Object.freeze({ id: 'project-summary', type: 'PDF', title: 'Garden project summary', description: 'The layout, key feature geometry, quantities and planning boundaries in one document.', href: 'documents/garden_v0_16_project_summary.pdf', modes: ['presentation', 'calculator'] }),
       Object.freeze({ id: 'solar-summary', type: 'PDF', title: 'Four-season sunlight guide', description: 'Summer, Autumn, Winter and Spring likely-planning maps with plain-language interpretation.', href: 'documents/garden_v0_20_four_season_solar_summary_r6.pdf', modes: ['presentation', 'calculator'] })

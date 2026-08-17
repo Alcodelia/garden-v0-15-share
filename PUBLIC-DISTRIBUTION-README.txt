@@ -1,32 +1,47 @@
-GARDEN v0.16 — SANITISED PUBLIC DISTRIBUTION R1
-================================================
+GARDEN v0.23 RC1 — PUBLICATION CANDIDATE R1
+============================================
 
-Open index.html in a current browser, or visit:
-https://alcodelia.github.io/garden-v0-15-share/
+This is the clean public-site candidate derived from the human-approved
+v0.21 R2 presentation/calculator and the v0.22 R1 security/deployment
+hardening candidate. Automated static/unit gates pass; final visible Firefox
+runtime acceptance remains required before publication.
 
-This is a separately named public derivative. It does not replace the frozen v0.15 R5 share master or the adopted v0.15 R4 solar authority.
+USE
+---
+Publish the allowlisted payload via HTTPS, or serve this directory through a
+local HTTP server for review. Do not rely on file:// for full functionality.
 
-CONTENTS
---------
-- v0.16 local and true-north 2D garden layouts with the restored Rhizome bed
-- v0.16 validated interactive GLB and static 3D preview
-- source-backed region manifest and browser material calculator
-- v0.16 project-summary and layout PDFs
-- adopted v0.15 R4 solar summary, six solar views and useful CSV/JSON evidence
-- sanitised model validation, public manifest and SHA-256 ledger
-
-AUTHORITY AND PLANNING BOUNDARY
--------------------------------
-- Spatial/model release: Garden v0.16 R1, descended from the protected v0.14 master.
-- Solar authority: adopted Garden v0.15 R4 results, unchanged; no solar rerun occurred.
-- Rear bearing: approximately 330 degrees true, plus or minus 5 degrees.
-- Off-site structures and trees remain scenario-bracketed.
-- Gum scenarios are uncertainty cases, not surveyed tree geometry.
-- Calculator areas come from source geometry, never rendered-image pixels.
-- Calculator results are planning estimates, not supplier quotations or automatic ordering approval.
-- Ordering readiness is region/item-specific.
-- Rhizome bed plan footprint is exact; Corten height, thickness, fabrication and product choice remain unresolved.
+AUTHORITY
+---------
+- Presentation/calculator UX: v0.21 R2 human-approved.
+- Security/deployment hardening candidate: v0.22 R1.
+- RC packaging: v0.23 RC1; visible Firefox runtime gate pending.
+- Protected primary GLB remains byte-identical:
+  37721f8b5d4c650cc4314a90f31887998cbbe080acff58c81fd2980562d06845
+- Adopted v0.15 R4 solar results and four likely seasonal maps remain unchanged.
+- No Blender or solar rerun is part of this candidate.
 
 PUBLICATION BOUNDARY
 --------------------
-Local source-path metadata and internal-only records are excluded or sanitised. This public derivative contains no source .blend files, raw photographs, development scripts, runtime logs, credentials or workstation paths.
+The public RC payload excludes `.git`, development tests/tools, PowerShell
+launchers, raw photographs, source `.blend` files, runtime logs, credentials
+and workstation paths.
+
+Linked realistic PNG copies have Blender text/EXIF/time metadata removed in
+the publication derivative with decoded pixels verified identical. The old
+v0.18 R1 downloadable ZIP is not published by this RC; its corrected, newly
+named R2 replacement is used instead.
+
+Runtime JavaScript is same-origin. @google/model-viewer 4.3.1 is vendored and
+pinned locally. Its Apache-2.0 license is included in `licenses/`, and embedded
+third-party notices remain in the vendored bundle.
+
+SECURITY
+--------
+The HTML carries a restrictive Content Security Policy, no-referrer policy and
+Subresource Integrity hashes for executable/style assets. The calculator uses
+bounded numeric validation; user-entered text is rendered as text rather than
+HTML.
+
+See the v0.22 audit/validation and v0.23 RC manifest/checksum ledger in
+`records/` for exact evidence and remaining limitations.

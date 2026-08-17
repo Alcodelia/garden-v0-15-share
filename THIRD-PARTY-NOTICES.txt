@@ -1,0 +1,12 @@
+GARDEN PUBLIC SITE — THIRD-PARTY NOTICES
+========================================
+
+@google/model-viewer 4.3.1
+Source project: google/model-viewer
+License: Apache License 2.0
+Bundled file: assets/vendor/model-viewer-4.3.1.min.js
+Full upstream license copy: licenses/model-viewer-4.3.1-Apache-2.0.txt
+
+The vendored bundle retains its upstream embedded copyright and third-party
+license notices, including notices for bundled dependencies such as Three.js.
+No source-map files are distributed with this Garden publication candidate.

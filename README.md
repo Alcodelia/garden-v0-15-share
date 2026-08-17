@@ -1,28 +1,37 @@
-# Garden v0.16 layout, materials and solar planning
+# Garden release candidate — v0.23 RC1
 
-This repository publishes the static recipient-facing wrapper for Garden v0.16 R1 at:
+This repository snapshot is the release-candidate source for the static Garden presentation/calculator site.
 
-https://alcodelia.github.io/garden-v0-15-share/
+## Current authority
 
-The stable publication channel now presents:
+- Presentation/calculator UX: human-approved Garden v0.21 R2.
+- Security/deployment hardening candidate: Garden v0.22 R1; automated static/unit gates pass, with final visible Firefox review still required.
+- Release candidate: Garden v0.23 RC1, pending the final visible Firefox runtime gate.
+- Spatial/model authority remains the protected accepted model lineage; v0.22/v0.23 do not alter garden geometry.
+- Solar authority remains the adopted Garden v0.15 R4 result set; no solar rerun occurred.
+- Protected primary GLB SHA-256: `37721f8b5d4c650cc4314a90f31887998cbbe080acff58c81fd2980562d06845`.
 
-- the restored rear/right quarter-sector **Rhizome bed** in 2D, 3D and GLB outputs;
-- a source-backed material calculator using established region geometry, explicit waste and optional settlement allowances;
-- local and true-north v0.16 layout views;
-- the adopted v0.15 R4 solar analysis without a rerun;
-- v0.16 project and layout PDFs; and
-- a separately named sanitised v0.16 public distribution ZIP, manifest and SHA-256 ledger.
+## Deployment boundary
 
-## Authority boundary
+The final public publication must use the allowlisted public-site payload only. Development-only `.git`, tests, tools, local launchers, logs and workstation metadata are not publication content.
 
-The spatial/model release is Garden v0.16 R1, descended from the protected v0.14 spatial master. The solar authority remains the adopted Garden v0.15 R4 scenario-bracketed result set. Inherited geometry was compared by object-level fingerprints and remained unchanged.
+The RC publication derivative also strips Blender text/EXIF metadata from the linked realistic PNG copies without changing decoded pixels, and replaces the older v0.18 R1 downloadable ZIP with the newly named metadata-clean R2 package. Canonical/source renders are not overwritten.
 
-The Rhizome bed plan authority fixes its rear/right centre at `(5800, 9000) mm`, outer radius at `1100 mm`, and inward quarter-sector footprint at `0.950332 m²`. The displayed 300 mm height and 20 mm band are presentation proxies, not product or fabrication dimensions.
+The page uses only same-origin runtime assets. `@google/model-viewer` 4.3.1 is vendored locally and pinned; its license is included under `licenses/` and its embedded notices are retained.
 
-## Calculator boundary
+A restrictive page Content Security Policy and Subresource Integrity hashes protect the executable/style asset set. The CSP deliberately permits same-origin content plus the `blob:`/`data:` forms required by the local 3D runtime; it does not permit arbitrary remote script execution.
 
-Region areas come from Blender receiver meshes or exact analytic geometry—never rendered image pixels. The calculator exposes region-specific evidence status and ordering-estimate readiness, applies the documented volume formulas, and rounds bag quantities upward. Results are planning quantities, not supplier quotations or automatic ordering approval.
+## Local review
 
-## Publication boundary
+Use an HTTP server rather than opening `index.html` directly with `file://`, because the site loads its JSON evidence through same-origin `fetch()`.
 
-This is a sanitised public derivative, not the authoritative source repository. It contains no source `.blend` files, raw photographs, build scripts, runtime logs, credentials or local workstation paths. Frozen v0.14/v0.15 authorities remain outside and unchanged.
+The existing `Run-Garden-v0_21.ps1` launcher remains suitable for the source worktree because it binds Python's HTTP server to `127.0.0.1` only. It is a local-review tool and is excluded from the public RC payload.
+
+## Evidence
+
+See:
+
+- `records/garden_v0_22_security_deployment_audit_r1.md`
+- `records/garden_v0_22_validation_r1.json`
+- `records/garden_v0_23_rc1_public_manifest_r1.json`
+- `records/garden_v0_23_rc1_SHA256SUMS_R1.txt`

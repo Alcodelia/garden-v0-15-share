@@ -998,7 +998,14 @@
       target.setAttribute('aria-busy', 'false');
     });
     const body = element('#whole-field-body');
-    if (body) body.innerHTML = '<tr><td colspan="4">Adopted values unavailable.</td></tr>';
+    if (body) {
+      const row = document.createElement('tr');
+      const cell = document.createElement('td');
+      cell.colSpan = 4;
+      cell.textContent = 'Adopted values unavailable.';
+      row.append(cell);
+      body.replaceChildren(row);
+    }
   }
 
   async function initialiseSharedData() {
