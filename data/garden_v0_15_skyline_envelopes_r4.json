@@ -1,0 +1,210 @@
+{
+  "schema": "garden.v0.15.skyline_envelopes.r4.v1",
+  "project_version": "v0.15",
+  "package_revision": "R4",
+  "authority_state": "USER_APPROVED_COMPLETION_RESET",
+  "claim_boundary": "All off-site angular values in this file are photo-supported approximate planning brackets, not surveyed angles, dimensions, distances, heights or exact XY positions. The protected v0.14 geometry remains unchanged. Off-site uncertainty is bracketed by lower/likely/upper angular skyline envelopes and is not treated as a completion blocker.",
+  "orientation": {
+    "rear_bearing_true_deg": 330.0,
+    "tolerance_deg": 5.0,
+    "analysis_bearings_true_deg": [325.0, 330.0, 335.0],
+    "status": "APPROXIMATE_PROTECTED_RELATION"
+  },
+  "fov_merge_policy": {
+    "rule": "OVERLAPPING_PHOTO_FIELDS_OF_VIEW_ARE_EVIDENCE_REPETITIONS_NOT_ADDITIVE_OBSTRUCTIONS",
+    "azimuth_merge_bin_deg": 5.0,
+    "structural_merge": "Within a named structural obstruction, overlapping photo evidence is merged to one skyline envelope per azimuth; it is never stacked. Across distinct opaque structures, the highest skyline at an azimuth controls because any opaque obstruction blocks the ray.",
+    "biological_merge": "Overlapping gum/other-foliage evidence is merged to a single biological occupancy union. Porous attenuation is applied once per ray, using the scenario open-sky fraction; repeated photos or overlapping biological groups never multiply attenuation.",
+    "structural_precedence": "Opaque structural blockage is evaluated before biological porosity and dominates it.",
+    "provenance": "Each envelope lists all supporting photo filenames so duplicate fields of view remain traceable without double-counting."
+  },
+  "scenario_parameters": {
+    "baseline": {
+      "scenario_id": "SCN-BASELINE",
+      "claim": "LOWER_SHADE_BOUND__NOT_BEST_ESTIMATE",
+      "gum_height_m": 10.0,
+      "gum_height_status": "USER_ESTIMATED_APPROXIMATE__NOT_MEASURED",
+      "biological_open_sky_fraction": 0.75,
+      "open_sky_status": "USER_APPROVED_PLANNING_ASSUMPTION__NOT_MEASURED"
+    },
+    "likely": {
+      "scenario_id": "SCN-LIKELY",
+      "claim": "CENTRAL_PLANNING_CASE__NOT_MEASURED_REALITY",
+      "gum_height_m": 12.0,
+      "gum_height_status": "USER_APPROVED_CENTRAL_VALUE_WITHIN_ESTIMATE__NOT_MEASURED",
+      "biological_open_sky_fraction": 0.60,
+      "open_sky_status": "USER_APPROVED_PLANNING_ASSUMPTION__NOT_MEASURED"
+    },
+    "conservative": {
+      "scenario_id": "SCN-CONSERVATIVE",
+      "claim": "UPPER_SHADE_PLANNING_ENVELOPE__NOT_WORST_PHYSICALLY_POSSIBLE",
+      "gum_height_m": 14.0,
+      "gum_height_status": "USER_ESTIMATED_APPROXIMATE__NOT_MEASURED",
+      "biological_open_sky_fraction": 0.45,
+      "open_sky_status": "USER_APPROVED_UPPER_SHADE_PLANNING_ASSUMPTION__STILL_POROUS__NOT_MEASURED"
+    }
+  },
+  "structural_envelopes": [
+    {
+      "obstruction_id": "OBS-HOUSE-UPPER",
+      "name": "two-storey house upper-storey/eave angular horizon beyond protected patio roof",
+      "class": "OPAQUE_STRUCTURE",
+      "source_sector": "SEC-HOUSEWARD",
+      "source_photos": ["20260812_110222.jpg", "20260812_110226.jpg", "20260812_110242.jpg", "20260812_110300.jpg", "20260812_110433.jpg", "20260812_110501.jpg"],
+      "protected_geometry_relation": "CASTER__PATIO_ROOF is reused exactly and never duplicated. This envelope represents only additional house/eave skyline beyond that protected caster.",
+      "angle_status": "PHOTO_SUPPORTED_APPROXIMATE_SCENARIO_BRACKET__NOT_MEASURED",
+      "control_points": [
+        {"azimuth_true_deg": 100.0, "lower_deg": 0.0, "likely_deg": 0.0, "upper_deg": 0.0},
+        {"azimuth_true_deg": 105.0, "lower_deg": 12.0, "likely_deg": 18.0, "upper_deg": 24.0},
+        {"azimuth_true_deg": 130.0, "lower_deg": 18.0, "likely_deg": 25.0, "upper_deg": 32.0},
+        {"azimuth_true_deg": 150.0, "lower_deg": 20.0, "likely_deg": 28.0, "upper_deg": 36.0},
+        {"azimuth_true_deg": 170.0, "lower_deg": 18.0, "likely_deg": 25.0, "upper_deg": 32.0},
+        {"azimuth_true_deg": 195.0, "lower_deg": 12.0, "likely_deg": 18.0, "upper_deg": 24.0},
+        {"azimuth_true_deg": 200.0, "lower_deg": 0.0, "likely_deg": 0.0, "upper_deg": 0.0}
+      ]
+    },
+    {
+      "obstruction_id": "OBS-REAR-NEIGHBOUR",
+      "name": "neighbouring rear tiled-roof skyline",
+      "class": "OPAQUE_STRUCTURE",
+      "source_sector": "SEC-REAR",
+      "source_photos": ["20260812_110133.jpg", "20260812_110140.jpg", "20260812_110443.jpg"],
+      "angle_status": "PHOTO_SUPPORTED_APPROXIMATE_SCENARIO_BRACKET__NOT_MEASURED",
+      "control_points_unwrapped": [
+        {"azimuth_true_deg": 325.0, "lower_deg": 0.0, "likely_deg": 0.0, "upper_deg": 0.0},
+        {"azimuth_true_deg": 330.0, "lower_deg": 5.0, "likely_deg": 8.0, "upper_deg": 11.0},
+        {"azimuth_true_deg": 345.0, "lower_deg": 8.0, "likely_deg": 12.0, "upper_deg": 16.0},
+        {"azimuth_true_deg": 360.0, "lower_deg": 9.0, "likely_deg": 14.0, "upper_deg": 19.0},
+        {"azimuth_true_deg": 375.0, "lower_deg": 7.0, "likely_deg": 11.0, "upper_deg": 15.0},
+        {"azimuth_true_deg": 380.0, "lower_deg": 0.0, "likely_deg": 0.0, "upper_deg": 0.0}
+      ]
+    },
+    {
+      "obstruction_id": "OBS-SIDE-BUILDING-RIGHT-REAR",
+      "name": "right/rear adjacent building skyline",
+      "class": "OPAQUE_STRUCTURE",
+      "source_sector": "SEC-RIGHT-REAR",
+      "source_photos": ["20260812_110350.jpg", "20260812_110407.jpg", "20260812_110419.jpg", "20260812_110424.jpg"],
+      "angle_status": "PHOTO_SUPPORTED_APPROXIMATE_SCENARIO_BRACKET__NOT_MEASURED",
+      "identity_rule": "Not connected to the left/rear building envelope unless later measured evidence proves identity.",
+      "control_points": [
+        {"azimuth_true_deg": 10.0, "lower_deg": 0.0, "likely_deg": 0.0, "upper_deg": 0.0},
+        {"azimuth_true_deg": 15.0, "lower_deg": 8.0, "likely_deg": 12.0, "upper_deg": 16.0},
+        {"azimuth_true_deg": 25.0, "lower_deg": 12.0, "likely_deg": 17.0, "upper_deg": 22.0},
+        {"azimuth_true_deg": 40.0, "lower_deg": 14.0, "likely_deg": 20.0, "upper_deg": 27.0},
+        {"azimuth_true_deg": 55.0, "lower_deg": 10.0, "likely_deg": 15.0, "upper_deg": 20.0},
+        {"azimuth_true_deg": 60.0, "lower_deg": 7.0, "likely_deg": 10.0, "upper_deg": 14.0},
+        {"azimuth_true_deg": 65.0, "lower_deg": 0.0, "likely_deg": 0.0, "upper_deg": 0.0}
+      ]
+    },
+    {
+      "obstruction_id": "OBS-SIDE-BUILDING-LEFT-REAR",
+      "name": "left/rear adjacent building skyline",
+      "class": "OPAQUE_STRUCTURE",
+      "source_sector": "SEC-LEFT-REAR",
+      "source_photos": ["20260812_110350.jpg", "20260812_110419.jpg", "20260812_110424.jpg"],
+      "angle_status": "PHOTO_SUPPORTED_APPROXIMATE_SCENARIO_BRACKET__NOT_MEASURED",
+      "identity_rule": "Not connected to the right/rear building envelope unless later measured evidence proves identity.",
+      "control_points": [
+        {"azimuth_true_deg": 235.0, "lower_deg": 0.0, "likely_deg": 0.0, "upper_deg": 0.0},
+        {"azimuth_true_deg": 240.0, "lower_deg": 7.0, "likely_deg": 11.0, "upper_deg": 15.0},
+        {"azimuth_true_deg": 252.0, "lower_deg": 10.0, "likely_deg": 15.0, "upper_deg": 20.0},
+        {"azimuth_true_deg": 270.0, "lower_deg": 12.0, "likely_deg": 18.0, "upper_deg": 24.0},
+        {"azimuth_true_deg": 285.0, "lower_deg": 8.0, "likely_deg": 12.0, "upper_deg": 16.0},
+        {"azimuth_true_deg": 290.0, "lower_deg": 0.0, "likely_deg": 0.0, "upper_deg": 0.0}
+      ]
+    }
+  ],
+  "biological_envelopes": [
+    {
+      "obstruction_id": "OBS-GUM-REAR",
+      "name": "rear gum sparse/porous crown occupancy",
+      "class": "BIOLOGICAL_POROUS_CANOPY_WITH_TRUNKS_ABSORBED_IN_TRANSMISSION_ASSUMPTION",
+      "source_sector": "SEC-REAR",
+      "source_photos": ["20260812_110140.jpg", "20260812_110443.jpg"],
+      "angle_status": "PHOTO_SUPPORTED_APPROXIMATE_CROWN_BAND__NOT_MEASURED",
+      "trunk_rule": "No separate narrow trunk ray mask is created because exact trunk azimuth/XY is unresolved. The approved open-sky fraction is the scenario-level effective transmission assumption for the occupied biological band and therefore conservatively includes trunk interception without inventing exact positions.",
+      "control_points_unwrapped": [
+        {"azimuth_true_deg": 325.0, "baseline_base_deg": 0.0, "baseline_top_deg": 0.0, "likely_base_deg": 0.0, "likely_top_deg": 0.0, "conservative_base_deg": 0.0, "conservative_top_deg": 0.0},
+        {"azimuth_true_deg": 330.0, "baseline_base_deg": 18.0, "baseline_top_deg": 28.0, "likely_base_deg": 14.0, "likely_top_deg": 38.0, "conservative_base_deg": 10.0, "conservative_top_deg": 48.0},
+        {"azimuth_true_deg": 345.0, "baseline_base_deg": 16.0, "baseline_top_deg": 34.0, "likely_base_deg": 12.0, "likely_top_deg": 44.0, "conservative_base_deg": 9.0, "conservative_top_deg": 54.0},
+        {"azimuth_true_deg": 360.0, "baseline_base_deg": 15.0, "baseline_top_deg": 38.0, "likely_base_deg": 11.0, "likely_top_deg": 48.0, "conservative_base_deg": 8.0, "conservative_top_deg": 58.0},
+        {"azimuth_true_deg": 375.0, "baseline_base_deg": 17.0, "baseline_top_deg": 32.0, "likely_base_deg": 13.0, "likely_top_deg": 42.0, "conservative_base_deg": 9.0, "conservative_top_deg": 52.0},
+        {"azimuth_true_deg": 380.0, "baseline_base_deg": 0.0, "baseline_top_deg": 0.0, "likely_base_deg": 0.0, "likely_top_deg": 0.0, "conservative_base_deg": 0.0, "conservative_top_deg": 0.0}
+      ]
+    },
+    {
+      "obstruction_id": "OBS-GUM-RIGHT-REAR",
+      "name": "right/rear gum sparse/porous crown occupancy",
+      "class": "BIOLOGICAL_POROUS_CANOPY_WITH_TRUNKS_ABSORBED_IN_TRANSMISSION_ASSUMPTION",
+      "source_sector": "SEC-RIGHT-REAR",
+      "source_photos": ["20260812_110407.jpg", "20260812_110443.jpg"],
+      "angle_status": "PHOTO_SUPPORTED_APPROXIMATE_CROWN_BAND__NOT_MEASURED",
+      "control_points": [
+        {"azimuth_true_deg": 10.0, "baseline_base_deg": 0.0, "baseline_top_deg": 0.0, "likely_base_deg": 0.0, "likely_top_deg": 0.0, "conservative_base_deg": 0.0, "conservative_top_deg": 0.0},
+        {"azimuth_true_deg": 15.0, "baseline_base_deg": 18.0, "baseline_top_deg": 30.0, "likely_base_deg": 14.0, "likely_top_deg": 40.0, "conservative_base_deg": 10.0, "conservative_top_deg": 50.0},
+        {"azimuth_true_deg": 30.0, "baseline_base_deg": 16.0, "baseline_top_deg": 36.0, "likely_base_deg": 13.0, "likely_top_deg": 46.0, "conservative_base_deg": 9.0, "conservative_top_deg": 56.0},
+        {"azimuth_true_deg": 45.0, "baseline_base_deg": 17.0, "baseline_top_deg": 34.0, "likely_base_deg": 13.0, "likely_top_deg": 44.0, "conservative_base_deg": 9.0, "conservative_top_deg": 54.0},
+        {"azimuth_true_deg": 60.0, "baseline_base_deg": 20.0, "baseline_top_deg": 28.0, "likely_base_deg": 16.0, "likely_top_deg": 38.0, "conservative_base_deg": 12.0, "conservative_top_deg": 48.0},
+        {"azimuth_true_deg": 65.0, "baseline_base_deg": 0.0, "baseline_top_deg": 0.0, "likely_base_deg": 0.0, "likely_top_deg": 0.0, "conservative_base_deg": 0.0, "conservative_top_deg": 0.0}
+      ]
+    },
+    {
+      "obstruction_id": "OBS-GUM-LEFT-REAR",
+      "name": "left/rear gum sparse/porous crown occupancy",
+      "class": "BIOLOGICAL_POROUS_CANOPY_WITH_TRUNKS_ABSORBED_IN_TRANSMISSION_ASSUMPTION",
+      "source_sector": "SEC-LEFT-REAR",
+      "source_photos": ["20260812_110424.jpg"],
+      "angle_status": "PHOTO_SUPPORTED_APPROXIMATE_CROWN_BAND__NOT_MEASURED",
+      "control_points": [
+        {"azimuth_true_deg": 235.0, "baseline_base_deg": 0.0, "baseline_top_deg": 0.0, "likely_base_deg": 0.0, "likely_top_deg": 0.0, "conservative_base_deg": 0.0, "conservative_top_deg": 0.0},
+        {"azimuth_true_deg": 240.0, "baseline_base_deg": 19.0, "baseline_top_deg": 28.0, "likely_base_deg": 15.0, "likely_top_deg": 38.0, "conservative_base_deg": 11.0, "conservative_top_deg": 48.0},
+        {"azimuth_true_deg": 255.0, "baseline_base_deg": 16.0, "baseline_top_deg": 34.0, "likely_base_deg": 13.0, "likely_top_deg": 44.0, "conservative_base_deg": 9.0, "conservative_top_deg": 54.0},
+        {"azimuth_true_deg": 270.0, "baseline_base_deg": 16.0, "baseline_top_deg": 36.0, "likely_base_deg": 12.0, "likely_top_deg": 46.0, "conservative_base_deg": 9.0, "conservative_top_deg": 56.0},
+        {"azimuth_true_deg": 285.0, "baseline_base_deg": 19.0, "baseline_top_deg": 29.0, "likely_base_deg": 15.0, "likely_top_deg": 39.0, "conservative_base_deg": 11.0, "conservative_top_deg": 49.0},
+        {"azimuth_true_deg": 290.0, "baseline_base_deg": 0.0, "baseline_top_deg": 0.0, "likely_base_deg": 0.0, "likely_top_deg": 0.0, "conservative_base_deg": 0.0, "conservative_top_deg": 0.0}
+      ]
+    },
+    {
+      "obstruction_id": "OBS-OTHER-FOLIAGE-MERGED",
+      "name": "rear and left/rear palms/other mature foliage merged sensitivity envelope",
+      "class": "BIOLOGICAL_POROUS_CANOPY",
+      "source_sector": "SEC-REAR_AND_SEC-LEFT-REAR",
+      "source_photos": ["20260812_110140.jpg", "20260812_110424.jpg", "20260812_110443.jpg"],
+      "angle_status": "PHOTO_SUPPORTED_APPROXIMATE_LOW_SKYLINE_SENSITIVITY__NOT_MEASURED",
+      "inclusion_rule": "Included as a bounded sensitivity layer because the user approved bracketing unresolved off-site geometry. It shares the scenario open-sky fraction and is merged with gum occupancy before attenuation, so it cannot double-count the same photo field or biological ray.",
+      "control_points_unwrapped": [
+        {"azimuth_true_deg": 235.0, "baseline_base_deg": 0.0, "baseline_top_deg": 0.0, "likely_base_deg": 0.0, "likely_top_deg": 0.0, "conservative_base_deg": 0.0, "conservative_top_deg": 0.0},
+        {"azimuth_true_deg": 240.0, "baseline_base_deg": 0.0, "baseline_top_deg": 7.0, "likely_base_deg": 0.0, "likely_top_deg": 11.0, "conservative_base_deg": 0.0, "conservative_top_deg": 15.0},
+        {"azimuth_true_deg": 270.0, "baseline_base_deg": 0.0, "baseline_top_deg": 10.0, "likely_base_deg": 0.0, "likely_top_deg": 15.0, "conservative_base_deg": 0.0, "conservative_top_deg": 20.0},
+        {"azimuth_true_deg": 300.0, "baseline_base_deg": 0.0, "baseline_top_deg": 8.0, "likely_base_deg": 0.0, "likely_top_deg": 12.0, "conservative_base_deg": 0.0, "conservative_top_deg": 16.0},
+        {"azimuth_true_deg": 330.0, "baseline_base_deg": 0.0, "baseline_top_deg": 8.0, "likely_base_deg": 0.0, "likely_top_deg": 12.0, "conservative_base_deg": 0.0, "conservative_top_deg": 16.0},
+        {"azimuth_true_deg": 360.0, "baseline_base_deg": 0.0, "baseline_top_deg": 8.0, "likely_base_deg": 0.0, "likely_top_deg": 12.0, "conservative_base_deg": 0.0, "conservative_top_deg": 16.0},
+        {"azimuth_true_deg": 380.0, "baseline_base_deg": 0.0, "baseline_top_deg": 0.0, "likely_base_deg": 0.0, "likely_top_deg": 0.0, "conservative_base_deg": 0.0, "conservative_top_deg": 0.0}
+      ]
+    }
+  ],
+  "analysis_rules": {
+    "known_site_casters_exact": [
+      "CASTER__FENCE_LEFT",
+      "CASTER__FENCE_REAR",
+      "CASTER__FENCE_RIGHT",
+      "CASTER__PATIO_ROOF",
+      "V010_R5_APPROVED__AC__AC",
+      "V010_R5_APPROVED__WF__WORM"
+    ],
+    "external_structures": "OPAQUE_ANGULAR_SKYLINE_MASKS",
+    "biological_canopy": "DETERMINISTIC_POROUS_ANGULAR_OCCUPANCY_MASK",
+    "deterministic_seed": "garden-v0.15-r4-canopy-20260812",
+    "same_seed_across_scenarios": true,
+    "sample_interval_hours": 0.25,
+    "sun_samples_source": "PROTECTED_GARDEN_V0_13_SOLAR_RESULTS_R1_JSON",
+    "receiver_source": "V013__SOLAR_RESULTS__KNOWN_SITE_ONLY_POINT_MESH_IN_PROTECTED_V0_14_MASTER",
+    "orientation_sensitivity": "PRESERVE_B325_B330_B335_FOR_ALL_FOUR_SEASONS",
+    "primary_metric": "EXPECTED_OPEN_SKY_WEIGHTED_DIRECT_SUN_EQUIVALENT_HOURS_PER_DAY",
+    "secondary_metric": "DETERMINISTIC_DAPPLED_PATTERN_DIRECT_SUN_HOURS_PER_DAY",
+    "planning_materiality_threshold_hours": 0.50,
+    "threshold_status": "REUSED_R3_MATERIALITY_SCREEN_FOR_SENSITIVITY_ONLY__NOT_A_PLANT_SUITABILITY_THRESHOLD",
+    "ordering_ready": false
+  }
+}

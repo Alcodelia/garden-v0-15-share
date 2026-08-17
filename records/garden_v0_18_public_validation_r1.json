@@ -1,0 +1,96 @@
+{
+  "schema": "garden.v0.18.public_validation.r1",
+  "status": "PASS__HUMAN_VISUAL_PENDING",
+  "checks": {
+    "all_local_links_resolve": true,
+    "glb_v2_header_and_length_pass": true,
+    "zip_crc_pass": true,
+    "privacy_and_local_path_scan_pass": true,
+    "seven_realistic_renders_present": true,
+    "fourteen_unique_solar_maps_present": true,
+    "interactive_glb_and_static_poster_present": true,
+    "plan_realistic_solar_navigation_present": true,
+    "solar_selector_present": true,
+    "keyboard_focus_style_present": true,
+    "reduced_motion_style_and_script_present": true,
+    "noscript_fallback_present": true,
+    "raw_originals_not_published": true
+  },
+  "checked_local_link_count": 39,
+  "missing_local_links": [],
+  "privacy_hits": [],
+  "glb_probe": {
+    "magic": "glTF",
+    "version": 2,
+    "declared_bytes": 838680,
+    "actual_bytes": 838680,
+    "pass": true
+  },
+  "zip_first_bad_member": null,
+  "browser_qa": {
+    "schema": "garden.v0.18.browser_qa.r1",
+    "tested_at": "2026-08-13T13:37:18.3688282+10:00",
+    "target": "http://127.0.0.1:8765/",
+    "browser": "Codex in-app Chromium browser",
+    "status": "PASS_WITH_AUTOMATION_KEY_EVENT_LIMITATION",
+    "viewports": [
+      {
+        "label": "desktop",
+        "width": 1440,
+        "height": 900,
+        "horizontal_overflow": false,
+        "visual_result": "PASS"
+      },
+      {
+        "label": "tablet",
+        "width": 820,
+        "height": 1180,
+        "horizontal_overflow": false,
+        "visible_broken_images": 0,
+        "visual_result": "PASS"
+      },
+      {
+        "label": "mobile",
+        "width": 390,
+        "height": 844,
+        "horizontal_overflow": false,
+        "visible_broken_images": 0,
+        "realistic_gallery_single_column": true,
+        "solar_explorer_single_column": true,
+        "visual_result": "PASS"
+      }
+    ],
+    "checks": {
+      "page_title_and_landmarks_present": true,
+      "plan_realistic_solar_controls_present": true,
+      "realistic_mode_scroll_and_aria_state_pass": true,
+      "all_five_realistic_gallery_images_loaded_when_visible": true,
+      "solar_selector_summer_conservative_path_and_status_pass": true,
+      "interactive_glb_reported_loaded": true,
+      "static_poster_and_two_noscript_fallbacks_present": true,
+      "native_keyboard_operable_elements_used": true,
+      "focus_visible_indicator_observed": true,
+      "focus_indicator": "3px solid outline",
+      "reduced_motion_css_and_script_branch_present": true,
+      "desktop_visual_review_by_agent_pass": true,
+      "tablet_visual_review_by_agent_pass": true,
+      "mobile_visual_review_by_agent_pass": true,
+      "human_visual_approval": false
+    },
+    "automation_limitation": "The browser automation backend focused native buttons but did not dispatch synthetic Enter/Space activation consistently. Keyboard operability is supported by native link, button, select and input semantics, a tested focus-visible outline, and no positive tabindex traps; human keyboard spot-check remains part of the mandatory human visual checkpoint.",
+    "console_warnings_or_errors": [],
+    "human_checkpoint": "PENDING_USER_REVIEW"
+  },
+  "live_qa": {
+    "status": "PASS",
+    "base_url": "https://alcodelia.github.io/garden-v0-15-share/",
+    "source_publication_commit": "4ac9d6bc5f07f269066a28889998398a2f6ece79",
+    "all_manifest_file_hashes_match_live": true,
+    "index_resource_count": 39,
+    "all_index_local_resources_http_200": true,
+    "live_glb_v2_header_and_length_pass": true,
+    "live_public_zip_crc_pass": true,
+    "unauthenticated": true
+  },
+  "human_visual_approval": false
+}

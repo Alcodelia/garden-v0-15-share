@@ -1,0 +1,229 @@
+{
+  "schema": "garden.v0.18.location_solar_summary.r1",
+  "authority": "garden_v0_15_R4_unchanged",
+  "metric_boundary": "Seasonal direct-sun-equivalent planning interpretation; not an exact daily guarantee.",
+  "locations": [
+    {
+      "location_id": "LOC_G1_RING",
+      "location_name": "Grape 1 open-bottom ring",
+      "plain_language": "G1 is not reliably sunny enough for a fruiting Carolina muscadine under the conservative summer case.",
+      "seasons": {
+        "winter": {
+          "baseline": 4.81,
+          "likely": 3.4,
+          "conservative": 2.16,
+          "likely_bearing_range_h": 0.48,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "autumn": {
+          "baseline": 6.0,
+          "likely": 6.0,
+          "conservative": 5.04,
+          "likely_bearing_range_h": 0.1,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "spring": {
+          "baseline": 6.25,
+          "likely": 6.25,
+          "conservative": 5.15,
+          "likely_bearing_range_h": 0.33,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "summer": {
+          "baseline": 4.5,
+          "likely": 4.25,
+          "conservative": 3.75,
+          "likely_bearing_range_h": 0.38,
+          "bearing_sensitivity_material_ge_0_5h": false
+        }
+      },
+      "v0_17_status": "RELOCATE_OR_SUBSTITUTE",
+      "v0_17_decision": "Do not plant a fruiting muscadine at G1. Retain the ring as a bed or move the vine/root zone to a location with at least 6 h observed growing-season sun at trellis height."
+    },
+    {
+      "location_id": "LOC_G2_RING",
+      "location_name": "Grape 2 open-bottom ring",
+      "plain_language": "G2 is the stronger grape position; summer is suitable but shoulder-season light and practical conditions remain limiting.",
+      "seasons": {
+        "winter": {
+          "baseline": 3.44,
+          "likely": 2.8,
+          "conservative": 2.4,
+          "likely_bearing_range_h": 0.7,
+          "bearing_sensitivity_material_ge_0_5h": true
+        },
+        "autumn": {
+          "baseline": 5.88,
+          "likely": 5.7,
+          "conservative": 5.34,
+          "likely_bearing_range_h": 0.2,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "spring": {
+          "baseline": 5.88,
+          "likely": 5.7,
+          "conservative": 5.34,
+          "likely_bearing_range_h": 0.3,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "summer": {
+          "baseline": 7.75,
+          "likely": 7.2,
+          "conservative": 6.49,
+          "likely_bearing_range_h": 0.25,
+          "bearing_sensitivity_material_ge_0_5h": false
+        }
+      },
+      "v0_17_status": "SUITABLE_WITH_CONDITION",
+      "v0_17_decision": "Use \u2018Noble\u2019 at G2 only after the 24-hour drainage test passes and the post/trellis interface is measured and accepted."
+    },
+    {
+      "location_id": "LOC_LEMON_POINT",
+      "location_name": "Existing dwarf lemon point",
+      "plain_language": "The adopted lemon point has no direct-sun equivalent in winter and should move to a measured sunnier citrus position.",
+      "seasons": {
+        "winter": {
+          "baseline": 0.0,
+          "likely": 0.0,
+          "conservative": 0.0,
+          "likely_bearing_range_h": 0.0,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "autumn": {
+          "baseline": 3.25,
+          "likely": 3.25,
+          "conservative": 2.42,
+          "likely_bearing_range_h": 0.85,
+          "bearing_sensitivity_material_ge_0_5h": true
+        },
+        "spring": {
+          "baseline": 3.0,
+          "likely": 3.0,
+          "conservative": 2.24,
+          "likely_bearing_range_h": 1.08,
+          "bearing_sensitivity_material_ge_0_5h": true
+        },
+        "summer": {
+          "baseline": 7.12,
+          "likely": 6.88,
+          "conservative": 6.38,
+          "likely_bearing_range_h": 0.5,
+          "bearing_sensitivity_material_ge_0_5h": true
+        }
+      },
+      "v0_17_status": "RELOCATE_OR_SUBSTITUTE",
+      "v0_17_decision": "The adopted lemon point is too shaded for reliable citrus performance. Relocate the existing plant if feasible, or keep it as a low-yield trial rather than buying another lemon for this point."
+    },
+    {
+      "location_id": "LOC_MANDARIN_POINT",
+      "location_name": "Relocated dwarf mandarin point",
+      "plain_language": "The adopted mandarin point is deeply shaded outside summer and remains a relocation candidate.",
+      "seasons": {
+        "winter": {
+          "baseline": 0.0,
+          "likely": 0.0,
+          "conservative": 0.0,
+          "likely_bearing_range_h": 0.0,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "autumn": {
+          "baseline": 1.62,
+          "likely": 1.62,
+          "conservative": 1.07,
+          "likely_bearing_range_h": 0.98,
+          "bearing_sensitivity_material_ge_0_5h": true
+        },
+        "spring": {
+          "baseline": 1.5,
+          "likely": 1.5,
+          "conservative": 0.95,
+          "likely_bearing_range_h": 0.95,
+          "bearing_sensitivity_material_ge_0_5h": true
+        },
+        "summer": {
+          "baseline": 5.75,
+          "likely": 5.75,
+          "conservative": 5.75,
+          "likely_bearing_range_h": 0.25,
+          "bearing_sensitivity_material_ge_0_5h": false
+        }
+      },
+      "v0_17_status": "RELOCATE_OR_SUBSTITUTE",
+      "v0_17_decision": "The adopted relocated-mandarin point remains too shaded through winter and shoulder seasons. Do not buy another mandarin for this point."
+    },
+    {
+      "location_id": "LOC_LIME_POINT",
+      "location_name": "Existing dwarf lime point",
+      "plain_language": "The lime is the strongest adopted citrus point, but winter light is still uncertain enough to retain and monitor.",
+      "seasons": {
+        "winter": {
+          "baseline": 4.81,
+          "likely": 3.4,
+          "conservative": 2.16,
+          "likely_bearing_range_h": 0.35,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "autumn": {
+          "baseline": 6.25,
+          "likely": 6.25,
+          "conservative": 5.29,
+          "likely_bearing_range_h": 0.6,
+          "bearing_sensitivity_material_ge_0_5h": true
+        },
+        "spring": {
+          "baseline": 6.25,
+          "likely": 6.25,
+          "conservative": 5.15,
+          "likely_bearing_range_h": 0.7,
+          "bearing_sensitivity_material_ge_0_5h": true
+        },
+        "summer": {
+          "baseline": 6.25,
+          "likely": 6.0,
+          "conservative": 5.5,
+          "likely_bearing_range_h": 0.75,
+          "bearing_sensitivity_material_ge_0_5h": true
+        }
+      },
+      "v0_17_status": "SUITABLE_WITH_CONDITION",
+      "v0_17_decision": "Retain as a monitored trial. This is the strongest adopted citrus point, but winter light remains low and the plant identity/root-zone footprint is unresolved."
+    },
+    {
+      "location_id": "LOC_RHIZOME_BED",
+      "location_name": "Rhizome bed net fill",
+      "plain_language": "The Rhizome bed is shaded in winter, autumn and spring; plant and tree identity remains decisive.",
+      "seasons": {
+        "winter": {
+          "baseline": 0.0,
+          "likely": 0.0,
+          "conservative": 0.0,
+          "likely_bearing_range_h": 0.0,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "autumn": {
+          "baseline": 0.0,
+          "likely": 0.0,
+          "conservative": 0.0,
+          "likely_bearing_range_h": 0.0,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "spring": {
+          "baseline": 0.0,
+          "likely": 0.0,
+          "conservative": 0.0,
+          "likely_bearing_range_h": 0.0,
+          "bearing_sensitivity_material_ge_0_5h": false
+        },
+        "summer": {
+          "baseline": 2.38,
+          "likely": 2.38,
+          "conservative": 2.36,
+          "likely_bearing_range_h": 0.5,
+          "bearing_sensitivity_material_ge_0_5h": true
+        }
+      },
+      "v0_17_status": "BLOCKED_BY_ONE_DECISION",
+      "v0_17_decision": "Do not place a tree in the quarter-sector by default. The footprint has no direct-sun equivalent outside summer, only 0.916 m\u00b2 net fill, and unresolved rhizome competition."
+    }
+  ]
+}

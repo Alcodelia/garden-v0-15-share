@@ -1,0 +1,73 @@
+{
+  "checks": {
+    "all_required_renders_present": true,
+    "exported_corten_footprint_matches_analytic": true,
+    "exported_soil_area_matches_analytic": true,
+    "glb_contains_named_rhizome_geometry": true,
+    "glb_exact_selected_object_set": true,
+    "glb_excludes_labels_and_internal_objects": true,
+    "inherited_object_fingerprints_preserved": true,
+    "inherited_object_set_complete": true,
+    "no_adjacent_corten_overlap": true,
+    "no_established_access_overlap": true,
+    "no_solar_rerun": true,
+    "ordering_ready_is_region_specific": true,
+    "protected_authorities_byte_identical": true,
+    "quarter_sector_gross_math_fixture": true,
+    "quarter_sector_net_math_fixture": true,
+    "rear_bed_net_excludes_rhizome": true,
+    "region_manifest_has_required_established_regions": true,
+    "rhizome_endpoints_meet_rear_and_right_fences": true,
+    "rhizome_footprint_inside_locked_site": true,
+    "rhizome_objects_present": true,
+    "source_blend_hash_bound": true
+  },
+  "conflict_checks": {
+    "fence_relationship": "arc endpoints meet locked rear/right fence lines; geometry remains within site",
+    "footprint_bounds_m": {
+      "max_x": 5.800000190734863,
+      "max_y": 9.0,
+      "min_x": 4.699999809265137,
+      "min_y": 7.900000095367432
+    },
+    "minimum_xy_distance_to_existing_rear_right_corten_m": 0.6151749272568672,
+    "minimum_xy_distance_to_patio_access_route_m": 5.281638574057873
+  },
+  "glb": {
+    "expected_count": 86,
+    "node_count": 86,
+    "rhizome_names": [
+      "V016_R1__RHIZOME_BED__CORTEN_ARC",
+      "V016_R1__RHIZOME_BED__FILL"
+    ],
+    "sha256": "8ce44f7544a7521c3ac2fd8b5ce2385759e27ec1e5111d1a36c4d4643cb3cab1"
+  },
+  "inherited_geometry": {
+    "current_aggregate": "811c9f0847debdebf339112727ae7b74660e8b6d4731df198b5ad529a65e620a",
+    "current_count": 342,
+    "expected_aggregate": "811c9f0847debdebf339112727ae7b74660e8b6d4731df198b5ad529a65e620a",
+    "expected_count": 342,
+    "mismatched": [],
+    "missing": []
+  },
+  "pass": true,
+  "project_version": "0.16",
+  "render_hashes": {
+    "local_top": "178267d423a92701dd08ed0dbddc9765008593aaa492bf00230bd0e87902cc9f",
+    "perspective": "9636d0a4ad147691c1ef756a1f07a397d7338f1fd636d648cd1552515c259cfe",
+    "true_north": "6d80fc2dc2ab4fa4e20e4ede3a5e986de5d3ce84eed13efb43ecbafc81c6a8cb"
+  },
+  "revision": "R1",
+  "rhizome_area": {
+    "corten_display_band_analytic_m2": 0.03424335992412886,
+    "corten_mesh_top_m2": 0.034242611262016,
+    "corten_relative_error": 2.186298641599917e-05,
+    "gross_analytic_m2": 0.9503317777109126,
+    "net_analytic_m2": 0.9160884177867837,
+    "soil_mesh_top_m2": 0.9160642623901367,
+    "soil_relative_error": 2.6367975162677794e-05
+  },
+  "rhizome_corten_fabrication_ordering_ready": false,
+  "schema": "garden-v0.16-public-validation-r1",
+  "solar_analysis_run": false
+}

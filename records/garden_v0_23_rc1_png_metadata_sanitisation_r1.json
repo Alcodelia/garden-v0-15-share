@@ -1,0 +1,144 @@
+{
+  "schema": "garden.v0.23.rc1.png_metadata_sanitisation.r1",
+  "date": "2026-08-17",
+  "policy": "Publication derivative only. Canonical/source render files are not overwritten.",
+  "current_presentation_renders": [
+    {
+      "path": "realistic/garden_v0_18_left_side_perspective_r2.png",
+      "source_sha256": "2c04931b971d6959dda05629f58c8920a029c4906485580aaa21e434537bbc35",
+      "published_sha256": "e366c5d7345323f4978902c68ab63384eda53f0947d0db92656b4f1100a6f328",
+      "pixel_sha256": "dca26a216046ea6d7f5a614646e54f1d629d80cee68dddfaf6c7b487b487b0b3",
+      "size_px": [
+        1400,
+        900
+      ],
+      "mode": "RGBA",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt"
+      ],
+      "decoded_pixels_identical": true
+    },
+    {
+      "path": "realistic/garden_v0_18_left_side_perspective_r4.png",
+      "source_sha256": "232827976dd552c1e017b6c72821a144e0ea1ef29b85462ba1655e7b070ffdd8",
+      "published_sha256": "7eca5ae9cf11738a2289112c7d0263fdd3d0dc4d3c25c387ed34bc4485e981e5",
+      "pixel_sha256": "7e61443f9a88b38346b0e7f70227bb662f2000a746c50108d64768996830b0aa",
+      "size_px": [
+        1400,
+        900
+      ],
+      "mode": "RGBA",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt"
+      ],
+      "decoded_pixels_identical": true
+    },
+    {
+      "path": "realistic/garden_v0_18_local_top_down_r2.png",
+      "source_sha256": "46e3f20c2ef05bae95e31a1e66171bc71cfa07ea24c5698b6e8931633a9c445b",
+      "published_sha256": "d51ecf1327c3f2cfb1b48b9195d38cf4e189e6967d3d5dc87b7dd803580a0888",
+      "pixel_sha256": "47f1e14380a907e44332bab9466429bc76f777599a21f46fa483d3cd619e437a",
+      "size_px": [
+        1400,
+        900
+      ],
+      "mode": "RGBA",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt"
+      ],
+      "decoded_pixels_identical": true
+    },
+    {
+      "path": "realistic/garden_v0_18_patio_perspective_r2.png",
+      "source_sha256": "5c7e84ec8a3f752224829db54a98e615804a07e39bbda7b58064e74396fb6c25",
+      "published_sha256": "c52d548d68c80e8a3e80fdd2c9ed4669d90cf8a34ce3a0f9162e392b31c77582",
+      "pixel_sha256": "5f5ff5ea3bc16b351cf5bad78d49117367a74137b58d06dc792a41eeba41489e",
+      "size_px": [
+        1400,
+        900
+      ],
+      "mode": "RGBA",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt"
+      ],
+      "decoded_pixels_identical": true
+    },
+    {
+      "path": "realistic/garden_v0_18_rear_garden_perspective_r2.png",
+      "source_sha256": "3f856dbcd59d0a988cf5eee8cf6f089a3719fd8752dbee8252fef37ade8fdbd4",
+      "published_sha256": "a8bf97b6b7e6b1237687312fac00cf2360e996d4a52fd4205a20c22d44d61808",
+      "pixel_sha256": "ae4dedbafcb823fb22f6964ae713c9f80b7e3984de5e794c8a357526a88d900a",
+      "size_px": [
+        1400,
+        900
+      ],
+      "mode": "RGBA",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt"
+      ],
+      "decoded_pixels_identical": true
+    },
+    {
+      "path": "realistic/garden_v0_18_rhizome_bed_close_r2.png",
+      "source_sha256": "cf6a6d7a7cbaed405d754c9367162e7c2672d86fe0e9f22fdad709450e94c7e8",
+      "published_sha256": "7c9a37a2de6024304d3bf8a673fa14ae417f5972f0504675fa14ad983498c8b7",
+      "pixel_sha256": "3651f0cccdaab4fa7e0c16af96f383de5cf23f9a391823e44459e6b17d0be44f",
+      "size_px": [
+        1400,
+        900
+      ],
+      "mode": "RGBA",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt"
+      ],
+      "decoded_pixels_identical": true
+    },
+    {
+      "path": "realistic/garden_v0_18_right_service_perspective_r2.png",
+      "source_sha256": "500aebad91a2c1b6d7f8cda9e81184db44c986afb09a128e239263e424ee09ca",
+      "published_sha256": "9276a9e513345e8c607980081d111c44e5e547b5bc45e510ea2a89f4dd301b17",
+      "pixel_sha256": "b1e7f44b65f7adf20b80da1e6550e9a740459889f1dbe51076e7d157d548ced9",
+      "size_px": [
+        1400,
+        900
+      ],
+      "mode": "RGBA",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt"
+      ],
+      "decoded_pixels_identical": true
+    },
+    {
+      "path": "realistic/garden_v0_18_true_north_r2.png",
+      "source_sha256": "9fcb5312bc557b3083d211bb4f93a0d602788d5f24f9b69735672568c4d5ff8a",
+      "published_sha256": "24d857378dd1b758d142e89969cba1ae99eb088773db023090f2ec3d54f86ceb",
+      "pixel_sha256": "02026ca50072110ee236c3a90b6183b1b84a8638eda2403e327dbe6552f643e3",
+      "size_px": [
+        1400,
+        900
+      ],
+      "mode": "RGBA",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt"
+      ],
+      "decoded_pixels_identical": true
+    }
+  ],
+  "nested_download_correction": {
+    "superseded_public_download": "garden_v0_18_public_distribution_r1.zip",
+    "superseded_sha256": "eaadcda25b9a2cc5ae9311393c2d17dd5767f6b9ca7f8a1a10da0d4b6590cca4",
+    "replacement_public_download": "garden_v0_18_public_distribution_r2_sanitised_metadata.zip",
+    "replacement_sha256": "cce7c048a2de5a73ef35b8eb77bd1c526e19833130fe5da8a58b877c91243d0d",
+    "detailed_correction_record_inside_replacement": "records/garden_v0_18_public_distribution_r2_metadata_correction.json"
+  },
+  "protected_solar_maps_modified": false,
+  "protected_primary_glb_modified": false
+}
