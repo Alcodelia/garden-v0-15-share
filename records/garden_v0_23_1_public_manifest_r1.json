@@ -1,0 +1,61 @@
+{
+  "schema": "garden.v0.23.1.public_manifest.r1",
+  "date": "2026-08-18",
+  "release": "v0.23.1",
+  "status": "FINAL_RELEASE__HUMAN_VISUAL_PASS__AUTOMATED_PASS__PUBLICATION_AUTHORIZED",
+  "publication_authorized": true,
+  "source_release": {
+    "branch": "release/garden-v0.23.1",
+    "commit": "062685c3a90891299d3647f411f2ad0984d4ab14",
+    "tag": "garden-v0.23.1",
+    "predecessor": "garden-v0.23-rc1"
+  },
+  "change_scope": {
+    "presentation_only": true,
+    "local_top_down": "realistic/garden_v0_18_local_top_down_r3.png",
+    "true_north": "realistic/garden_v0_18_true_north_r3.png",
+    "human_visual_review": "PASS",
+    "geometry_changed": false,
+    "protected_model_changed": false,
+    "calculator_changed": false,
+    "solar_rerun": false
+  },
+  "render_provenance": {
+    "record": "records/garden_v0_23_1_topdown_framing_r1.json",
+    "local_r3_public_sha256": "a276c2a9525c1ecb930ebcc16ca032e5fb24b51b841d2f056adeb8c623f75307",
+    "true_north_r3_public_sha256": "83610684985e6e2e3a272d6027916cf3654541d099700af107dad29f5d588f84",
+    "blender_master_saved": false,
+    "blender_master_sha256": "87a0d2da7e6b8bf54c53652ec679be5bd934caa0b9cae07af29824cc56fab358",
+    "ancillary_blender_metadata_removed": true,
+    "reviewed_image_data_preserved": true
+  },
+  "public_payload_policy": {
+    "predecessor_public_commit": "619088b1aaa63ed6e743a66c5902d124a5d0e0d4",
+    "base_payload_file_count": 60,
+    "allowlist_record": "records/garden_v0_23_1_allowlist_source_paths_r1.txt",
+    "checksum_ledger": "records/garden_v0_23_1_SHA256SUMS_R1.txt",
+    "checksum_ledger_excludes_itself": true,
+    "expected_total_file_count": 63,
+    "old_r2_topdown_assets_retained": true,
+    "current_site_references_r3_only": true,
+    "development_files_excluded": true
+  },
+  "protected_artifacts": {
+    "3d/garden_v0_18_primary_interactive_model_r4.glb": "37721f8b5d4c650cc4314a90f31887998cbbe080acff58c81fd2980562d06845",
+    "data/garden_v0_15_solar_results_r4.json": "28fcbf0a11912c02be0abeb19d426b0e83b2becc35ff22340e3aabe2a6b49ad0",
+    "solar/v0_18/garden_v0_18_solar_summer_likely_b330_r1.png": "473c16e6bc92c815bada70ded36d12fd2e896f91c8f10034e57eec04894a4fae",
+    "solar/v0_18/garden_v0_18_solar_autumn_likely_b330_r1.png": "4a505ddea88d1d8f77f576067ecdcbf5c77dc0b1794f5569a804222cd0500042",
+    "solar/v0_18/garden_v0_18_solar_winter_likely_b330_r1.png": "ee7e21d2ab1f6fd6eb941ad83a5fe8afaba5968f22ee50a00629a455af0c39bc",
+    "solar/v0_18/garden_v0_18_solar_spring_likely_b330_r1.png": "626fa2a167776b932d9685e639d86feafa1b14ca5893d878e58dbba70bd1f652",
+    "documents/garden_v0_20_four_season_solar_summary_r6.pdf": "da17984373c3e9bc607804f9f244bb24393a7c056da620fd00c2f3dfafb2c1e6"
+  },
+  "protected_artifacts_byte_identical": true,
+  "evidence": [
+    "records/garden_v0_22_security_deployment_audit_r1.md",
+    "records/garden_v0_22_validation_r1.json",
+    "records/garden_v0_23_rc1_public_manifest_r1.json",
+    "records/garden_v0_23_rc1_SHA256SUMS_R1.txt",
+    "records/garden_v0_23_1_topdown_framing_r1.json",
+    "records/garden_v0_23_1_allowlist_source_paths_r1.txt"
+  ]
+}
