@@ -1,0 +1,61 @@
+{
+  "schema": "garden.v0.23.1.topdown_framing.r1",
+  "date": "2026-08-18",
+  "scope": "Presentation-only top-down camera framing correction",
+  "geometry_changed": false,
+  "solar_changed": false,
+  "blender_master_saved": false,
+  "blender_master_sha256": "87a0d2da7e6b8bf54c53652ec679be5bd934caa0b9cae07af29824cc56fab358",
+  "visual_review": "USER_PASS",
+  "camera_settings": {
+    "V018_CAM__LOCAL_TOP": {
+      "ortho_scale": 15.0
+    },
+    "V018_CAM__TRUE_NORTH": {
+      "ortho_scale": 17.5
+    },
+    "render_resolution_px": [
+      1400,
+      900
+    ]
+  },
+  "policy": "Raw reviewed renders remain local. Public Git copies strip ancillary Blender metadata only.",
+  "renders": [
+    {
+      "file": "garden_v0_18_local_top_down_r3.png",
+      "raw_sha256": "ed74d21b324759149a0ea1518b76730470b559f71523f47218cda1cae0106c58",
+      "sanitised_sha256": "a276c2a9525c1ecb930ebcc16ca032e5fb24b51b841d2f056adeb8c623f75307",
+      "idat_sha256": "7966db2a5585ad344d36c64c33f6cc8bf0c5c6a247f06ee871c0823882e58b4c",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt"
+      ],
+      "image_data_byte_identical": true,
+      "local_path_bytes_absent": true
+    },
+    {
+      "file": "garden_v0_18_true_north_r3.png",
+      "raw_sha256": "7e808eaae1b31a6405244d283d4d756a48bf5fb02d4fc3adca24d7e9a2988298",
+      "sanitised_sha256": "83610684985e6e2e3a272d6027916cf3654541d099700af107dad29f5d588f84",
+      "idat_sha256": "3a9152d552ca3acc174a5a116b92b38fe5a0776bbd04287e5b84737143ef7cbb",
+      "removed_png_chunks": [
+        "eXIf",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt",
+        "tEXt"
+      ],
+      "image_data_byte_identical": true,
+      "local_path_bytes_absent": true
+    }
+  ]
+}
